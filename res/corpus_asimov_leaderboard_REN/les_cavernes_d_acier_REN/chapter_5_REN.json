@@ -1,0 +1,38 @@
+[
+    {
+        "id": 0,
+        "name": "Jessie",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Olivaw",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Person",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    }
+]

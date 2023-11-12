@@ -1,0 +1,32 @@
+[
+    {
+        "id": 0,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Sammy",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    }
+]

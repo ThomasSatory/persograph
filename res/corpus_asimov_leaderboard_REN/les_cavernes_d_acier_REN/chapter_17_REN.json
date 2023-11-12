@@ -1,0 +1,26 @@
+[
+    {
+        "id": 0,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Sarton",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Dane",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Ter",
+        "category": "PER",
+        "alias": []
+    }
+]

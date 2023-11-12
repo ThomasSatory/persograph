@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Clousarr",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    }
+]
