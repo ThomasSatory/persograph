@@ -2,13 +2,15 @@
 #
 # Authors: Lahcène Belhadi <lahcene.belhadi@gmail.com>
 
-from collections.abc import Generator
-from io import BytesIO
 import json
-import token
-import tokenize
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 from custom_exceptions import EmptyFile
+from dataclasses import dataclass
+
+@dataclass
+class NamedEntity:
+    pos: int
+    entity: Dict[Any, Any]
 
 class Cooc:
     """
@@ -93,4 +95,86 @@ class Cooc:
         # la liste des entités nommées au format JSON (on fait un split sur le
         # nom au moment du check) pour toujours avoir un pointeur vers le JSON
         
+        f_entity: NamedEntity | None = None  # first encountered
+        s_entity: NamedEntity | None = None  # second encountered
+        pairs: Dict[Tuple[int, int], int] = {} 
+
+        for pos, token in enumerate(tokens):
+            # vérifie si le token appartient à une entité nommée
+            if self.is_named_entity(token):
+                if f_entity is None:
+                    f_entity = self.get_named_entity_from_id(
+                        self.get_named_entity_id(token), pos
+                    )
+                    continue
+
+                if s_entity is None:
+                    s_entity = self.get_named_entity_from_id(
+                        self.get_named_entity_id(token), pos
+                    )
+
+                    # si l'entité nommée est celle qui suit le token de la
+                    # première alors on skip car 2 entitées nommées ne sont 
+                    # pas collées, ça veut juste dire que c'est le nom de
+                    # famille de la première entité
+                    if s_entity.pos - f_entity.pos == 1:
+                        s_entity = None
+                        continue
+
+                    # compare la distance entre f et s
+                    if s_entity.pos - f_entity.pos <= 25:
+                        key: Tuple[int, int] = (f_entity.entity["id"], s_entity.entity["id"])
+                        key_alt: Tuple[int, int] = (s_entity.entity["id"], f_entity.entity["id"])
+
+                        if key in pairs:
+                            pairs[key] += 1
+
+                        elif key_alt in pairs:
+                            pairs[key_alt] += 1
+
+                        else:
+                            pairs[key] = 1
+
+                    # move to next
+                    f_entity = s_entity
+                    s_entity = None
+
+        print(pairs)
+
+    def is_named_entity(self, token: str) -> bool:
+        """
+        Indique si le token donné est une entité nommée
+        """
+
+        for entity in self.data:
+            name: str = entity["name"]
+
+            if token in name.split():
+                return True
+
+        return False
+
+    def get_named_entity_id(self, token: str) -> Optional[int]:
+        """
+        Retourne l'id de l'entité nommée à partir du nom
+        """
+
+        for entity in self.data:
+            name: str = entity["name"]
+            
+            if token in name.split():
+                return entity["id"]
+
+        return None
+
+    def get_named_entity_from_id(self, id: int, pos: int) -> Optional[NamedEntity]:
+        """
+        Retourne une named entity en fonction de l'id
+        """
         
+        for entity in self.data:
+            if entity["id"] == id:
+                return NamedEntity(pos=pos, entity=entity)
+
+        return None
+
