@@ -2,7 +2,11 @@
 #
 # Authors: Lahcène Belhadi <lahcene.belhadi@gmail.com>
 
+from collections.abc import Generator
+from io import BytesIO
 import json
+import token
+import tokenize
 from typing import Any, Dict, List, Tuple
 from custom_exceptions import EmptyFile
 
@@ -20,7 +24,7 @@ class Cooc:
         nommées
         """
         self.path: str = path
-        self.data: Dict[str, str | int] = {}
+        self.data: List[Dict[str, str | int]] = []
 
         # la liste des co-occurences trouvées sous forme de paires de noms
         self.found: List[Tuple[str, str]] = []
@@ -39,7 +43,7 @@ class Cooc:
         n'a pas pu être ouvert à partir de `self.path`
         """
         try:
-            with open(self.path, 'w') as file:
+            with open(self.path, 'r') as file:
                 data: str = file.read()
 
                 # si le fichier ne contient aucune données
@@ -55,16 +59,38 @@ class Cooc:
         except OSError:
             raise Exception(FileNotFoundError)
 
+    def __fetch_tokens(self, path: str) -> List[str]:
+        """
+        Lit le fichier texte donné et extrait les tokens
+
+        # Arguments
+        * path: `str` - le chemin ers le fichier texte
+
+        # Raises
+        * `FileNotFoundError` - retourne un `FileNotFoundError` si le fichier 
+        """
+        with open(path, 'r') as file:
+            content = file.read().split()
+            return content
+
     def find(self) -> None:
         """
         Trouve les paires de co-occurences dans le texte à partir des entitées 
         nommées présentes dans le fichier JSON associé
         """
 
-        try:
-            self.__fetch_data()
+        self.__fetch_data()
 
-        except Exception as error:
-            print(f"Une erreur est survenue lors de l'extraction des données JSON: {error}")
-            exit(1)
+        tokens = self.__fetch_tokens("res/test/text.txt")
+        self.algo(tokens)
 
+    def algo(self, tokens: List[str]) -> None:
+        """
+        Trouve les pairs liées entre elles
+        """
+        # TODO: Au lieu de split le nom de toutes les entités nommées et de le 
+        # mettre dans une liste, on vérifie pour chaque token s'il est dans 
+        # la liste des entités nommées au format JSON (on fait un split sur le
+        # nom au moment du check) pour toujours avoir un pointeur vers le JSON
+        
+        
