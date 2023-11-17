@@ -3,6 +3,48 @@
         "id": 0,
         "name": "Baley",
         "category": "PER",
+        "alias": [
+            1
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Bale",
+        "category": "PER",
+        "alias": [
+            0
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Julius Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Ter",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Ende",
+        "category": "PER",
+        "alias": [
+            2
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Elijah",
+        "category": "PER",
         "alias": []
     }
 ]

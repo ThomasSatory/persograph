@@ -1,1 +1,157 @@
-[{'id': 0, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 1, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 2, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 3, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 4, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 5, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 6, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 7, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 8, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 9, 'name': 'Dor', 'category': 'B-PER', 'alias': []}, {'id': 10, 'name': '##s', 'category': 'I-PER', 'alias': []}, {'id': 11, 'name': 'Ve', 'category': 'I-PER', 'alias': []}, {'id': 12, 'name': '##na', 'category': 'I-PER', 'alias': []}, {'id': 13, 'name': '##bili', 'category': 'I-PER', 'alias': []}, {'id': 14, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 15, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 16, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 17, 'name': 'Dor', 'category': 'B-PER', 'alias': []}, {'id': 18, 'name': '##s', 'category': 'I-PER', 'alias': []}, {'id': 19, 'name': 'My', 'category': 'B-PER', 'alias': []}, {'id': 20, 'name': '##celi', 'category': 'I-PER', 'alias': []}, {'id': 21, 'name': '##um', 'category': 'I-PER', 'alias': []}, {'id': 22, 'name': 'So', 'category': 'I-PER', 'alias': []}, {'id': 23, 'name': '##ix', 'category': 'I-PER', 'alias': []}, {'id': 24, 'name': '##ante', 'category': 'I-PER', 'alias': []}, {'id': 25, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 26, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 27, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 28, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 29, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 30, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 31, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 32, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 33, 'name': '##n', 'category': 'I-PER', 'alias': []}]
+[
+    {
+        "id": 0,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Ter",
+        "category": "PER",
+        "alias": [
+            18
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Ent",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Em",
+        "category": "PER",
+        "alias": [
+            4,
+            17
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dem",
+        "category": "PER",
+        "alias": [
+            17
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Tra",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Hum",
+        "category": "PER",
+        "alias": [
+            13
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Dor",
+        "category": "PER",
+        "alias": [
+            12,
+            15
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Se",
+        "category": "PER",
+        "alias": [
+            11
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Hari",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Go",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": [
+            8
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Dors Venabili",
+        "category": "PER",
+        "alias": [
+            7,
+            15,
+            16
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": [
+            6
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Antennin",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Dors",
+        "category": "PER",
+        "alias": [
+            7,
+            12
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Venabili",
+        "category": "PER",
+        "alias": [
+            12
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": [
+            4
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Chetter",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 19,
+        "name": "Renégat",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 20,
+        "name": "My",
+        "category": "PER",
+        "alias": []
+    }
+]

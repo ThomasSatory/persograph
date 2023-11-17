@@ -3,7 +3,9 @@
         "id": 0,
         "name": "Daneel",
         "category": "PER",
-        "alias": []
+        "alias": [
+            12
+        ]
     },
     {
         "id": 1,
@@ -15,6 +17,80 @@
         "id": 2,
         "name": "Baley",
         "category": "PER",
+        "alias": [
+            4,
+            8,
+            12
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Fastolfe",
+        "category": "PER",
         "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Elijah Baley",
+        "category": "PER",
+        "alias": [
+            5
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": [
+            4
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Gerrigel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Bale",
+        "category": "PER",
+        "alias": [
+            2,
+            4,
+            12
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Bi",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Vince Barrett",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Sammy",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Daneel Baley",
+        "category": "PER",
+        "alias": [
+            0
+        ]
     }
 ]

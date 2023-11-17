@@ -1,1 +1,72 @@
-[{'id': 0, 'name': 'Hari', 'category': 'B-PER', 'alias': []}, {'id': 1, 'name': 'Se', 'category': 'I-PER', 'alias': []}, {'id': 2, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 3, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 4, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 5, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 6, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 7, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 8, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 9, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 10, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 11, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 12, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 13, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 14, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 15, 'name': '##n', 'category': 'I-PER', 'alias': []}]
+[
+    {
+        "id": 0,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Ter",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Ent",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Em",
+        "category": "PER",
+        "alias": [
+            4
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dem",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Tra",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Hum",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": [
+            7
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Goutte",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Dors",
+        "category": "PER",
+        "alias": []
+    }
+]

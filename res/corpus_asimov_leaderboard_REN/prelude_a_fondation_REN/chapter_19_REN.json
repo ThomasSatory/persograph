@@ -1,1 +1,290 @@
-[{'id': 0, 'name': 'Hari', 'category': 'B-PER', 'alias': []}, {'id': 1, 'name': 'Se', 'category': 'I-PER', 'alias': []}, {'id': 2, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 3, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 4, 'name': 'Ray', 'category': 'B-PER', 'alias': []}, {'id': 5, 'name': '##ch', 'category': 'I-PER', 'alias': []}, {'id': 6, 'name': 'Se', 'category': 'I-PER', 'alias': []}, {'id': 7, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 8, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 9, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 10, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 11, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 12, 'name': 'Se', 'category': 'B-PER', 'alias': []}, {'id': 13, 'name': '##ldo', 'category': 'I-PER', 'alias': []}, {'id': 14, 'name': '##n', 'category': 'I-PER', 'alias': []}, {'id': 15, 'name': 'Hum', 'category': 'B-PER', 'alias': []}, {'id': 16, 'name': 'R', 'category': 'B-PER', 'alias': []}, {'id': 17, 'name': '##itt', 'category': 'I-PER', 'alias': []}, {'id': 18, 'name': '##ah', 'category': 'I-PER', 'alias': []}, {'id': 19, 'name': 'Aurora', 'category': 'B-PER', 'alias': []}, {'id': 20, 'name': 'Aurora', 'category': 'B-PER', 'alias': []}]
+[
+    {
+        "id": 0,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Ter",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Ent",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Em",
+        "category": "PER",
+        "alias": [
+            4
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dem",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Tra",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Hum",
+        "category": "PER",
+        "alias": [
+            33
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Dor",
+        "category": "PER",
+        "alias": [
+            36
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Se",
+        "category": "PER",
+        "alias": [
+            30,
+            31,
+            32
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Hari",
+        "category": "PER",
+        "alias": [
+            30
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Go",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "My",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Dahl",
+        "category": "PER",
+        "alias": [
+            22,
+            39
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Dieu",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 14,
+        "name": "Ti",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Ho",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 16,
+        "name": "Maître",
+        "category": "PER",
+        "alias": [
+            27
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Ca",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 18,
+        "name": "Amar",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 19,
+        "name": "Bill",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 20,
+        "name": "Ve",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 21,
+        "name": "Ray",
+        "category": "PER",
+        "alias": [
+            31
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Da",
+        "category": "PER",
+        "alias": [
+            12,
+            39
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Kan",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 24,
+        "name": "Russ",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 25,
+        "name": "Br",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 26,
+        "name": "Rachel",
+        "category": "PER",
+        "alias": [
+            31
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Maire",
+        "category": "PER",
+        "alias": [
+            16
+        ]
+    },
+    {
+        "id": 28,
+        "name": "All",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 29,
+        "name": "Mann",
+        "category": "PER",
+        "alias": [
+            38
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            9,
+            31
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Raych Seldon",
+        "category": "PER",
+        "alias": [
+            21,
+            26,
+            30
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": [
+            8,
+            30,
+            31
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": [
+            6
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Rittah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 35,
+        "name": "Aurora",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 36,
+        "name": "Dors",
+        "category": "PER",
+        "alias": [
+            7
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Cléon",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 38,
+        "name": "Mannix IV",
+        "category": "PER",
+        "alias": [
+            29
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": [
+            12,
+            22
+        ]
+    }
+]

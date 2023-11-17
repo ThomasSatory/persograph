@@ -3,7 +3,9 @@
         "id": 0,
         "name": "Baley",
         "category": "PER",
-        "alias": []
+        "alias": [
+            2
+        ]
     },
     {
         "id": 1,
@@ -14,6 +16,14 @@
     {
         "id": 2,
         "name": "Bale",
+        "category": "PER",
+        "alias": [
+            0
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Elijah",
         "category": "PER",
         "alias": []
     }

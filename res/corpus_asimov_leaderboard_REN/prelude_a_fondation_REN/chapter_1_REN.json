@@ -1,92 +1,119 @@
 [
-    {'id': 0, 'name': 'CL', 'category': 'B-PER', 'alias': []
+    {
+        "id": 0,
+        "name": "Bale",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 1, 'name': '##un', 'category': 'I-PER', 'alias': []
+    {
+        "id": 1,
+        "name": "Ter",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 2, 'name': 'Hari', 'category': 'B-PER', 'alias': []
+    {
+        "id": 2,
+        "name": "Ent",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 3, 'name': 'Se', 'category': 'I-PER', 'alias': []
+    {
+        "id": 3,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            8
+        ]
     },
-    {'id': 4, 'name': '##ldo', 'category': 'I-PER', 'alias': []
+    {
+        "id": 4,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": [
+            3,
+            8
+        ]
     },
-    {'id': 5, 'name': '##n', 'category': 'I-PER', 'alias': []
+    {
+        "id": 5,
+        "name": "Cléon",
+        "category": "PER",
+        "alias": [
+            8
+        ]
     },
-    {'id': 6, 'name': 'Se', 'category': 'B-PER', 'alias': []
+    {
+        "id": 6,
+        "name": "Eto Demerzel",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 7, 'name': '##ldo', 'category': 'I-PER', 'alias': []
+    {
+        "id": 7,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": [
+            6,
+            13
+        ]
     },
-    {'id': 8, 'name': '##n', 'category': 'I-PER', 'alias': []
+    {
+        "id": 8,
+        "name": "Hari Seldon Cléon",
+        "category": "PER",
+        "alias": [
+            3
+        ]
     },
-    {'id': 9, 'name': 'Cl', 'category': 'B-PER', 'alias': []
+    {
+        "id": 9,
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 10, 'name': '##eon', 'category': 'I-PER', 'alias': []
+    {
+        "id": 10,
+        "name": "Alban Wellis",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 11, 'name': 'Se', 'category': 'B-PER', 'alias': []
+    {
+        "id": 11,
+        "name": "Wellis",
+        "category": "PER",
+        "alias": [
+            10
+        ]
     },
-    {'id': 12, 'name': '##ldo', 'category': 'I-PER', 'alias': []
+    {
+        "id": 12,
+        "name": "Em",
+        "category": "PER",
+        "alias": [
+            6,
+            7,
+            13
+        ]
     },
-    {'id': 13, 'name': '##n', 'category': 'I-PER', 'alias': []
+    {
+        "id": 13,
+        "name": "Dem",
+        "category": "PER",
+        "alias": [
+            6,
+            7
+        ]
     },
-    {'id': 14, 'name': '##r', 'category': 'I-PER', 'alias': []
+    {
+        "id": 14,
+        "name": "Tra",
+        "category": "PER",
+        "alias": []
     },
-    {'id': 15, 'name': 'Cl', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 16, 'name': '##eon', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 17, 'name': 'Et', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 18, 'name': '##o', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 19, 'name': 'Dem', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 20, 'name': '##erze', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 21, 'name': '##l', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 22, 'name': 'Cl', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 23, 'name': '##eon', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 24, 'name': 'Cl', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 25, 'name': '##eon', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 26, 'name': 'Dem', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 27, 'name': '##erze', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 28, 'name': '##l', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 29, 'name': 'Hari', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 30, 'name': 'Se', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 31, 'name': '##ldo', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 32, 'name': '##n', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 33, 'name': 'Cl', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 34, 'name': '##eon', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 35, 'name': 'Hari', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 36, 'name': 'Se', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 37, 'name': '##ldo', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 38, 'name': '##n', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 39, 'name': 'Dem', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 40, 'name': '##erze', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 41, 'name': '##l', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 42, 'name': 'Dem', 'category': 'B-PER', 'alias': []
-    },
-    {'id': 43, 'name': '##erze', 'category': 'I-PER', 'alias': []
-    },
-    {'id': 44, 'name': '##l', 'category': 'I-PER', 'alias': []
+    {
+        "id": 15,
+        "name": "Hum",
+        "category": "PER",
+        "alias": []
     }
 ]
