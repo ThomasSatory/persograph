@@ -1,456 +1,67 @@
 [
     {
         "id": 0,
-        "name": "Hum",
+        "name": "Trantor",
         "category": "PER",
-        "alias": [
-            28,
-            48
-        ]
+        "alias": []
     },
     {
         "id": 1,
-        "name": "Se",
+        "name": "Hari Seldon",
         "category": "PER",
         "alias": [
-            19,
-            38,
-            40,
-            41,
-            44,
-            46,
-            49,
-            53
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Hari",
-        "category": "PER",
-        "alias": [
-            26,
-            29,
-            40
+            "Seldon",
+            "Hari"
         ]
     },
     {
         "id": 3,
-        "name": "Dor",
+        "name": "Dors",
         "category": "PER",
-        "alias": [
-            24,
-            42,
-            45
-        ]
+        "alias": []
     },
     {
         "id": 4,
-        "name": "Ve",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Lin",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Ho",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Maître",
+        "name": "Endor Levanian",
         "category": "PER",
         "alias": [
-            22
+            "Levanian"
         ]
     },
     {
         "id": 8,
-        "name": "Amar",
+        "name": "Chetter Hummin",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Hummin"
+        ]
     },
     {
         "id": 9,
-        "name": "Dahl",
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": [
-            11,
-            13
+            "Maître-du-Soleil",
+            "Maître-du- Soleil",
+            "Maître- du-Soleil"
         ]
     },
     {
-        "id": 10,
-        "name": "Bill",
+        "id": 11,
+        "name": "Mycogénien",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 11,
-        "name": "Da",
-        "category": "PER",
-        "alias": [
-            9,
-            13
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Kanldon",
-        "category": "PER",
-        "alias": [
-            20
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Dahlldon",
-        "category": "PER",
-        "alias": [
-            9,
-            11,
-            24
-        ]
-    },
-    {
         "id": 14,
-        "name": "Dem",
+        "name": "Grisnuage",
         "category": "PER",
         "alias": []
     },
     {
         "id": 15,
-        "name": "Ti",
+        "name": "Goutte-de-Pluie Quarante-trois",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 16,
-        "name": "Russ",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 17,
-        "name": "Em",
-        "category": "PER",
-        "alias": [
-            14
-        ]
-    },
-    {
-        "id": 18,
-        "name": "Tha",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 19,
-        "name": "SeLEldon",
-        "category": "PER",
-        "alias": [
-            1,
-            41,
-            46
-        ]
-    },
-    {
-        "id": 20,
-        "name": "Kan",
-        "category": "PER",
-        "alias": [
-            12
-        ]
-    },
-    {
-        "id": 21,
-        "name": "Rachel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 22,
-        "name": "Maire",
-        "category": "PER",
-        "alias": [
-            7,
-            23,
-            37
-        ]
-    },
-    {
-        "id": 23,
-        "name": "Maireutte",
-        "category": "PER",
-        "alias": [
-            22
-        ]
-    },
-    {
-        "id": 24,
-        "name": "Dorldon",
-        "category": "PER",
-        "alias": [
-            3,
-            13,
-            42,
-            45
-        ]
-    },
-    {
-        "id": 25,
-        "name": "Aurora",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 26,
-        "name": "Harin",
-        "category": "PER",
-        "alias": [
-            2,
-            29,
-            40
-        ]
-    },
-    {
-        "id": 27,
-        "name": "Ale",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 28,
-        "name": "Hums",
-        "category": "PER",
-        "alias": [
-            0,
-            48
-        ]
-    },
-    {
-        "id": 29,
-        "name": "Hariage",
-        "category": "PER",
-        "alias": [
-            2,
-            26,
-            40
-        ]
-    },
-    {
-        "id": 30,
-        "name": "Tra",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 31,
-        "name": "Ten",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 32,
-        "name": "Cl",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 33,
-        "name": "Le",
-        "category": "PER",
-        "alias": [
-            19,
-            27,
-            43,
-            44
-        ]
-    },
-    {
-        "id": 34,
-        "name": "Ben",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 35,
-        "name": "Jena",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 36,
-        "name": "St",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 37,
-        "name": "MAÎTRE",
-        "category": "PER",
-        "alias": [
-            22
-        ]
-    },
-    {
-        "id": 38,
-        "name": "SOSe",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 39,
-        "name": "QU",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 40,
-        "name": "Hari Seldon",
-        "category": "PER",
-        "alias": [
-            2,
-            26,
-            29
-        ]
-    },
-    {
-        "id": 41,
-        "name": "Seldon",
-        "category": "PER",
-        "alias": [
-            1,
-            19,
-            40,
-            46,
-            53
-        ]
-    },
-    {
-        "id": 42,
-        "name": "Dorsldone",
-        "category": "PER",
-        "alias": [
-            3,
-            24,
-            45
-        ]
-    },
-    {
-        "id": 43,
-        "name": "Levanian",
-        "category": "PER",
-        "alias": [
-            33,
-            44
-        ]
-    },
-    {
-        "id": 44,
-        "name": "LevanianSe",
-        "category": "PER",
-        "alias": [
-            43
-        ]
-    },
-    {
-        "id": 45,
-        "name": "Dors",
-        "category": "PER",
-        "alias": [
-            3,
-            24,
-            42
-        ]
-    },
-    {
-        "id": 46,
-        "name": "Seldo",
-        "category": "PER",
-        "alias": [
-            1,
-            19,
-            40,
-            41
-        ]
-    },
-    {
-        "id": 47,
-        "name": "Chetter",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 48,
-        "name": "Hummin",
-        "category": "PER",
-        "alias": [
-            0,
-            28
-        ]
-    },
-    {
-        "id": 49,
-        "name": "SeGoutt",
-        "category": "PER",
-        "alias": [
-            1,
-            55
-        ]
-    },
-    {
-        "id": 50,
-        "name": "Lugubreage",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 51,
-        "name": "Grisnu",
-        "category": "PER",
-        "alias": [
-            52
-        ]
-    },
-    {
-        "id": 52,
-        "name": "Grisnuage",
-        "category": "PER",
-        "alias": [
-            51
-        ]
-    },
-    {
-        "id": 53,
-        "name": "Senn",
-        "category": "PER",
-        "alias": [
-            1,
-            41
-        ]
-    },
-    {
-        "id": 54,
-        "name": "Go",
-        "category": "PER",
-        "alias": [
-            49,
-            55
-        ]
-    },
-    {
-        "id": 55,
-        "name": "Goutte",
-        "category": "PER",
-        "alias": [
-            49,
-            54
-        ]
     }
 ]

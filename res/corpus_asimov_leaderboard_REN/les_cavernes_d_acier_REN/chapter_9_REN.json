@@ -1,45 +1,27 @@
 [
     {
         "id": 0,
-        "name": "Baley",
-        "category": "PER",
-        "alias": [
-            2
-        ]
-    },
-    {
-        "id": 1,
-        "name": "Fastolfe",
-        "category": "PER",
-        "alias": [
-            3
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            0
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Fastol",
-        "category": "PER",
-        "alias": [
-            1
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Ter",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 5,
-        "name": "Daneel",
+        "id": 1,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": [
+            "Fastolfe"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Lije",
         "category": "PER",
         "alias": []
     }

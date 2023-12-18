@@ -3,76 +3,28 @@
         "id": 0,
         "name": "Elijah Baley",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Baley"
+        ]
     },
     {
         "id": 1,
-        "name": "Jessie",
+        "name": "R. Daneel Olivaw",
         "category": "PER",
-        "alias": [
-            4
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Daneel Olivaw",
-        "category": "PER",
-        "alias": [
-            8
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Baley",
+        "name": "Jessie",
         "category": "PER",
-        "alias": [
-            0,
-            4,
-            9
-        ]
+        "alias": []
     },
     {
         "id": 4,
-        "name": "Jessie Chut Baley",
+        "name": "Julius Enderby",
         "category": "PER",
         "alias": [
-            1
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Lije",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Bentley",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": [
-            2
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            0,
-            3,
-            4
+            "Enderby"
         ]
     }
 ]

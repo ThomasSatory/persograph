@@ -13,100 +13,49 @@
     },
     {
         "id": 2,
-        "name": "Baley",
+        "name": "Ben",
         "category": "PER",
-        "alias": [
-            3,
-            5,
-            6
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Daneel Baley",
+        "name": "Baley",
         "category": "PER",
-        "alias": [
-            4
-        ]
+        "alias": []
     },
     {
         "id": 4,
-        "name": "Daneel",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            3
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Elijah Baley",
-        "category": "PER",
-        "alias": [
-            9
+            "Daneel"
         ]
     },
     {
         "id": 6,
-        "name": "Bale",
+        "name": "Dr Sarton",
         "category": "PER",
-        "alias": [
-            2,
-            3,
-            5
-        ]
+        "alias": []
     },
     {
         "id": 7,
-        "name": "Sarton",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Dr",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 9,
         "name": "Elijah",
         "category": "PER",
-        "alias": [
-            5
-        ]
+        "alias": []
     },
     {
         "id": 10,
         "name": "Julius Enderby",
         "category": "PER",
         "alias": [
-            12
+            "Julius",
+            "Enderby"
         ]
     },
     {
         "id": 11,
-        "name": "Enderb",
+        "name": "Lije",
         "category": "PER",
-        "alias": [
-            10,
-            13
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Julius",
-        "category": "PER",
-        "alias": [
-            10
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": [
-            10,
-            11
-        ]
+        "alias": []
     }
 ]

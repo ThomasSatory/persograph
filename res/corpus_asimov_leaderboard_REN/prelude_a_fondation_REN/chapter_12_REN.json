@@ -1,156 +1,73 @@
 [
     {
         "id": 0,
-        "name": "Bale",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 1,
-        "name": "Ter",
+        "name": "Hari Seldon",
         "category": "PER",
         "alias": [
-            18
+            "Seldon",
+            "Hari"
         ]
     },
     {
         "id": 2,
-        "name": "Ent",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 3,
-        "name": "Em",
+        "name": "Dors Venabili",
         "category": "PER",
         "alias": [
-            4,
-            17
+            "Dors",
+            "Venabili"
         ]
     },
     {
         "id": 4,
-        "name": "Dem",
-        "category": "PER",
-        "alias": [
-            17
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Tra",
+        "name": "Mycélium Soixante-douze",
         "category": "PER",
         "alias": []
     },
     {
         "id": 6,
-        "name": "Hum",
+        "name": "Hummin",
         "category": "PER",
-        "alias": [
-            13
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Dor",
-        "category": "PER",
-        "alias": [
-            12,
-            15
-        ]
+        "alias": []
     },
     {
         "id": 8,
-        "name": "Se",
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": [
-            11
+            "Maître-du-Soleil"
         ]
     },
     {
         "id": 9,
-        "name": "Hari",
+        "name": "Mycogénien",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Mycogène"
+        ]
     },
     {
         "id": 10,
-        "name": "Go",
+        "name": "Bande-céleste Deux",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 11,
-        "name": "Seldon",
-        "category": "PER",
-        "alias": [
-            8
-        ]
-    },
-    {
         "id": 12,
-        "name": "Dors Venabili",
+        "name": "Grand Ancien",
         "category": "PER",
         "alias": [
-            7,
-            15,
-            16
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Hummin",
-        "category": "PER",
-        "alias": [
-            6
+            "Ancien"
         ]
     },
     {
         "id": 14,
-        "name": "Antennin",
+        "name": "Empereur",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 15,
-        "name": "Dors",
-        "category": "PER",
-        "alias": [
-            7,
-            12
-        ]
     },
     {
         "id": 16,
-        "name": "Venabili",
-        "category": "PER",
-        "alias": [
-            12
-        ]
-    },
-    {
-        "id": 17,
         "name": "Demerzel",
-        "category": "PER",
-        "alias": [
-            4
-        ]
-    },
-    {
-        "id": 18,
-        "name": "Chetter",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 19,
-        "name": "Renégat",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 20,
-        "name": "My",
         "category": "PER",
         "alias": []
     }

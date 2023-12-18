@@ -13,9 +13,9 @@ path_caverne_REN = "../res/corpus_asimov_leaderboard_REN/les_cavernes_d_acier_RE
 path_prelude_REN = "../res/corpus_asimov_leaderboard_REN/prelude_a_fondation_REN"
 
 def extract_REN(text):
-    tokenizer = AutoTokenizer.from_pretrained("Davlan/distilbert-base-multilingual-cased-ner-hrl")
-    model = AutoModelForTokenClassification.from_pretrained("Davlan/distilbert-base-multilingual-cased-ner-hrl")
-    nlp = pipeline("ner", model=model, tokenizer=tokenizer)
+    tokenizer = AutoTokenizer.from_pretrained("Jean-Baptiste/camembert-ner")
+    model = AutoModelForTokenClassification.from_pretrained("Jean-Baptiste/camembert-ner")
+    nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
     ner_results = nlp(text)
     return (ner_results)
 
@@ -26,36 +26,12 @@ def extract_REN(text):
 #   "category" : "PER",
 #   "alias" : ["John","Doe","Johnny"]   
 # }
-def format_ner_results(ner_results):
+def format_ner_results(data):
     concatenated_data = []
-    for result in ner_results:
-        if result['entity'] == 'B-PER' or result['entity'] == 'I-PER':
-            for result2 in ner_results:
-                if result2['entity'] == 'I-PER':
-                    if result['end'] == result2['start'] and result['word'] != result2['word'] and result2['entity'] == 'I-PER' and result['index']+1  == result2['index'] and result['index']+1  == result2['index']:
-                        if ('##' in result2['word'] and len(result2['word'].split()) < 2):
-                            result['word'] = result['word'] + result2['word'][2:]
-                        elif (len(result2['word'].split()) < 2):
-                            result['word'] = result['word'] + result2['word']
-                        result['end'] = result2['end']
-                        result['index'] = result2['index']
-                        result['entity'] = 'PER'
-                        result2['entity'] = 'O'
-                        # si start est dans la fourchette end et end +2
-                    elif (result['end'] < result2['start'] and result['end']  >= result2['start'] - 1 and result['word'] != result2['word'] and result2['entity'] == 'I-PER' and result['index']+1  == result2['index']):
-                        #si le mot fait plus de 2 mots on ajoute pas le mot
-                        if ('##' in result2['word'] and len(result2['word'].split()) < 2):
-                            result['word'] = result['word'] + result2['word'][2:]
-                        elif (len(result2['word'].split()) < 2):
-                            result['word'] = result['word'] + " " + result2['word']
-                        result['end'] = result2['end']
-                        result['index'] = result2['index']
-                        result['entity'] = 'PER'
-                        result2['entity'] = 'O'
-            if (result['word'] not in concatenated_data and result['word'][0] != '#' 
-                and (result['entity'] == 'PER' or result['entity'] == 'B-PER' 
-                or result['entity'] == 'I-PER') and len(result['word']) >= 2 and len (result['word'].split()) < 3):
-                concatenated_data.append(result['word'])
+    #print (data)
+    for i in data:
+        if i['entity_group'] == 'PER' and i['score'] > 0.9 and i['word'] not in concatenated_data and len(i['word'])>2:
+            concatenated_data.append(i['word'])
     formatted_ner_results = []
     id = 0
     for word in concatenated_data:
@@ -74,17 +50,57 @@ def alias_creation(data):
         for result2 in data:
             name1 = result['name'].lower()
             name2 = result2['name'].lower()
-            if (jaro_winkler_metric(name1, name2) >= 0.8 and name1 != name2):
+            if ((jaro_winkler_metric(name1, name2) >= 0.8 or (name1 in name2 or name2 in name1))
+                and name1 != name2
+                and result2['id'] != result['id']
+                and (not name1.startswith('dr') or not name2.startswith('dr')) 
+                and len(name1)>2 and len(name2)>2 
+                and (not name1.endswith('cinq') or not name2.endswith('trois'))
+                and (not name1.endswith('trois') or not name2.endswith('cinq'))
+                ):
                 result['alias'].append(result2['id'])
-            #si le mot contient un bigramme ou un trigramme du mot actuel
-            elif (name1 in name2 and name1 != name2):
-                result['alias'].append(result2['id'])
+    data = delete_duplicates(data)
+    show_result(data)
     return(data)
+
+def is_shorter_named_entity(entity):
+    entity_name_length = len(entity['name'])
+    alias_lengths = [len(name) for name in entity['alias']]
+    if not alias_lengths:
+        return False
+    if entity_name_length == max(alias_lengths):
+        return True
+    return entity_name_length < max(alias_lengths)
+
+#on parcourt la liste des entités et on prend l'entitée nommée la plus grande 
+#et on supprime les alias associés et à la place de sauvegarder des id non 
+#sauvegarde les noms
+def delete_duplicates(entities):
+    data_cleaned = []
+
+    #Parcourir la liste des entités pour mettre le nom des entitées à la place de leur id
+    for entity in entities:
+        if len(entity['alias']) > 0:
+            string_aliases = []
+            for alias_id in entity['alias']:
+                alias_name = entities[alias_id]['name']
+                string_aliases.append(alias_name)
+            entity['alias'] = string_aliases
+
+    entities = [entity for entity in entities if not is_shorter_named_entity(entity)]
+    return (entities)
+
+#méthode affichant les résultats avec pour chaque mot la liste de mot alias associés
+def show_result(data):
+    for result in data:
+        print(result['name'])
+        if (len(result['alias']) > 0):
+            print(result['alias'])
 
 
 def split_text_by_tokens(text, token_limit=500):
     # Séparation du texte en tokens (mots)
-    tokens = re.findall(r'\b\w+\b', text)
+    tokens = text.split(' ')
     
     # Initialisation des sous-textes
     token_chunks = []
@@ -119,14 +135,14 @@ def main():
             print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
             return
 
-        #découper text en blocs de 500 mots
         ner_results = []
+        #découper text en blocs de 500 mots
         chunks = split_text_by_tokens(text, 500)
         for i, chunk in enumerate(chunks, start=1):
             ner_results += (extract_REN(chunk))
-        print (ner_results)
+        #print (ner_results)
         formatted_ner_results = format_ner_results(ner_results)
-        print(formatted_ner_results)
+        #print(formatted_ner_results)
 
         #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
         with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
@@ -134,7 +150,7 @@ def main():
 
         print(f"Traitement terminé pour {file_path}.")
 
-    
+
     # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
     for file in os.listdir(path_prelude_normalized):
         file_path = os.path.join(path_prelude_normalized, file)  # Chemin complet du fichier
@@ -148,6 +164,7 @@ def main():
             print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
             return
 
+        ner_results = []
         #découper text en blocs de 500 mots
         chunks = split_text_by_tokens(text, 500)
         for i, chunk in enumerate(chunks, start=1):

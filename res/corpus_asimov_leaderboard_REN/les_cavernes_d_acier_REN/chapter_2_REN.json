@@ -1,50 +1,28 @@
 [
     {
-        "id": 0,
-        "name": "Baley",
-        "category": "PER",
-        "alias": [
-            1
-        ]
-    },
-    {
         "id": 1,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            0
-        ]
-    },
-    {
-        "id": 2,
         "name": "Julius Enderby",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Enderby"
+        ]
     },
     {
         "id": 3,
-        "name": "Ter",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 4,
-        "name": "Ende",
+        "name": "R. Daneel Olivaw",
         "category": "PER",
         "alias": [
-            2
+            "Olivaw",
+            "R. Daneel",
+            "Daneel"
         ]
     },
     {
         "id": 5,
-        "name": "Daneel",
+        "name": "Elijah Baley",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Baley"
+        ]
     }
 ]

@@ -1,119 +1,69 @@
 [
     {
         "id": 0,
-        "name": "Sammy Ga",
+        "name": "R. Sammy",
         "category": "PER",
-        "alias": [
-            3
-        ]
+        "alias": []
     },
     {
         "id": 1,
-        "name": "Li",
+        "name": "Lije",
         "category": "PER",
-        "alias": [
-            4,
-            7,
-            9
-        ]
+        "alias": []
     },
     {
         "id": 2,
         "name": "Baley",
         "category": "PER",
-        "alias": [
-            5,
-            12
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Sammy C",
-        "category": "PER",
-        "alias": [
-            0
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Lije",
-        "category": "PER",
-        "alias": [
-            1
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            2,
-            12
-        ]
-    },
-    {
-        "id": 6,
         "name": "Enderby",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 7,
+        "id": 4,
         "name": "Julius",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 8,
-        "name": "Gerrigel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 9,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 10,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
+        "id": 6,
         "name": "Francis Clousarr",
         "category": "PER",
         "alias": []
     },
     {
+        "id": 7,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Paul Gerhard",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
         "id": 12,
-        "name": "Paul Gerhard Baley",
+        "name": "Chester",
         "category": "PER",
         "alias": []
     },
     {
         "id": 13,
-        "name": "Dr",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 14,
         "name": "Heisenberg",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 15,
-        "name": "Frankenstein",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 16,
-        "name": "Terrien",
         "category": "PER",
         "alias": []
     }

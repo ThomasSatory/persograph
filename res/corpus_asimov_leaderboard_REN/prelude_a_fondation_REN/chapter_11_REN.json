@@ -1,132 +1,72 @@
 [
     {
-        "id": 0,
-        "name": "Bale",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 1,
-        "name": "Ter",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 2,
-        "name": "Ent",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 3,
-        "name": "Em",
+        "name": "Goutte-de-Pluie Quarante-trois",
         "category": "PER",
         "alias": [
-            4
+            "Goutte-de-Pluie"
         ]
-    },
-    {
-        "id": 4,
-        "name": "Dem",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 5,
-        "name": "Tra",
+        "name": "Goutte-de-Pluie Quarante- cinq",
         "category": "PER",
         "alias": [
-            6,
-            8
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Tras",
-        "category": "PER",
-        "alias": [
-            5,
-            8
+            "Goutte-de-Pluie",
+            "Goutte-de-Pluie Quarante-cinq"
         ]
     },
     {
         "id": 7,
-        "name": "Hum",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Tranto",
+        "name": "Hari Seldon",
         "category": "PER",
         "alias": [
-            5,
-            6
+            "Seldon",
+            "Hari"
         ]
     },
     {
         "id": 9,
-        "name": "Goutte",
+        "name": "Dors Venabili",
         "category": "PER",
         "alias": [
-            15,
-            16
+            "Dors"
         ]
     },
     {
         "id": 10,
-        "name": "Seldon",
+        "name": "Mycogénien",
         "category": "PER",
         "alias": [
-            13
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Dors",
-        "category": "PER",
-        "alias": [
-            12
+            "Mycogène"
         ]
     },
     {
         "id": 12,
-        "name": "Dor",
+        "name": "Mycélium Soixante-douze",
         "category": "PER",
         "alias": [
-            11
+            "Mycélium"
         ]
     },
     {
         "id": 13,
-        "name": "Se",
-        "category": "PER",
-        "alias": [
-            10
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Hari",
+        "name": "Bande-céleste Deux",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 15,
-        "name": "Goutt",
+        "id": 14,
+        "name": "Grand Ancien",
         "category": "PER",
         "alias": [
-            9,
-            16
+            "Ancien"
         ]
     },
     {
         "id": 16,
-        "name": "Go",
+        "name": "Hummin",
         "category": "PER",
-        "alias": [
-            9,
-            15
-        ]
+        "alias": []
     }
 ]

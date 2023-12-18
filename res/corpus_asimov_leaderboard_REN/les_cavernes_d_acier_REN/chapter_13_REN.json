@@ -1,93 +1,57 @@
 [
     {
-        "id": 0,
-        "name": "Gerrigel",
+        "id": 1,
+        "name": "Baley",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 1,
-        "name": "Baley",
-        "category": "PER",
-        "alias": [
-            2,
-            10,
-            13
-        ]
-    },
-    {
         "id": 2,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            1,
-            10,
-            13
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": [
-            16
-        ]
-    },
-    {
-        "id": 4,
         "name": "Norris",
         "category": "PER",
         "alias": []
     },
     {
+        "id": 3,
+        "name": "Barrett",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Phil",
+        "category": "PER",
+        "alias": []
+    },
+    {
         "id": 5,
-        "name": "Allons",
+        "name": "Lije",
         "category": "PER",
         "alias": []
     },
     {
         "id": 6,
-        "name": "Li",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            7,
-            10,
-            12
+            "Daneel"
         ]
     },
     {
         "id": 7,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": [
-            10
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": [
-            12
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Sarton",
+        "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 10,
-        "name": "Elijah Baley",
+        "id": 8,
+        "name": "Elijah",
         "category": "PER",
-        "alias": [
-            7
-        ]
+        "alias": []
     },
     {
         "id": 11,
-        "name": "Fastolfe",
+        "name": "Dr Sarton",
         "category": "PER",
         "alias": []
     },
@@ -95,42 +59,16 @@
         "id": 12,
         "name": "Julius Enderby",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Enderby"
+        ]
     },
     {
         "id": 13,
-        "name": "Jessie Baley",
+        "name": "Dr Gerrigel",
         "category": "PER",
         "alias": [
-            14
+            "Gerrigel"
         ]
-    },
-    {
-        "id": 14,
-        "name": "Jessie",
-        "category": "PER",
-        "alias": [
-            13
-        ]
-    },
-    {
-        "id": 15,
-        "name": "Ter",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 16,
-        "name": "Dane",
-        "category": "PER",
-        "alias": [
-            3
-        ]
-    },
-    {
-        "id": 17,
-        "name": "Bentley",
-        "category": "PER",
-        "alias": []
     }
 ]

@@ -3,130 +3,58 @@
         "id": 0,
         "name": "Jessie",
         "category": "PER",
-        "alias": [
-            1
-        ]
+        "alias": []
     },
     {
         "id": 1,
-        "name": "Jessica",
-        "category": "PER",
-        "alias": [
-            0
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            4,
-            5
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Elie",
+        "name": "Jézabel",
         "category": "PER",
         "alias": []
     },
     {
         "id": 4,
-        "name": "Baley",
+        "name": "Ahab",
         "category": "PER",
-        "alias": [
-            2,
-            5
-        ]
+        "alias": []
     },
     {
         "id": 5,
-        "name": "Lije Baley",
-        "category": "PER",
-        "alias": [
-            16
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Jo",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Ah",
-        "category": "PER",
-        "alias": [
-            10
-        ]
-    },
-    {
-        "id": 8,
         "name": "Jéhoram",
         "category": "PER",
         "alias": [
-            9
+            "Jéhu"
         ]
     },
     {
-        "id": 9,
-        "name": "Jéhu",
-        "category": "PER",
-        "alias": [
-            8
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Ahab",
-        "category": "PER",
-        "alias": [
-            7
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Na",
+        "id": 7,
+        "name": "Naboth",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
-        "name": "Bentley",
+        "id": 9,
+        "name": "Bentley Baley",
         "category": "PER",
         "alias": [
-            16
+            "Baley",
+            "Bentley",
+            "Ben"
         ]
     },
     {
         "id": 13,
-        "name": "Daneel Oliva",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            15
+            "Daneel"
         ]
-    },
-    {
-        "id": 14,
-        "name": "Olivaw",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 15,
-        "name": "Daneel",
+        "name": "M. Olivaw",
         "category": "PER",
         "alias": [
-            13
-        ]
-    },
-    {
-        "id": 16,
-        "name": "Lije Bentley",
-        "category": "PER",
-        "alias": [
-            5
+            "Olivaw"
         ]
     }
 ]

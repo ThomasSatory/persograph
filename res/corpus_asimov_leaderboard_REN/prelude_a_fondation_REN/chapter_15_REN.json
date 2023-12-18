@@ -1,270 +1,68 @@
 [
     {
         "id": 0,
-        "name": "Bale",
+        "name": "Davan",
         "category": "PER",
         "alias": []
     },
     {
         "id": 1,
-        "name": "Ter",
+        "name": "Hari Seldon",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Seldon"
+        ]
     },
     {
         "id": 2,
-        "name": "Ent",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 3,
-        "name": "Em",
+        "name": "Dors Venabili",
         "category": "PER",
         "alias": [
-            4
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Dem",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Tra",
-        "category": "PER",
-        "alias": [
-            34
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Hum",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Dor",
-        "category": "PER",
-        "alias": [
-            23,
-            27
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Se",
-        "category": "PER",
-        "alias": [
-            21,
-            22
+            "Dors"
         ]
     },
     {
         "id": 9,
-        "name": "Hari",
-        "category": "PER",
-        "alias": [
-            21
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Go",
+        "name": "Exos",
         "category": "PER",
         "alias": []
     },
     {
         "id": 11,
-        "name": "My",
+        "name": "Marlo Tanto",
         "category": "PER",
         "alias": []
     },
     {
         "id": 12,
-        "name": "Dahl",
-        "category": "PER",
-        "alias": [
-            32
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Dieu",
+        "name": "Raych",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 14,
-        "name": "Ti",
+        "id": 13,
+        "name": "Yugo Amaryl",
         "category": "PER",
         "alias": [
-            24
+            "Amaryl"
         ]
     },
     {
         "id": 15,
-        "name": "Ho",
+        "name": "Dahl",
         "category": "PER",
-        "alias": [
-            29
-        ]
+        "alias": []
     },
     {
         "id": 16,
-        "name": "Maître",
+        "name": "Empereur",
         "category": "PER",
         "alias": []
     },
     {
         "id": 17,
-        "name": "Ca",
+        "name": "Demerzel",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 18,
-        "name": "Amar",
-        "category": "PER",
-        "alias": [
-            33
-        ]
-    },
-    {
-        "id": 19,
-        "name": "Bill",
-        "category": "PER",
-        "alias": [
-            26
-        ]
-    },
-    {
-        "id": 20,
-        "name": "Davan",
-        "category": "PER",
-        "alias": [
-            32
-        ]
-    },
-    {
-        "id": 21,
-        "name": "Hari Seldon",
-        "category": "PER",
-        "alias": [
-            9
-        ]
-    },
-    {
-        "id": 22,
-        "name": "Seldon",
-        "category": "PER",
-        "alias": [
-            8,
-            21
-        ]
-    },
-    {
-        "id": 23,
-        "name": "Dors Venabili",
-        "category": "PER",
-        "alias": [
-            7,
-            25,
-            27
-        ]
-    },
-    {
-        "id": 24,
-        "name": "Tisalver",
-        "category": "PER",
-        "alias": [
-            14
-        ]
-    },
-    {
-        "id": 25,
-        "name": "Venabili",
-        "category": "PER",
-        "alias": [
-            23,
-            28
-        ]
-    },
-    {
-        "id": 26,
-        "name": "Billibotton",
-        "category": "PER",
-        "alias": [
-            19
-        ]
-    },
-    {
-        "id": 27,
-        "name": "Dors",
-        "category": "PER",
-        "alias": [
-            7,
-            23
-        ]
-    },
-    {
-        "id": 28,
-        "name": "Ve",
-        "category": "PER",
-        "alias": [
-            23,
-            24,
-            25
-        ]
-    },
-    {
-        "id": 29,
-        "name": "Don Quichotte",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 30,
-        "name": "Ray",
-        "category": "PER",
-        "alias": [
-            31
-        ]
-    },
-    {
-        "id": 31,
-        "name": "Raych",
-        "category": "PER",
-        "alias": [
-            30
-        ]
-    },
-    {
-        "id": 32,
-        "name": "Da",
-        "category": "PER",
-        "alias": [
-            12,
-            20
-        ]
-    },
-    {
-        "id": 33,
-        "name": "Amaryl",
-        "category": "PER",
-        "alias": [
-            18
-        ]
-    },
-    {
-        "id": 34,
-        "name": "Trantor",
-        "category": "PER",
-        "alias": [
-            5
-        ]
     }
 ]

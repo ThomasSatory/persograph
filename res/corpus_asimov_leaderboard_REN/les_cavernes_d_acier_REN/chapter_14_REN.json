@@ -3,9 +3,7 @@
         "id": 0,
         "name": "Baley",
         "category": "PER",
-        "alias": [
-            4
-        ]
+        "alias": []
     },
     {
         "id": 1,
@@ -15,101 +13,61 @@
     },
     {
         "id": 2,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 3,
-        "name": "Li",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            6,
-            7,
-            9,
-            14
+            "Daneel",
+            "R. Dan"
         ]
     },
     {
         "id": 4,
-        "name": "Bale",
+        "name": "Lije",
         "category": "PER",
-        "alias": [
-            0
-        ]
+        "alias": []
     },
     {
         "id": 5,
-        "name": "All",
+        "name": "Lizzy",
         "category": "PER",
         "alias": []
     },
     {
         "id": 6,
-        "name": "Lije",
-        "category": "PER",
-        "alias": [
-            3
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Lizzy",
-        "category": "PER",
-        "alias": [
-            3
-        ]
-    },
-    {
-        "id": 8,
         "name": "Jane Myers",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 9,
+        "id": 7,
         "name": "Elisabeth",
         "category": "PER",
         "alias": [
-            14
+            "Elijah"
         ]
     },
     {
-        "id": 10,
+        "id": 8,
         "name": "Bentley",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 11,
+        "id": 9,
         "name": "Joseph Klemin",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 12,
-        "name": "Klemin",
-        "category": "PER",
         "alias": [
-            11
+            "Klemin"
         ]
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "Jésus",
         "category": "PER",
         "alias": []
     },
     {
         "id": 14,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": [
-            9
-        ]
-    },
-    {
-        "id": 15,
         "name": "Francis Clousarr",
         "category": "PER",
         "alias": []

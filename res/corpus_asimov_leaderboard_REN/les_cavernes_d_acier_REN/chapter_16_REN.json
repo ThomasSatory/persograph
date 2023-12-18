@@ -1,53 +1,39 @@
 [
     {
         "id": 0,
-        "name": "Daneel",
+        "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            12
+            "Daneel"
         ]
     },
     {
         "id": 1,
-        "name": "Clousarr",
+        "name": "Francis",
         "category": "PER",
         "alias": []
     },
     {
         "id": 2,
-        "name": "Baley",
+        "name": "Clousarr",
         "category": "PER",
-        "alias": [
-            4,
-            8,
-            12
-        ]
+        "alias": []
     },
     {
         "id": 3,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
         "name": "Fastolfe",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 4,
-        "name": "Elijah Baley",
-        "category": "PER",
-        "alias": [
-            5
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": [
-            4
-        ]
-    },
-    {
         "id": 6,
-        "name": "Gerrigel",
+        "name": "Elijah",
         "category": "PER",
         "alias": []
     },
@@ -59,38 +45,32 @@
     },
     {
         "id": 8,
-        "name": "Bale",
+        "name": "Gerrigel",
         "category": "PER",
-        "alias": [
-            2,
-            4,
-            12
-        ]
+        "alias": []
     },
     {
         "id": 9,
-        "name": "Bi",
+        "name": "Julius",
         "category": "PER",
         "alias": []
     },
     {
         "id": 10,
-        "name": "Vince Barrett",
+        "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
     {
         "id": 11,
-        "name": "Sammy",
+        "name": "Vince Barrett",
         "category": "PER",
         "alias": []
     },
     {
         "id": 12,
-        "name": "Daneel Baley",
+        "name": "Jessie",
         "category": "PER",
-        "alias": [
-            0
-        ]
+        "alias": []
     }
 ]

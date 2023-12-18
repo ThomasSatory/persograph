@@ -1,13 +1,5 @@
 [
     {
-        "id": 0,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": [
-            9
-        ]
-    },
-    {
         "id": 1,
         "name": "Enderby",
         "category": "PER",
@@ -15,29 +7,19 @@
     },
     {
         "id": 2,
-        "name": "Baley",
+        "name": "Lije",
         "category": "PER",
-        "alias": [
-            4
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Sammy",
+        "name": "Baley",
         "category": "PER",
         "alias": []
     },
     {
         "id": 4,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            2
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Poussant",
+        "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
@@ -49,22 +31,33 @@
     },
     {
         "id": 7,
-        "name": "Fastolfe",
+        "name": "Dr Han Fastolfe",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Sarton",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Fastolfe"
+        ]
     },
     {
         "id": 9,
-        "name": "Daneel Oliva",
+        "name": "Dr Sarton",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Dr Fastolfe",
         "category": "PER",
         "alias": [
-            0
+            "Fastolfe"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "R. Daneel Olivaw",
+        "category": "PER",
+        "alias": [
+            "Daneel",
+            "R. Daneel"
         ]
     }
 ]

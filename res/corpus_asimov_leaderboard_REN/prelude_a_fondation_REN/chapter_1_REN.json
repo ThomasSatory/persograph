@@ -1,118 +1,49 @@
 [
     {
         "id": 0,
-        "name": "Bale",
+        "name": "Hari Seldon",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 1,
-        "name": "Ter",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Seldon"
+        ]
     },
     {
         "id": 2,
-        "name": "Ent",
+        "name": "Cléon",
         "category": "PER",
         "alias": []
     },
     {
         "id": 3,
-        "name": "Hari Seldon",
+        "name": "Eto Demerzel",
         "category": "PER",
         "alias": [
-            8
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Seldon",
-        "category": "PER",
-        "alias": [
-            3,
-            8
+            "Demerzel"
         ]
     },
     {
         "id": 5,
-        "name": "Cléon",
-        "category": "PER",
-        "alias": [
-            8
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Eto Demerzel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Demerzel",
-        "category": "PER",
-        "alias": [
-            6,
-            13
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Hari Seldon Cléon",
-        "category": "PER",
-        "alias": [
-            3
-        ]
-    },
-    {
-        "id": 9,
         "name": "Sire",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 10,
-        "name": "Alban Wellis",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
+        "id": 7,
         "name": "Wellis",
         "category": "PER",
-        "alias": [
-            10
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Em",
-        "category": "PER",
-        "alias": [
-            6,
-            7,
-            13
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Dem",
-        "category": "PER",
-        "alias": [
-            6,
-            7
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Tra",
-        "category": "PER",
         "alias": []
     },
     {
-        "id": 15,
-        "name": "Hum",
+        "id": 8,
+        "name": "L’Empereur",
+        "category": "PER",
+        "alias": [
+            "Empereur"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Hummin",
         "category": "PER",
         "alias": []
     }

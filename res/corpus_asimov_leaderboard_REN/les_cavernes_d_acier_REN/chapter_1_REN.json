@@ -7,7 +7,7 @@
     },
     {
         "id": 1,
-        "name": "Sammy",
+        "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
@@ -15,83 +15,32 @@
         "id": 2,
         "name": "Vince Barrett",
         "category": "PER",
-        "alias": [
-            3
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Vince",
+        "name": "Baley",
         "category": "PER",
-        "alias": [
-            2
-        ]
+        "alias": []
     },
     {
         "id": 4,
-        "name": "Baley",
+        "name": "JULIUS ENDERBY",
         "category": "PER",
         "alias": [
-            11
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": [
-            6
+            "Enderby",
+            "Julius"
         ]
     },
     {
         "id": 6,
-        "name": "Ende",
-        "category": "PER",
-        "alias": [
-            5
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Julius",
+        "name": "Lije",
         "category": "PER",
         "alias": []
     },
     {
         "id": 8,
-        "name": "Aus",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 9,
-        "name": "Nem",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 10,
-        "name": "Jessie",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
-        "name": "Bale",
-        "category": "PER",
-        "alias": [
-            4
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Pierre Jacques",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 13,
-        "name": "Paul",
+        "name": "Robot Daneel Olivaw",
         "category": "PER",
         "alias": []
     }

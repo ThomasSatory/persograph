@@ -1,11 +1,5 @@
 [
     {
-        "id": 0,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 1,
         "name": "Clousarr",
         "category": "PER",
@@ -15,87 +9,73 @@
         "id": 2,
         "name": "Baley",
         "category": "PER",
-        "alias": [
-            6
-        ]
+        "alias": []
     },
     {
         "id": 3,
-        "name": "Li",
+        "name": "Lije",
         "category": "PER",
-        "alias": [
-            13
-        ]
+        "alias": []
     },
     {
         "id": 4,
-        "name": "Sammy",
+        "name": "R. Sammy",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Sammy"
+        ]
     },
     {
         "id": 5,
-        "name": "Sarton",
+        "name": "Dr Sarton",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Sarton"
+        ]
     },
     {
         "id": 6,
-        "name": "Bale",
+        "name": "Julius Enderby",
         "category": "PER",
         "alias": [
-            2
+            "Enderby"
         ]
-    },
-    {
-        "id": 7,
-        "name": "Spa",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 8,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": [
-            11
-        ]
-    },
-    {
-        "id": 9,
         "name": "Jessie",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 10,
-        "name": "Gerrigel",
+        "id": 9,
+        "name": "Dr Gerrigel",
         "category": "PER",
         "alias": []
     },
     {
         "id": 11,
-        "name": "Dane",
-        "category": "PER",
-        "alias": [
-            8
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Dr",
+        "name": "Bentley",
         "category": "PER",
         "alias": []
     },
     {
         "id": 13,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
+        "id": 14,
         "name": "Elijah",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 14,
-        "name": "Fastolfe",
+        "id": 15,
+        "name": "Dr Fastolfe",
         "category": "PER",
         "alias": []
     }
