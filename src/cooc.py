@@ -72,7 +72,7 @@ class Cooc:
         * `FileNotFoundError` - retourne un `FileNotFoundError` si le fichier 
         """
         with open(path, 'r') as file:
-            content = file.read().split()
+            content = file.read().lower().split()
             return content
 
     def find(self) -> None:
@@ -139,7 +139,13 @@ class Cooc:
                     f_entity = s_entity
                     s_entity = None
 
-        print(pairs)
+        # trouve le nom des pairs
+        for pair in pairs:
+            f_entity: NamedEntity = self.get_named_entity_from_id(pair[0], 0).entity
+            s_entity: NamedEntity = self.get_named_entity_from_id(pair[1], 0).entity
+
+            print("{} & {}: {}".format(f_entity["name"], s_entity["name"], pairs[(pair[0], pair[1])]))
+
 
     def is_named_entity(self, token: str) -> bool:
         """
