@@ -1,0 +1,421 @@
+[
+    {
+        "id": 0,
+        "name": "simpson",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "r. sammy",
+        "alias": [
+            "sammy"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "vince barrett",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "julius enderby",
+        "alias": [
+            "enderby",
+            "julius"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "lije",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "r. daneel",
+        "alias": [
+            "mannix iv",
+            "r. daneel",
+            "r. daneel olivaw",
+            "r. dan",
+            "daneel olivaw",
+            "m. olivaw",
+            "dahl",
+            "daneel",
+            "robot daneel olivaw",
+            "olivaw",
+            "maître robot",
+            "mannix"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "dr sarton",
+        "alias": [
+            "sarton"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "dr fastolfe",
+        "alias": [
+            "lindor",
+            "fastolfe",
+            "dr han fastolfe",
+            "hano lindor"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "francis clousarr",
+        "alias": [
+            "clousarr"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "paul gerhard",
+        "alias": []
+    },
+    {
+        "id": 14,
+        "name": "chester",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "heisenberg",
+        "alias": []
+    },
+    {
+        "id": 16,
+        "name": "norris",
+        "alias": []
+    },
+    {
+        "id": 17,
+        "name": "barrett",
+        "alias": []
+    },
+    {
+        "id": 18,
+        "name": "phil",
+        "alias": []
+    },
+    {
+        "id": 19,
+        "name": "dr gerrigel",
+        "alias": [
+            "gerrigel"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "jessie",
+        "alias": []
+    },
+    {
+        "id": 21,
+        "name": "lizzy",
+        "alias": []
+    },
+    {
+        "id": 22,
+        "name": "jane myers",
+        "alias": []
+    },
+    {
+        "id": 23,
+        "name": "elisabeth",
+        "alias": [
+            "ba-lee",
+            "elijah",
+            "baley",
+            "elijah baley"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "joseph klemin",
+        "alias": [
+            "klemin"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "francis",
+        "alias": []
+    },
+    {
+        "id": 25,
+        "name": "jézabel",
+        "alias": []
+    },
+    {
+        "id": 26,
+        "name": "ahab",
+        "alias": []
+    },
+    {
+        "id": 27,
+        "name": "jéhoram",
+        "alias": [
+            "jésus",
+            "jéhu"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "naboth",
+        "alias": []
+    },
+    {
+        "id": 29,
+        "name": "bentley baley",
+        "alias": [
+            "benastra",
+            "ben",
+            "bentley",
+            "baley"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "cléon",
+        "alias": []
+    },
+    {
+        "id": 29,
+        "name": "eto demerzel",
+        "alias": [
+            "demerzel"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "sire",
+        "alias": []
+    },
+    {
+        "id": 31,
+        "name": "wellis",
+        "alias": []
+    },
+    {
+        "id": 32,
+        "name": "l’empereur",
+        "alias": [
+            "empereur"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "goutte-de-pluie quarante-trois",
+        "alias": [
+            "goutte-de-pluie quarante-cinq",
+            "goutte-de-pluie quarante-trois",
+            "goutte-de-pluie",
+            "goutte- de-pluie quarante-trois",
+            "goutte-de-pluie quarante- cinq"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "frère",
+        "alias": []
+    },
+    {
+        "id": 37,
+        "name": "dors venabili",
+        "alias": [
+            "hari",
+            "dors",
+            "maître seldon",
+            "maîtresse",
+            "rachelle",
+            "tisalver",
+            "dors machinchose",
+            "dors seldon",
+            "casilia tisalver",
+            "maître-du-soleil",
+            "raych seldon",
+            "casilia",
+            "docteur venabili",
+            "maître",
+            "maître-du-soleil quatorze",
+            "maîtresse venabili",
+            "sel",
+            "marbie",
+            "hari seldon",
+            "seldon",
+            "maître- du-soleil",
+            "maîtresse tisalver",
+            "raych",
+            "venabili",
+            "maître-du- soleil",
+            "dors venabili"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "streeling",
+        "alias": []
+    },
+    {
+        "id": 40,
+        "name": "mycogénien",
+        "alias": [
+            "mycogène"
+        ]
+    },
+    {
+        "id": 41,
+        "name": "mycélium soixante-douze",
+        "alias": [
+            "mycélium"
+        ]
+    },
+    {
+        "id": 42,
+        "name": "bande-céleste deux",
+        "alias": []
+    },
+    {
+        "id": 44,
+        "name": "jirad",
+        "alias": []
+    },
+    {
+        "id": 46,
+        "name": "anat bigell",
+        "alias": []
+    },
+    {
+        "id": 46,
+        "name": "chetter hummin",
+        "alias": [
+            "hummin"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "yugo amaryl",
+        "alias": [
+            "amaryl"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "mère rittah",
+        "alias": [
+            "mère"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "marron",
+        "alias": []
+    },
+    {
+        "id": 51,
+        "name": "davan",
+        "alias": []
+    },
+    {
+        "id": 52,
+        "name": "exos",
+        "alias": []
+    },
+    {
+        "id": 53,
+        "name": "marlo tanto",
+        "alias": []
+    },
+    {
+        "id": 53,
+        "name": "trantor",
+        "alias": []
+    },
+    {
+        "id": 54,
+        "name": "russ",
+        "alias": []
+    },
+    {
+        "id": 55,
+        "name": "astinwald",
+        "alias": []
+    },
+    {
+        "id": 56,
+        "name": "galactos",
+        "alias": []
+    },
+    {
+        "id": 56,
+        "name": "emmer thalus",
+        "alias": [
+            "thalus"
+        ]
+    },
+    {
+        "id": 55,
+        "name": "cléon ier",
+        "alias": []
+    },
+    {
+        "id": 56,
+        "name": "alem",
+        "alias": []
+    },
+    {
+        "id": 57,
+        "name": "hélicon",
+        "alias": []
+    },
+    {
+        "id": 58,
+        "name": "kan",
+        "alias": []
+    },
+    {
+        "id": 59,
+        "name": "kiangtow randa",
+        "alias": [
+            "randa",
+            "lisung randa",
+            "grand ancien",
+            "ancien"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "jenarr leggen",
+        "alias": [
+            "jenarr",
+            "jennat",
+            "leggen"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "clowzia",
+        "alias": []
+    },
+    {
+        "id": 61,
+        "name": "héliconien",
+        "alias": []
+    },
+    {
+        "id": 61,
+        "name": "endor levanian",
+        "alias": [
+            "levanian"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "grisnuage",
+        "alias": []
+    }
+]

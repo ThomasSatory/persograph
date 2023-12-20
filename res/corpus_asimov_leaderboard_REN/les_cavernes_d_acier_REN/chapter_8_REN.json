@@ -30,14 +30,6 @@
         "alias": []
     },
     {
-        "id": 5,
-        "name": "R. Daneel",
-        "category": "PER",
-        "alias": [
-            "Daneel"
-        ]
-    },
-    {
         "id": 8,
         "name": "Dr Fastolfe",
         "category": "PER",
@@ -50,6 +42,7 @@
         "name": "Daneel Olivaw",
         "category": "PER",
         "alias": [
+            "R. Daneel",
             "Daneel"
         ]
     }

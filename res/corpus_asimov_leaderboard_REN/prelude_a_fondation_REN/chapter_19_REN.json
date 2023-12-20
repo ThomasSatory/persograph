@@ -1,18 +1,10 @@
 [
     {
-        "id": 0,
-        "name": "Dors SELDON",
-        "category": "PER",
-        "alias": [
-            "Seldon",
-            "Dors"
-        ]
-    },
-    {
         "id": 2,
         "name": "Raych Seldon",
         "category": "PER",
         "alias": [
+            "Dors SELDON",
             "Hari Seldon",
             "Seldon",
             "Rachelle",

@@ -1,14 +1,5 @@
 [
     {
-        "id": 0,
-        "name": "Hari Seldon",
-        "category": "PER",
-        "alias": [
-            "Seldon",
-            "Hari"
-        ]
-    },
-    {
         "id": 2,
         "name": "Empereur",
         "category": "PER",
@@ -77,15 +68,6 @@
         "category": "PER",
         "alias": [
             "Lindor"
-        ]
-    },
-    {
-        "id": 22,
-        "name": "Dors Venabili",
-        "category": "PER",
-        "alias": [
-            "Venabili",
-            "Dors"
         ]
     },
     {
