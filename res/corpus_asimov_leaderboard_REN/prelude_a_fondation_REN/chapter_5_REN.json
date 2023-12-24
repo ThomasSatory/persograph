@@ -15,11 +15,19 @@
         "alias": []
     },
     {
+        "id": 3,
+        "name": "Lisung Randa",
+        "category": "PER",
+        "alias": [
+            "Randa",
+            "Lisung"
+        ]
+    },
+    {
         "id": 6,
         "name": "Kiangtow Randa",
         "category": "PER",
         "alias": [
-            "Lisung Randa",
             "Randa"
         ]
     },

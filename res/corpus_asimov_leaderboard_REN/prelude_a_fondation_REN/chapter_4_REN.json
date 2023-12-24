@@ -20,8 +20,16 @@
         "name": "Dors Machinchose",
         "category": "PER",
         "alias": [
-            "Dors Venabili",
             "Dors"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dors Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors",
+            "Venabili"
         ]
     },
     {
@@ -53,12 +61,6 @@
     {
         "id": 13,
         "name": "Sire",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 14,
-        "name": "Cléon",
         "category": "PER",
         "alias": []
     },

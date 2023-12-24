@@ -1,5 +1,14 @@
 [
     {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
+    },
+    {
         "id": 1,
         "name": "Raych",
         "category": "PER",
@@ -38,20 +47,18 @@
         ]
     },
     {
+        "id": 13,
+        "name": "Maître Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon"
+        ]
+    },
+    {
         "id": 14,
         "name": "Astinwald",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 15,
-        "name": "Maîtresse Tisalver",
-        "category": "PER",
-        "alias": [
-            "Tisalver",
-            "Casilia Tisalver",
-            "Maîtresse"
-        ]
     },
     {
         "id": 16,

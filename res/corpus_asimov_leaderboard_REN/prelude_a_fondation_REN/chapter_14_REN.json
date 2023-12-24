@@ -6,11 +6,12 @@
         "alias": []
     },
     {
-        "id": 6,
-        "name": "Maître-du-Soleil Quatorze",
+        "id": 1,
+        "name": "Hari Seldon",
         "category": "PER",
         "alias": [
-            "Maître Seldon"
+            "Hari",
+            "Seldon"
         ]
     },
     {
@@ -52,11 +53,11 @@
         "alias": []
     },
     {
-        "id": 15,
-        "name": "Maîtresse Venabili",
+        "id": 13,
+        "name": "Maître Seldon",
         "category": "PER",
         "alias": [
-            "Dors Venabili"
+            "Seldon"
         ]
     },
     {

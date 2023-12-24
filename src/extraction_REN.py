@@ -62,23 +62,35 @@ def is_similar(name1, name2):
     name1 = name1.lower()
     name2 = name2.lower()
 
+    if (name1.startswith('maître') and name2.startswith('maître')):
+        name1 = name1.split('maître', 1)[-1]
+        name2 = name2.split('mâitre', 1)[-1]
+    
+    if (len(name2.split(' ')) > 1 and len(name1.split(' ')) > 1):
+        if (name1.endswith('seldon') and name2.endswith('seldon')):
+            name1 = name1.split(' ')[0]
+            name2 = name2.split(' ')[0]
+        elif (name1.endswith('randa') and name2.endswith('randa')):
+            name1 = name1.split(' ')[0]
+            name2 = name2.split(' ')[0]
     if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.ratio(name1, name2) >= 80)
-         or (name1 in name2 or name2 in name1) 
-         or (name1.startswith('dors') and name2.startswith('dors')) 
+         or (name1 in name2 or name2 in name1)
+         or (name1.startswith('cléon') and name2.endswith('empereur'))
          or ((len(name1.split(' ')) > 1 and len(name2.split(' ')) > 1 and (name1.split(' ')[1] in name2 or name2.split(' ')[1] in name1))))
                 and name1 != name2
                 and (not name1.startswith('dr') or not name2.startswith('dr')) 
                 and len(name1)>2 and len(name2)>2 
-                and (not name1.startswith('maîtresse') or not name2.startswith('maître '))
                 and (not name1.endswith('cinq') or not name2.endswith('trois'))
                 and (not name1.endswith('trois') or not name2.endswith('cinq'))
+                and (not name1.endswith('elisabeth') or not name2.endswith('elijah'))
+                and (not name1.endswith('dors seldon') or not name2.endswith('seldon'))
                 ):
         return True
     return False
 
 
 def pretraitement(name1,name2):
-    list_maitre = ['maître-du-soleil','maître','maîtresse','maître-du-','maître']
+    list_maitre = ['maître-du-soleil','maîtresse','maître','maître-du-','maître-']
 
     if (len(name1.split(' ')) > 1):
         if (name1.split(' ')[0] in list_maitre):
@@ -87,29 +99,44 @@ def pretraitement(name1,name2):
         if (name1.endswith('cinq') or name1.endswith('trois')):
             name2 = name2.rpartition('-')[-1] if '-' in name2 else name2
         
-        if (name1.endswith('baley') or name1.endswith('randa')):
+        if (name1.endswith('baley') or name1.endswith('randa') or name1.endswith('seldon')  or name1.endswith('iv')):
             name1 = name1.split(' ')[0]
 
     if (len(name2.split(' ')) > 1):
         if (name2.endswith('cinq') or name1.endswith('trois')):
             name2 = name2.rpartition('-')[-1] if '-' in name2 else name2
 
-        if (name2.endswith('baley') or name2.endswith('randa')):
+        if (name2.endswith('baley') or name2.endswith('randa') or name2.endswith('seldon')):
             name2 = name2.split(' ')[0]
 
         #si le premier mot est robot alors on supprime robot dans la chaine 
         if (name2.split(' ')[0] == 'robot'):
             name2 = name2.split(' ', 1)[-1]
 
+    if ((name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie')
+        or (name1 == 'baley' and name2 == 'baley')
+        or (name1 == 'seldon' and name2 == 'seldon')
+        or (name1 == 'dors' and name2 == 'dors')
+        or (name1 == 'randa' and name2 == 'randa')
+        or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
+        or (name1 == 'marron' and name2 == 'marlon tanto') or (name1 == 'marlon tanto' and name2 == 'marron') 
+        or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
+        or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
+        or (name1 == 'barrett' and name2 == 'vince barrett') or (name1 == 'vince barrett' and name2 == 'barrett')):
+        return False
+
     if (name1 == name2):
         return True
     
-    if (name1.startswith('dr') and name2.startswith('hano')):
+    if (name1.startswith('dr') and name2.startswith('hano') or name1.startswith('hano') and name2.startswith('dr')):
         return False
 
-    if (name1.startswith('elisabeth')):
+    if (name1.startswith('elisabeth') or name2.startswith('elisabeth')):
         return False
     
+    if (name1.endswith('venabili') and name2.endswith('machinchose')):
+        return True
+
     return is_similar(name1,name2)
 
 def is_shorter_named_entity(entity):
@@ -202,7 +229,8 @@ def add_to_dictionnary(data):
             if new_name == entry['name']:
                 entry['alias'] = list(set(entry['alias']) | new_aliases)
                 found = True
-                print (new_name + ' existe dans le dictionnaire et on a merge les alias')
+                #print new_name en jaune
+                print ('\033[93m' + new_name + '\033[0m' + ' existe déjà et on a merge les alias')
                 break
 
         # Cas 2: Nouvelle entité est dans une liste d'alias d'une entité du dictionnaire
@@ -211,108 +239,161 @@ def add_to_dictionnary(data):
                 if new_name in entry['alias']:
                     entry['alias'] = list(set(entry['alias']) | new_aliases)
                     found = True
-                    print (new_name + ' est un alias d\'une entité du dictionnaire et on a merge les alias')
+                    #print new_name en rouge
+                    print ('\033[91m' + new_name + '\033[0m' + ' est un alias de ' + entry['name'] + ' et on a merge les alias')
                     break
 
         # Cas 3: Nouvelle entité a un alias correspondant à une entité existante ou à ses alias
         if not found:
             for entry in dictionary:
                 for alias in entry['alias']:
-                    if pretraitement(new_name, alias):
-                        entry['alias'] = list(set(entry['alias']) | new_aliases | {new_name})
-                        found = True
-                        print (new_name + ' a un alias correspondant et on a merge les alias')
-                        break
+                    for new_alias in new_aliases:
+                        if pretraitement(alias, new_alias):
+                            print (alias + ' est un alias de ' + new_alias + ' et on a merge les alias')
+                            entry['alias'] = list(set(entry['alias']) | new_aliases | {new_name})
+                            found = True
+                            #print new_name en orange
+                            print ('\033[33m' + new_name + '\033[0m' + ' est un alias de ' + entry['name'] + ' et on a merge les alias')
+                            break
                 if found:
                     break
 
         # Cas 4: Si la nouvelle entité n'a pas été fusionnée, l'ajouter simplement au dictionnaire
         if not found:
             dictionary.append({'id': len(dictionary), 'name': new_name, 'alias': list(new_aliases)})
-            print (new_name + ' n\'existe pas et on l\'a ajouté au dictionnaire')
+            #print new_name en vert
+            print ('\033[32m' + new_name + '\033[0m' + ' a été ajouté au dictionnaire')
 
-    #si une entité du dictionnaire a un alias qui est aussi une entité du dictionnaire
-    #on supprime l'entité et on ajoute ses alias à l'entité qui existe déjà ainsi que son nom
-    for entry in dictionary:
-        for alias in entry['alias']:
-            for entry2 in dictionary:
-                if pretraitement(alias, entry2['name']) and entry['id'] != entry2['id']:
-                    entry['alias'] = list(set(entry['alias']) | set(entry2['alias']) | {entry2['name']})
-                    print('on supprime ' + entry2['name'] + ' et on ajoute ses alias à ' + entry['name'])
-                    dictionary.remove(entry2)
-                    break
-        
     with open(path_dictionnary, "w", encoding="utf-8") as f:
         json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
+def clean_dictionary(dictionary):
+    to_delete = []
 
+    for entry in dictionary:
+        for entry2 in dictionary:
+            if pretraitement(entry['name'], entry2['name']) and entry['id'] != entry2['id']  and entry2 not in to_delete and entry not in to_delete:
+                if (entry['name'] in entry2['alias']):
+                    entry['alias'] = list(set(entry['alias']) | set(entry2['alias']))
+                else:
+                    entry['alias'] = list(set(entry['alias']) | set(entry2['alias']) | {entry['name']})
+                print('On supprime ' + entry2['name'] + ' et on ajoute ses alias à ' + entry['name'])
+                to_delete.append(entry2)
+                break
+  
+    # Supprimer les entrées qui ont été fusionnées
+    for entry in to_delete:
+        dictionary.remove(entry)
+
+    with open(path_dictionnary, "w", encoding="utf-8") as f:
+        json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
 def main():
-    # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
-    for file in os.listdir(path_caverne_normalized):
-        file_path = os.path.join(path_caverne_normalized, file)  # Chemin complet du fichier
-        output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
+    ren = False
+    if (ren):
+        # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
+        for file in os.listdir(path_caverne_normalized):
+            file_path = os.path.join(path_caverne_normalized, file)  # Chemin complet du fichier
+            output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
 
-        try:
-            # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
-            with open(file_path, "r", encoding="utf-8") as f:
-                text = f.read()
-        except UnicodeDecodeError:
-            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-            return
+            try:
+                # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
+                with open(file_path, "r", encoding="utf-8") as f:
+                    text = f.read()
+            except UnicodeDecodeError:
+                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+                return
 
-        ner_results = []
-        #découper text en blocs de 500 mots
-        chunks = split_text_by_tokens(text, 500)
-        for i, chunk in enumerate(chunks, start=1):
-            ner_results += (extract_REN(chunk))
-        #print (ner_results)
-        formatted_ner_results = format_ner_results(ner_results)
-        #print(formatted_ner_results)
+            ner_results = []
+            #découper text en blocs de 500 mots
+            chunks = split_text_by_tokens(text, 500)
+            for i, chunk in enumerate(chunks, start=1):
+                ner_results += (extract_REN(chunk))
+            #print (ner_results)
+            formatted_ner_results = format_ner_results(ner_results)
+            #print(formatted_ner_results)
 
-        #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
-        with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
-            json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
+            #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
+            with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
+                json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
 
-        add_to_dictionnary(formatted_ner_results)
+            add_to_dictionnary(formatted_ner_results)
 
-        print(f"Traitement terminé pour {file_path}.")
+            print(f"Traitement terminé pour {file_path}.")
 
 
-    # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
-    for file in os.listdir(path_prelude_normalized):
-        file_path = os.path.join(path_prelude_normalized, file)  # Chemin complet du fichier
-        output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
+        # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
+        for file in os.listdir(path_prelude_normalized):
+            file_path = os.path.join(path_prelude_normalized, file)  # Chemin complet du fichier
+            output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
 
-        try:
-            # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
-            with open(file_path, "r", encoding="utf-8") as f:
-                text = f.read()
-        except UnicodeDecodeError:
-            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-            return
+            try:
+                # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
+                with open(file_path, "r", encoding="utf-8") as f:
+                    text = f.read()
+            except UnicodeDecodeError:
+                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+                return
 
-        ner_results = []
-        #découper text en blocs de 500 mots
-        chunks = split_text_by_tokens(text, 500)
-        for i, chunk in enumerate(chunks, start=1):
-            ner_results += (extract_REN(chunk))
-        formatted_ner_results = format_ner_results(ner_results)
+            ner_results = []
+            #découper text en blocs de 500 mots
+            chunks = split_text_by_tokens(text, 500)
+            for i, chunk in enumerate(chunks, start=1):
+                ner_results += (extract_REN(chunk))
+            formatted_ner_results = format_ner_results(ner_results)
 
-        #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
-        with open(os.path.join(path_prelude_REN, output_file), "w", encoding="utf-8") as f:
-            json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
+            #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
+            with open(os.path.join(path_prelude_REN, output_file), "w", encoding="utf-8") as f:
+                json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
 
-        add_to_dictionnary(formatted_ner_results)
+            add_to_dictionnary(formatted_ner_results)
 
-        print(f"Traitement terminé pour {file_path}.")
-    
-    # Nettoyage du dictionnaire
-    #with open(path_dictionnary, "r", encoding="utf-8") as f:
-     #   dictionary = json.load(f)
-    #cleaned_dict = clean_dictionary(dictionary)
-    #with open(path_dictionnary, "w", encoding="utf-8") as f:
-        #json.dump(cleaned_dict, f, ensure_ascii=False, indent=4)
+            print(f"Traitement terminé pour {file_path}.")
+        
+        # Nettoyage du dictionnaire
+        #with open(path_dictionnary, "r", encoding="utf-8") as f:
+        #   dictionary = json.load(f)
+        #cleaned_dict = clean_dictionary(dictionary)
+        #with open(path_dictionnary, "w", encoding="utf-8") as f:
+            #json.dump(cleaned_dict, f, ensure_ascii=False, indent=4)
+    else:
+
+        #supprimer le contenu du document dictionnaire
+        with open(path_dictionnary, "w", encoding="utf-8") as f:
+            json.dump([], f, ensure_ascii=False, indent=4)
+        
+        for file in os.listdir(path_caverne_REN):
+            file_path = os.path.join(path_caverne_REN, file)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    text = f.read()
+            except UnicodeDecodeError:
+                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+                return
+        
+            ner_results = json.loads(text)
+            add_to_dictionnary(ner_results)
+            print(f"Traitement terminé pour {file_path}.")
+        
+        for file in os.listdir(path_prelude_REN):
+            file_path = os.path.join(path_prelude_REN, file)
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    text = f.read()
+            except UnicodeDecodeError:
+                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+                return
+        
+            ner_results = json.loads(text)
+            add_to_dictionnary(ner_results)
+            print(f"Traitement terminé pour {file_path}.")
+        
+        # Nettoyage du dictionnaire
+        for i in range(5):
+            with open(path_dictionnary, "r", encoding="utf-8") as f:
+                dictionary = json.load(f)
+            clean_dictionary(dictionary)
+
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,14 @@
 [
     {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
+    },
+    {
         "id": 2,
         "name": "Empereur",
         "category": "PER",
@@ -8,12 +17,6 @@
     {
         "id": 3,
         "name": "Demerzel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 4,
-        "name": "Cléon",
         "category": "PER",
         "alias": []
     },
@@ -42,19 +45,18 @@
         "alias": []
     },
     {
-        "id": 11,
-        "name": "Maître-du-Soleil Quatorze",
-        "category": "PER",
-        "alias": [
-            "Maître Seldon",
-            "Maîtresse Tisalver"
-        ]
-    },
-    {
         "id": 13,
         "name": "Jirad",
         "category": "PER",
         "alias": []
+    },
+    {
+        "id": 14,
+        "name": "Maître Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon"
+        ]
     },
     {
         "id": 16,
