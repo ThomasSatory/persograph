@@ -3,36 +3,38 @@
         "id": 0,
         "name": "r. daneel",
         "alias": [
-            "olivaw",
-            "r. dan",
-            "daneel",
-            "m. olivaw",
             "r. daneel",
             "daneel olivaw",
-            "r. daneel olivaw"
+            "r. dan",
+            "r. daneel olivaw",
+            "daneel",
+            "olivaw",
+            "m. olivaw",
+            "robot daneel olivaw"
         ]
     },
     {
         "id": 1,
         "name": "baley",
         "alias": [
-            "baley"
+            "ba-lee"
         ]
     },
     {
         "id": 2,
         "name": "elijah",
         "alias": [
-            "elijah",
-            "baley"
+            "baley",
+            "elijah baley"
         ]
     },
     {
         "id": 3,
         "name": "julius",
         "alias": [
+            "julius",
             "enderby",
-            "julius"
+            "julius enderby"
         ]
     },
     {
@@ -56,8 +58,8 @@
         "id": 7,
         "name": "dr fastolfe",
         "alias": [
-            "dr han fastolfe",
-            "fastolfe"
+            "fastolfe",
+            "dr han fastolfe"
         ]
     },
     {
@@ -71,8 +73,8 @@
         "id": 12,
         "name": "francis clousarr",
         "alias": [
-            "francis clousarr",
-            "clousarr"
+            "clousarr",
+            "francis"
         ]
     },
     {
@@ -83,10 +85,7 @@
     {
         "id": 14,
         "name": "chester",
-        "alias": [
-            "chester",
-            "hummin"
-        ]
+        "alias": []
     },
     {
         "id": 15,
@@ -183,9 +182,8 @@
         "id": 35,
         "name": "bentley baley",
         "alias": [
-            "bentley baley",
-            "bentley",
             "ben",
+            "bentley",
             "baley"
         ]
     },
@@ -194,17 +192,19 @@
         "name": "hari seldon",
         "alias": [
             "seldon",
+            "maître seldon",
+            "hari",
             "sel",
-            "hari"
+            "maître"
         ]
     },
     {
         "id": 37,
         "name": "goutte-de-pluie quarante-trois",
         "alias": [
-            "goutte-de-pluie",
             "goutte-de-pluie quarante-trois",
-            "goutte- de-pluie quarante-trois"
+            "goutte- de-pluie quarante-trois",
+            "goutte-de-pluie"
         ]
     },
     {
@@ -216,17 +216,19 @@
         "id": 39,
         "name": "mycogène",
         "alias": [
-            "mycogène"
+            "mycogène",
+            "mycogénien"
         ]
     },
     {
         "id": 40,
         "name": "dors venabili",
         "alias": [
+            "dors venabili",
             "docteur venabili",
             "venabili",
-            "dors venabili",
-            "dors"
+            "dors",
+            "dors machinchose"
         ]
     },
     {
@@ -243,8 +245,8 @@
         "id": 43,
         "name": "goutte-de-pluie quarante- cinq",
         "alias": [
-            "goutte-de-pluie",
-            "goutte-de-pluie quarante-cinq"
+            "goutte-de-pluie quarante-cinq",
+            "goutte-de-pluie"
         ]
     },
     {
@@ -264,18 +266,6 @@
         "name": "grand ancien",
         "alias": [
             "ancien"
-        ]
-    },
-    {
-        "id": 48,
-        "name": "hummin",
-        "alias": []
-    },
-    {
-        "id": 50,
-        "name": "demerzel",
-        "alias": [
-            "demerzel"
         ]
     },
     {
@@ -301,16 +291,23 @@
         ]
     },
     {
-        "id": 56,
-        "name": "amaryl",
-        "alias": [
-            "amaryl"
-        ]
-    },
-    {
         "id": 57,
         "name": "anat bigell",
         "alias": []
+    },
+    {
+        "id": 58,
+        "name": "chetter hummin",
+        "alias": [
+            "hummin"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "yugo amaryl",
+        "alias": [
+            "amaryl"
+        ]
     },
     {
         "id": 60,
@@ -334,17 +331,15 @@
         "name": "raych",
         "alias": [
             "seldon",
-            "raych seldon",
+            "raych",
             "rachelle",
-            "raych"
+            "raych seldon"
         ]
     },
     {
         "id": 65,
         "name": "marron",
-        "alias": [
-            "marron"
-        ]
+        "alias": []
     },
     {
         "id": 66,
@@ -354,6 +349,11 @@
     {
         "id": 67,
         "name": "exos",
+        "alias": []
+    },
+    {
+        "id": 68,
+        "name": "marlo tanto",
         "alias": []
     },
     {
@@ -391,11 +391,17 @@
         ]
     },
     {
-        "id": 76,
-        "name": "maître",
+        "id": 77,
+        "name": "dors seldon",
         "alias": [
-            "seldon",
-            "maître"
+            "dors"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "eto demerzel",
+        "alias": [
+            "demerzel"
         ]
     },
     {
@@ -417,22 +423,26 @@
         "id": 84,
         "name": "hélicon",
         "alias": [
-            "hélicon"
+            "héliconien"
         ]
     },
     {
         "id": 85,
         "name": "kan",
-        "alias": [
-            "kan",
-            "randa"
-        ]
+        "alias": []
     },
     {
         "id": 86,
         "name": "lisung randa",
         "alias": [
-            "lisung",
+            "randa",
+            "lisung"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "kiangtow randa",
+        "alias": [
             "randa"
         ]
     },
@@ -460,7 +470,7 @@
         "alias": [
             "cléon ier",
             "empereur",
-            "cléon"
+            "l’empereur"
         ]
     },
     {

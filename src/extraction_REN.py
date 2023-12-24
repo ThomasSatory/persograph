@@ -92,6 +92,28 @@ def is_similar(name1, name2):
 def pretraitement(name1,name2):
     list_maitre = ['maître-du-soleil','maîtresse','maître','maître-du-','maître-']
 
+    if ((name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie')
+        or (name1 == 'baley' and name2 == 'baley')
+        or (name1 == 'seldon' and name2 == 'seldon')
+        or (name1 == 'dors' and name2 == 'dors')
+        or (name1 == 'randa' and name2 == 'randa')
+        or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
+        or (name1 == 'marron' and name2 == 'marlo tanto') or (name1 == 'marlo tanto' and name2 == 'marron') 
+        or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
+        or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
+        or (name1 == 'barrett' and name2 == 'vince barrett') or (name1 == 'vince barrett' and name2 == 'barrett')
+        or (name1 == 'chetter hummin' and name2 == 'chester') or (name1 == 'chester' and name2 == 'chetter hummin')
+        or (name1 == 'amaryl' and name2 == 'yugo amaryl')
+        or (name1 == 'hummin' and name2 == 'chetter hummin')
+        or (name1 == 'demerzel' and name2 == 'eto demerzel')
+        or (name1 == 'marbie' and name2 == 'maître seldon')):
+        return False
+    
+    if ((name1.endswith('venabili') and name2.endswith('machinchose'))
+        or (name1.endswith('hari seldon') and name2.endswith('maître'))
+        or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))):
+        return True
+
     if (len(name1.split(' ')) > 1):
         if (name1.split(' ')[0] in list_maitre):
             name1 = name1.split(' ')[1]
@@ -113,18 +135,6 @@ def pretraitement(name1,name2):
         if (name2.split(' ')[0] == 'robot'):
             name2 = name2.split(' ', 1)[-1]
 
-    if ((name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie')
-        or (name1 == 'baley' and name2 == 'baley')
-        or (name1 == 'seldon' and name2 == 'seldon')
-        or (name1 == 'dors' and name2 == 'dors')
-        or (name1 == 'randa' and name2 == 'randa')
-        or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
-        or (name1 == 'marron' and name2 == 'marlon tanto') or (name1 == 'marlon tanto' and name2 == 'marron') 
-        or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
-        or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
-        or (name1 == 'barrett' and name2 == 'vince barrett') or (name1 == 'vince barrett' and name2 == 'barrett')):
-        return False
-
     if (name1 == name2):
         return True
     
@@ -133,9 +143,6 @@ def pretraitement(name1,name2):
 
     if (name1.startswith('elisabeth') or name2.startswith('elisabeth')):
         return False
-    
-    if (name1.endswith('venabili') and name2.endswith('machinchose')):
-        return True
 
     return is_similar(name1,name2)
 
@@ -273,10 +280,10 @@ def clean_dictionary(dictionary):
     for entry in dictionary:
         for entry2 in dictionary:
             if pretraitement(entry['name'], entry2['name']) and entry['id'] != entry2['id']  and entry2 not in to_delete and entry not in to_delete:
-                if (entry['name'] in entry2['alias']):
-                    entry['alias'] = list(set(entry['alias']) | set(entry2['alias']))
-                else:
-                    entry['alias'] = list(set(entry['alias']) | set(entry2['alias']) | {entry['name']})
+                #merge les alias et ajouter entry{name} si il n'est pas déjà dans la liste des alias
+                entry['alias'] = list(set(entry['alias']) | set(entry2['alias']))
+                if entry2['name'] not in entry['alias']:
+                    entry['alias'].append(entry2['name'])
                 print('On supprime ' + entry2['name'] + ' et on ajoute ses alias à ' + entry['name'])
                 to_delete.append(entry2)
                 break
@@ -389,7 +396,7 @@ def main():
             print(f"Traitement terminé pour {file_path}.")
         
         # Nettoyage du dictionnaire
-        for i in range(5):
+        for i in range(10):
             with open(path_dictionnary, "r", encoding="utf-8") as f:
                 dictionary = json.load(f)
             clean_dictionary(dictionary)
