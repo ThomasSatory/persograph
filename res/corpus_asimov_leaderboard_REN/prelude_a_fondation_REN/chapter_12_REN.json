@@ -30,21 +30,19 @@
         "alias": []
     },
     {
-        "id": 9,
-        "name": "Mycogénien",
+        "id": 8,
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
-        "alias": [
-            "Mycogène"
-        ]
+        "alias": []
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "Bande-céleste Deux",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
+        "id": 10,
         "name": "Grand Ancien",
         "category": "PER",
         "alias": [
@@ -52,13 +50,19 @@
         ]
     },
     {
-        "id": 14,
+        "id": 12,
         "name": "Empereur",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 16,
+        "id": 13,
+        "name": "Maître-du-Soleil",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 14,
         "name": "Demerzel",
         "category": "PER",
         "alias": []

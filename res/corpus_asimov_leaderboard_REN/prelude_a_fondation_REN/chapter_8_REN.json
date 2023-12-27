@@ -1,12 +1,6 @@
 [
     {
         "id": 0,
-        "name": "Trantor",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 1,
         "name": "Hari Seldon",
         "category": "PER",
         "alias": [
@@ -15,13 +9,13 @@
         ]
     },
     {
-        "id": 3,
+        "id": 2,
         "name": "Dors",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Endor Levanian",
         "category": "PER",
         "alias": [
@@ -29,7 +23,7 @@
         ]
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Chetter Hummin",
         "category": "PER",
         "alias": [
@@ -37,19 +31,19 @@
         ]
     },
     {
-        "id": 11,
-        "name": "Mycogénien",
+        "id": 8,
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 14,
+        "id": 12,
         "name": "Grisnuage",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 15,
+        "id": 13,
         "name": "Goutte-de-Pluie Quarante-trois",
         "category": "PER",
         "alias": []

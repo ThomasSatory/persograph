@@ -6,13 +6,7 @@
         "alias": []
     },
     {
-        "id": 1,
-        "name": "Mycogène",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 3,
+        "id": 2,
         "name": "Emmer Thalus",
         "category": "PER",
         "alias": [
@@ -20,7 +14,7 @@
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Hari Seldon",
         "category": "PER",
         "alias": [
@@ -29,19 +23,19 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "name": "Dors",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Davan",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 10,
+        "id": 9,
         "name": "Chetter Hummin",
         "category": "PER",
         "alias": [
@@ -49,7 +43,7 @@
         ]
     },
     {
-        "id": 11,
+        "id": 10,
         "name": "Rachelle",
         "category": "PER",
         "alias": [
@@ -57,25 +51,25 @@
         ]
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Venabili",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 14,
+        "id": 13,
         "name": "Demerzel",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 15,
+        "id": 14,
         "name": "Maître",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 16,
+        "id": 15,
         "name": "Empereur",
         "category": "PER",
         "alias": []

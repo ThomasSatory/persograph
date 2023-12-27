@@ -54,17 +54,5 @@
         "alias": [
             "Daneel"
         ]
-    },
-    {
-        "id": 12,
-        "name": "Chester",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 13,
-        "name": "Heisenberg",
-        "category": "PER",
-        "alias": []
     }
 ]

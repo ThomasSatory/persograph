@@ -29,9 +29,25 @@ def extract_REN(text):
 # }
 def format_ner_results(data):
     concatenated_data = []
+
+    fausses_entites = [
+    'chester',
+    'heisenberg',
+    'frère',
+    'streeling',
+    'mycogène',
+    'mycogénien',
+    'dahl',
+    'anat bigell',
+    'ba-lee',
+    'exos',
+    'trantor',
+    'galactos',
+    'hélicon'
+    ]
     #print (data)
     for i in data:
-        if i['entity_group'] == 'PER' and i['score'] > 0.9 and i['word'] not in concatenated_data and len(i['word'])>2:
+        if i['entity_group'] == 'PER' and i['score'] > 0.9 and i['word'] not in concatenated_data and len(i['word'])>2 and i['word'].lower() not in fausses_entites:
             concatenated_data.append(i['word'])
     formatted_ner_results = []
     id = 0
@@ -49,8 +65,8 @@ def format_ner_results(data):
 def alias_creation(data):
     for result in data:
         for result2 in data:
-            name1 = result['name'].lower()
-            name2 = result2['name'].lower()
+            name1 = result['name']
+            name2 = result2['name']
             if (is_similar(name1, name2)):
                 result['alias'].append(result2['id'])
     data = delete_duplicates(data)
@@ -62,10 +78,9 @@ def is_similar(name1, name2):
     name1 = name1.lower()
     name2 = name2.lower()
 
-    if (name1.startswith('maître') and name2.startswith('maître')):
-        name1 = name1.split('maître', 1)[-1]
-        name2 = name2.split('mâitre', 1)[-1]
-    
+
+    list_maitre = ['maître-du-soleil','maîtresse','maître-du-','maître-','maître']
+
     if (len(name2.split(' ')) > 1 and len(name1.split(' ')) > 1):
         if (name1.endswith('seldon') and name2.endswith('seldon')):
             name1 = name1.split(' ')[0]
@@ -73,6 +88,14 @@ def is_similar(name1, name2):
         elif (name1.endswith('randa') and name2.endswith('randa')):
             name1 = name1.split(' ')[0]
             name2 = name2.split(' ')[0]
+
+    if (len(name1.split(' ')) > 1):
+        if (name1.split(' ')[0] in list_maitre):
+            name1 = name1.split(' ', 1)[-1]
+    
+    if (len(name2.split(' ')) > 1):
+        if (name2.split(' ')[0] in list_maitre):
+            name2 = name2.split(' ', 1)[-1]
     if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.ratio(name1, name2) >= 80)
          or (name1 in name2 or name2 in name1)
          or (name1.startswith('cléon') and name2.endswith('empereur'))
@@ -92,6 +115,9 @@ def is_similar(name1, name2):
 def pretraitement(name1,name2):
     list_maitre = ['maître-du-soleil','maîtresse','maître','maître-du-','maître-']
 
+    name1 = name1.lower()
+    name2 = name2.lower()
+
     if ((name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie')
         or (name1 == 'baley' and name2 == 'baley')
         or (name1 == 'seldon' and name2 == 'seldon')
@@ -106,12 +132,16 @@ def pretraitement(name1,name2):
         or (name1 == 'amaryl' and name2 == 'yugo amaryl')
         or (name1 == 'hummin' and name2 == 'chetter hummin')
         or (name1 == 'demerzel' and name2 == 'eto demerzel')
-        or (name1 == 'marbie' and name2 == 'maître seldon')):
+        or (name1 == 'marbie' and name2 == 'maître seldon')
+        or (name1 == 'raych' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych')
+        or (name1 == 'bentley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley')
+        or (name1 == 'bentley baley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley baley')):
         return False
     
     if ((name1.endswith('venabili') and name2.endswith('machinchose'))
         or (name1.endswith('hari seldon') and name2.endswith('maître'))
-        or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))):
+        or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))
+        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))):
         return True
 
     if (len(name1.split(' ')) > 1):
@@ -227,8 +257,8 @@ def add_to_dictionnary(data):
         alias_set.update(entry['alias'])
 
     for new_entity in data:
-        new_name = new_entity['name'].lower()
-        new_aliases = set(alias.lower() for alias in new_entity['alias'])
+        new_name = new_entity['name']
+        new_aliases = set(alias for alias in new_entity['alias'])
 
         # Cas 1: Nouvelle entité a le même nom qu'une entité du dictionnaire
         found = False
@@ -257,7 +287,7 @@ def add_to_dictionnary(data):
                     for new_alias in new_aliases:
                         if pretraitement(alias, new_alias):
                             print (alias + ' est un alias de ' + new_alias + ' et on a merge les alias')
-                            entry['alias'] = list(set(entry['alias']) | new_aliases | {new_name})
+                            entry['alias'] = list(set(entry['alias']) | new_aliases | {new_entity['name']})
                             found = True
                             #print new_name en orange
                             print ('\033[33m' + new_name + '\033[0m' + ' est un alias de ' + entry['name'] + ' et on a merge les alias')
@@ -296,7 +326,7 @@ def clean_dictionary(dictionary):
         json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
 def main():
-    ren = False
+    ren = True
     if (ren):
         # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
         for file in os.listdir(path_caverne_normalized):

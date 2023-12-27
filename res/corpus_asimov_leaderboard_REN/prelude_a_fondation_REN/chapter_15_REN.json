@@ -14,25 +14,51 @@
         ]
     },
     {
-        "id": 9,
-        "name": "Exos",
+        "id": 3,
+        "name": "Tisalver",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 11,
+        "id": 5,
+        "name": "Maître Tisalver",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Maîtresse",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Maîtresse Tisalver",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
         "name": "Marlo Tanto",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Raych",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 13,
+        "id": 12,
         "name": "Yugo Amaryl",
         "category": "PER",
         "alias": [
@@ -40,19 +66,13 @@
         ]
     },
     {
-        "id": 15,
-        "name": "Dahl",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 16,
+        "id": 14,
         "name": "Empereur",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 17,
+        "id": 15,
         "name": "Demerzel",
         "category": "PER",
         "alias": []

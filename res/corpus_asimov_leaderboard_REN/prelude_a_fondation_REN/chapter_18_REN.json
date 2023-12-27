@@ -1,5 +1,11 @@
 [
     {
+        "id": 0,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": []
+    },
+    {
         "id": 1,
         "name": "Dors Venabili",
         "category": "PER",
@@ -52,8 +58,6 @@
         "id": 11,
         "name": "Maître Seldon",
         "category": "PER",
-        "alias": [
-            "Seldon"
-        ]
+        "alias": []
     }
 ]

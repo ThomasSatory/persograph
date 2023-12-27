@@ -26,7 +26,7 @@
         ]
     },
     {
-        "id": 9,
+        "id": 8,
         "name": "Dors Venabili",
         "category": "PER",
         "alias": [
@@ -35,14 +35,6 @@
     },
     {
         "id": 10,
-        "name": "Mycogénien",
-        "category": "PER",
-        "alias": [
-            "Mycogène"
-        ]
-    },
-    {
-        "id": 12,
         "name": "Mycélium Soixante-douze",
         "category": "PER",
         "alias": [
@@ -50,13 +42,13 @@
         ]
     },
     {
-        "id": 13,
+        "id": 11,
         "name": "Bande-céleste Deux",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 14,
+        "id": 12,
         "name": "Grand Ancien",
         "category": "PER",
         "alias": [
@@ -64,7 +56,7 @@
         ]
     },
     {
-        "id": 16,
+        "id": 14,
         "name": "Hummin",
         "category": "PER",
         "alias": []

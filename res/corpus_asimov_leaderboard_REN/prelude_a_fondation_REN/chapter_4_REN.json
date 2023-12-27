@@ -41,31 +41,19 @@
         ]
     },
     {
-        "id": 9,
-        "name": "Hélicon",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 10,
-        "name": "Trantor",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 12,
         "name": "Empereur",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 13,
+        "id": 11,
         "name": "Sire",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 15,
+        "id": 13,
         "name": "Kan",
         "category": "PER",
         "alias": []
