@@ -2,6 +2,8 @@
 #
 # Authors: Lahcène Belhadi <lahcene.belhadi@gmail.com>
 
+import enum
+import networkx
 import json
 from typing import Any, Dict, List, Optional, Tuple
 from custom_exceptions import EmptyFile
@@ -12,20 +14,28 @@ class NamedEntity:
     pos: int
     entity: Dict[Any, Any]
 
+class BookType(enum.Enum):
+    PAF = 0,
+    LCA = 1,
+
 class Cooc:
     """
     Gestion des co-occurences dans un texte
     """
 
-    def __init__(self, path: str) -> None:
+    def __init__(self, path: str, text_path: str, book_type: BookType, chapter_id: int) -> None:
         """
         Créer une instance de `Cooc`
 
         # Arguments
         * path: `str` - le chemin vers le fichier JSON où se trouve les entités
+        * text_path: `str` - le chemin vers le fichier texte à exploiter
         nommées
         """
         self.path: str = path
+        self.text_path: str = text_path
+        self.book_type: BookType = book_type
+        self.chapter_id: int = chapter_id
         self.data: List[Dict[str, str | int]] = []
 
         # la liste des co-occurences trouvées sous forme de paires de noms
@@ -75,7 +85,7 @@ class Cooc:
             content = file.read().lower().split()
             return content
 
-    def find(self) -> None:
+    def find(self):
         """
         Trouve les paires de co-occurences dans le texte à partir des entitées 
         nommées présentes dans le fichier JSON associé
@@ -83,10 +93,13 @@ class Cooc:
 
         self.__fetch_data()
 
-        tokens = self.__fetch_tokens("res/test/text.txt")
-        self.algo(tokens)
+        tokens = self.__fetch_tokens(self.text_path)
+        pairs = self.algo(tokens)
+        book_id, graphml = self.generate_graph(pairs)
 
-    def algo(self, tokens: List[str]) -> None:
+        return book_id, graphml
+
+    def algo(self, tokens: List[str]):
         """
         Trouve les pairs liées entre elles
         """
@@ -146,6 +159,7 @@ class Cooc:
 
             print("{} & {}: {}".format(f_entity["name"], s_entity["name"], pairs[(pair[0], pair[1])]))
 
+        return pairs
 
     def is_named_entity(self, token: str) -> bool:
         """
@@ -183,4 +197,58 @@ class Cooc:
                 return NamedEntity(pos=pos, entity=entity)
 
         return None
+
+    def get_entity_names(self, entity: Dict[Any, Any]) -> str:
+        """
+        Retourne la liste des noms de l'entité séparés par un ;
+        """
+        name = entity["name"]
+        alias = entity["alias"]
+
+        names = ""
+        names += name + ";"
+
+        for name in alias:
+            names += name + ";"
+
+        # remove last ;
+        names = names[:-1]
+
+        return names
+
+    def get_ID(self) -> str:
+        """
+        Génère l'id du chapitre
+        """
+
+        book: str = "lca"
+        if self.book_type == BookType.PAF:
+            book = "paf"
+
+        chapter: int = self.chapter_id
+
+    def generate_graph(self, pairs: Dict[Tuple[int, int], int]):
+        """
+        Génère un graphe en fonction des pairs trouvées
+        """
+        
+        graph = networkx.Graph()
+
+        for pair in pairs:
+            # retrouve les entités présentes dans le couple
+            first_entity = self.get_named_entity_from_id(pair[0], 0).entity
+            secnd_entity = self.get_named_entity_from_id(pair[1], 0).entity
+
+            print(f"{first_entity}")
+            print(self.get_entity_names(first_entity))
+            
+            # ajoute les arêtes
+            graph.add_edge(first_entity["name"], secnd_entity["name"])
+            graph.nodes[first_entity["name"]]["names"] = self.get_entity_names(first_entity)
+            graph.nodes[secnd_entity["name"]]["names"] = self.get_entity_names(secnd_entity)
+
+        book_id = self.get_ID()
+        graphml = "".join(networkx.generate_graphml(graph))
+
+        return book_id, graphml
 
