@@ -1,0 +1,195 @@
+[
+	{
+		"id": 0,
+		"name": "simpson",
+        "alias": []
+    },
+	{
+		"id": 1,
+		"name": "r. sammy",
+        "alias": [
+            "sammy"
+        ]
+    },
+	{
+		"id": 2,
+		"name": "vince barrett",
+        "alias": []
+    },
+	{
+		"id": 3,
+		"name": "baley",
+        "alias": []
+    },
+	{
+		"id": 4,
+		"name": "julius enderby",
+        "alias": [
+            "julius",
+            "enderby"
+        ]
+    },
+	{
+		"id": 5,
+		"name": "lije",
+        "alias": []
+    },
+	{
+		"id": 6,
+		"name": "r. daneel",
+        "alias": [
+            "r. daneel",
+            "m. olivaw",
+            "daneel",
+            "r. dan",
+            "daneel olivaw",
+            "r. daneel olivaw",
+            "olivaw"
+        ]
+    },
+	{
+		"id": 7,
+		"name": "elijah",
+        "alias": []
+    },
+	{
+		"id": 8,
+		"name": "dr sarton",
+        "alias": [
+            "sarton"
+        ]
+    },
+	{
+		"id": 9,
+		"name": "dr fastolfe",
+        "alias": [
+            "dr han fastolfe",
+            "fastolfe"
+        ]
+    },
+	{
+		"id": 10,
+		"name": "bentley",
+        "alias": []
+    },
+	{
+		"id": 11,
+		"name": "elijah baley",
+        "alias": [
+            "baley",
+            "ben",
+            "bentley",
+            "bentley baley"
+        ]
+    },
+	{
+		"id": 12,
+		"name": "ben",
+        "alias": []
+    },
+	{
+		"id": 13,
+		"name": "francis clousarr",
+        "alias": [
+            "clousarr"
+        ]
+    },
+	{
+		"id": 14,
+		"name": "paul gerhard",
+        "alias": []
+    },
+	{
+		"id": 15,
+		"name": "chester",
+        "alias": []
+    },
+	{
+		"id": 16,
+		"name": "heisenberg",
+        "alias": []
+    },
+	{
+		"id": 17,
+		"name": "norris",
+        "alias": []
+    },
+	{
+		"id": 18,
+		"name": "barrett",
+        "alias": []
+    },
+	{
+		"id": 19,
+		"name": "phil",
+        "alias": []
+    },
+	{
+		"id": 20,
+		"name": "dr gerrigel",
+        "alias": [
+            "gerrigel"
+        ]
+    },
+	{
+		"id": 21,
+		"name": "jessie",
+        "alias": []
+    },
+	{
+		"id": 22,
+		"name": "lizzy",
+        "alias": []
+    },
+	{
+		"id": 23,
+		"name": "jane myers",
+        "alias": []
+    },
+	{
+		"id": 24,
+		"name": "elisabeth",
+        "alias": [
+            "elijah"
+        ]
+    },
+	{
+		"id": 24,
+		"name": "joseph klemin",
+        "alias": [
+            "klemin"
+        ]
+    },
+	{
+		"id": 25,
+		"name": "jésus",
+        "alias": []
+    },
+	{
+		"id": 26,
+		"name": "francis",
+        "alias": []
+    },
+	{
+		"id": 27,
+		"name": "jézabel",
+        "alias": []
+    },
+	{
+		"id": 28,
+		"name": "ahab",
+        "alias": []
+    },
+	{
+		"id": 29,
+		"name": "jéhoram",
+        "alias": [
+            "jéhu"
+        ]
+    },
+	{
+		"id": 30,
+		"name": "naboth",
+        "alias": []
+    }
+]
