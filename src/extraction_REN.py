@@ -43,7 +43,8 @@ def format_ner_results(data):
     'exos',
     'trantor',
     'galactos',
-    'hélicon'
+    'hélicon',
+    'héliconien'
     ]
     #print (data)
     for i in data:
@@ -106,7 +107,8 @@ def is_similar(name1, name2):
                 and (not name1.endswith('cinq') or not name2.endswith('trois'))
                 and (not name1.endswith('trois') or not name2.endswith('cinq'))
                 and (not name1.endswith('elisabeth') or not name2.endswith('elijah'))
-                and (not name1.endswith('dors seldon') or not name2.endswith('seldon'))
+                and (not name1.endswith('dors seldon') or not name2.endswith('seldon')
+                and (not (name1.startswith('raych') and name2 == 'rachelle') or not (name1 == 'rachelle' and name2.startswith('raych'))))
                 ):
         return True
     return False
@@ -126,14 +128,15 @@ def pretraitement(name1,name2):
         or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
         or (name1 == 'marron' and name2 == 'marlo tanto') or (name1 == 'marlo tanto' and name2 == 'marron') 
         or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
+        or (name1 == 'dors venabili' and name2 == 'dors') or (name1 == 'dors' and name2 == 'dors venabili')
         or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
-        or (name1 == 'barrett' and name2 == 'vince barrett') or (name1 == 'vince barrett' and name2 == 'barrett')
         or (name1 == 'chetter hummin' and name2 == 'chester') or (name1 == 'chester' and name2 == 'chetter hummin')
         or (name1 == 'amaryl' and name2 == 'yugo amaryl')
         or (name1 == 'hummin' and name2 == 'chetter hummin')
         or (name1 == 'demerzel' and name2 == 'eto demerzel')
         or (name1 == 'marbie' and name2 == 'maître seldon')
         or (name1 == 'raych' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych')
+        or (name1 == 'raych seldon' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych seldon')
         or (name1 == 'bentley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley')
         or (name1 == 'bentley baley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley baley')):
         return False
@@ -141,7 +144,10 @@ def pretraitement(name1,name2):
     if ((name1.endswith('venabili') and name2.endswith('machinchose'))
         or (name1.endswith('hari seldon') and name2.endswith('maître'))
         or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))
-        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))):
+        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))
+        or (name1.endswith('barrett') and name2.endswith('barrett'))
+        or (name1.endswith('tisalver') and name2.endswith('casilia'))
+        or (name1.endswith('robot daneel olivaw') and name2.endswith('maître robot'))):
         return True
 
     if (len(name1.split(' ')) > 1):
@@ -387,12 +393,10 @@ def main():
 
             print(f"Traitement terminé pour {file_path}.")
         
-        # Nettoyage du dictionnaire
-        #with open(path_dictionnary, "r", encoding="utf-8") as f:
-        #   dictionary = json.load(f)
-        #cleaned_dict = clean_dictionary(dictionary)
-        #with open(path_dictionnary, "w", encoding="utf-8") as f:
-            #json.dump(cleaned_dict, f, ensure_ascii=False, indent=4)
+        #Nettoyage du dictionnaire
+        with open(path_dictionnary, "r", encoding="utf-8") as f:
+           dictionary = json.load(f)
+        clean_dictionary(dictionary)
     else:
 
         #supprimer le contenu du document dictionnaire

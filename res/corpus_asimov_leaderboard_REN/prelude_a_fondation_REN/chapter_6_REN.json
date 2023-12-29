@@ -18,25 +18,19 @@
         ]
     },
     {
-        "id": 6,
-        "name": "Héliconien",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
+        "id": 7,
         "name": "Clowzia",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 9,
+        "id": 8,
         "name": "Benastra",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
+        "id": 11,
         "name": "Docteur Venabili",
         "category": "PER",
         "alias": [
