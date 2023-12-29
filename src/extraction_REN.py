@@ -97,6 +97,8 @@ def is_similar(name1, name2):
     if (len(name2.split(' ')) > 1):
         if (name2.split(' ')[0] in list_maitre):
             name2 = name2.split(' ', 1)[-1]
+    if (name1.startswith('raych') and name2 == 'rachelle') or (name1 == 'rachelle' and name2.startswith('raych')):
+        return False
     if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.ratio(name1, name2) >= 80)
          or (name1 in name2 or name2 in name1)
          or (name1.startswith('cléon') and name2.endswith('empereur'))
@@ -107,8 +109,7 @@ def is_similar(name1, name2):
                 and (not name1.endswith('cinq') or not name2.endswith('trois'))
                 and (not name1.endswith('trois') or not name2.endswith('cinq'))
                 and (not name1.endswith('elisabeth') or not name2.endswith('elijah'))
-                and (not name1.endswith('dors seldon') or not name2.endswith('seldon')
-                and (not (name1.startswith('raych') and name2 == 'rachelle') or not (name1 == 'rachelle' and name2.startswith('raych'))))
+                and (not name1.endswith('dors seldon') or not name2.endswith('seldon'))
                 ):
         return True
     return False

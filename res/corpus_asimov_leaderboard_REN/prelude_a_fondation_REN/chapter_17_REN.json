@@ -29,6 +29,12 @@
         "alias": []
     },
     {
+        "id": 6,
+        "name": "Raych",
+        "category": "PER",
+        "alias": []
+    },
+    {
         "id": 7,
         "name": "Davan",
         "category": "PER",
@@ -46,9 +52,7 @@
         "id": 10,
         "name": "Rachelle",
         "category": "PER",
-        "alias": [
-            "Raych"
-        ]
+        "alias": []
     },
     {
         "id": 11,

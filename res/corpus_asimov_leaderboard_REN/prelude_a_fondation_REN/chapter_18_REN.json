@@ -15,6 +15,12 @@
         ]
     },
     {
+        "id": 2,
+        "name": "Raych",
+        "category": "PER",
+        "alias": []
+    },
+    {
         "id": 4,
         "name": "Hummin",
         "category": "PER",
@@ -44,9 +50,7 @@
         "id": 8,
         "name": "Rachelle",
         "category": "PER",
-        "alias": [
-            "Raych"
-        ]
+        "alias": []
     },
     {
         "id": 10,

@@ -27,9 +27,9 @@
         "id": 4,
         "name": "JULIUS ENDERBY",
         "alias": [
+            "Julius Enderby",
             "Enderby",
-            "Julius",
-            "Julius Enderby"
+            "Julius"
         ]
     },
     {
@@ -41,13 +41,13 @@
         "id": 6,
         "name": "Robot Daneel Olivaw",
         "alias": [
-            "R. Daneel Olivaw",
-            "Olivaw",
-            "M. Olivaw",
-            "Daneel Olivaw",
             "R. Daneel",
-            "R. Dan",
-            "Daneel"
+            "M. Olivaw",
+            "R. Daneel Olivaw",
+            "Daneel Olivaw",
+            "Olivaw",
+            "Daneel",
+            "R. Dan"
         ]
     },
     {
@@ -78,8 +78,8 @@
         "name": "Bentley",
         "alias": [
             "Bentley",
-            "Ben",
             "Baley",
+            "Ben",
             "Bentley Baley"
         ]
     },
@@ -178,9 +178,9 @@
         "id": 32,
         "name": "Hari Seldon",
         "alias": [
-            "Seldon",
-            "Sel",
             "Hari",
+            "Sel",
+            "Seldon",
             "Maître Seldon"
         ]
     },
@@ -205,20 +205,20 @@
         "id": 38,
         "name": "Goutte-de-Pluie Quarante-trois",
         "alias": [
+            "Goutte- de-Pluie Quarante-trois",
             "Goutte-de-Pluie",
-            "Goutte-de-Pluie Quarante-trois",
-            "Goutte- de-Pluie Quarante-trois"
+            "Goutte-de-Pluie Quarante-trois"
         ]
     },
     {
         "id": 39,
         "name": "Dors Venabili",
         "alias": [
-            "Dors",
-            "Venabili",
             "Maîtresse Venabili",
-            "Dors Venabili",
             "Docteur Venabili",
+            "Dors Venabili",
+            "Venabili",
+            "Dors",
             "Dors Machinchose"
         ]
     },
@@ -304,7 +304,11 @@
     {
         "id": 57,
         "name": "Raych",
-        "alias": []
+        "alias": [
+            "Seldon",
+            "Raych",
+            "Raych Seldon"
+        ]
     },
     {
         "id": 58,
@@ -355,12 +359,7 @@
     {
         "id": 67,
         "name": "Rachelle",
-        "alias": [
-            "Raych",
-            "Raych Seldon",
-            "Seldon",
-            "Rachelle"
-        ]
+        "alias": []
     },
     {
         "id": 68,
@@ -378,42 +377,42 @@
         ]
     },
     {
-        "id": 70,
+        "id": 71,
         "name": "Maître Robot",
         "alias": []
     },
     {
-        "id": 71,
+        "id": 72,
         "name": "Marbie",
         "alias": []
     },
     {
-        "id": 72,
+        "id": 73,
         "name": "Alem",
         "alias": []
     },
     {
-        "id": 74,
+        "id": 75,
         "name": "Kan",
         "alias": []
     },
     {
-        "id": 75,
+        "id": 76,
         "name": "Lisung Randa",
         "alias": [
-            "Randa",
-            "Lisung"
+            "Lisung",
+            "Randa"
         ]
     },
     {
-        "id": 76,
+        "id": 77,
         "name": "Kiangtow Randa",
         "alias": [
             "Randa"
         ]
     },
     {
-        "id": 77,
+        "id": 78,
         "name": "Jenarr Leggen",
         "alias": [
             "Leggen",
@@ -421,28 +420,28 @@
         ]
     },
     {
-        "id": 78,
+        "id": 79,
         "name": "Clowzia",
         "alias": []
     },
     {
-        "id": 80,
+        "id": 81,
         "name": "Cléon",
         "alias": [
-            "Cléon Ier",
             "Empereur",
+            "Cléon Ier",
             "L’Empereur"
         ]
     },
     {
-        "id": 81,
+        "id": 82,
         "name": "Endor Levanian",
         "alias": [
             "Levanian"
         ]
     },
     {
-        "id": 82,
+        "id": 83,
         "name": "Grisnuage",
         "alias": []
     }
