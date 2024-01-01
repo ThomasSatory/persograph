@@ -52,6 +52,14 @@
         "alias": []
     },
     {
+        "id": 15,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
+    },
+    {
         "id": 16,
         "name": "Hano Lindor",
         "category": "PER",

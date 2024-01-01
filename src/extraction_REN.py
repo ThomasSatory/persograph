@@ -146,7 +146,8 @@ def pretraitement(name1,name2):
         or (name1 == 'maître tisalver' and name2 == 'casilia tisalver') or (name1 == 'casilia tisalver' and name2 == 'maître tisalver')
         or (name1 == 'maîtresse tisalver' and name2 == 'sse tisalver') or (name1 == 'sse tisalver' and name2 == 'maîtresse tisalver')
         or (name1 == 'maître seldon' and name2 == 'seldon') or (name1 == 'seldon' and name2 == 'maître seldon')
-        or (name1 == 'goutte- de-pluie quarante-trois' and name2.startswith('goutte-de-pluie')) or (name1.startswith('goutte-de-pluie') and name2 == 'goutte- de-pluie quarante-trois')):
+        or (name1 == 'goutte- de-pluie quarante-trois' and name2.startswith('goutte-de-pluie')) or (name1.startswith('goutte-de-pluie') and name2 == 'goutte- de-pluie quarante-trois')
+        or (name1 == 'goutte-de-pluie quarante- cinq' and name2 == 'goutte-de-pluie quarante- cinq') or (name1 == 'goutte-de-pluie quarante- cinq' and name2 == 'goutte-de-pluie quarante- cinq')):
         return False
     
     if ((name1.endswith('venabili') and name2.endswith('machinchose'))
@@ -356,6 +357,7 @@ def clean_chapter(chapter):
             dictionary = []
 
     to_remove = []
+    ban_list = ['Dors Venabili','Maîtresse Venabili']
         
     for chapt in chapter:
         for entry in dictionary:
@@ -371,7 +373,7 @@ def clean_chapter(chapter):
                             print('On supprime ' + chapt2['name'] + ' et on ajoute ses alias à ' + chapt['name'])
                             to_remove.append(chapt2)
                             break
-                        if  pretraitement(entry['name'], chapt2['name']) and chapt2 not in to_remove and not pretraitement(chapt['name'], chapt2['name']):
+                        if  pretraitement(entry['name'], chapt2['name']) and chapt2 not in to_remove and (not pretraitement(chapt['name'], chapt2['name']) and (chapt['name'] not in ban_list and chapt2['name'] not in ban_list)):
                             #delete chapt2 et mettre chapt2['name'] dans chapt['alias'] et on merge les alias
                             print('1:'+entry['name']+ '2:'+chapt2['name'])
                             chapt['alias'] = list(set(chapt['alias']) | set(chapt2['alias']))

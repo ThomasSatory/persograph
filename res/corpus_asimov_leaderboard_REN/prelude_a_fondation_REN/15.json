@@ -29,6 +29,14 @@
         "alias": []
     },
     {
+        "id": 7,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
+    },
+    {
         "id": 10,
         "name": "Marlo Tanto",
         "category": "PER",
