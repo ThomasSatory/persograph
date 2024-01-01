@@ -126,6 +126,10 @@ class Cooc:
                         self.get_named_entity_id(token), pos
                     )
 
+                    if s_entity.entity["id"] == f_entity.entity["id"]:
+                        s_entity = None
+                        continue
+
                     # si l'entité nommée est celle qui suit le token de la
                     # première alors on skip car 2 entitées nommées ne sont 
                     # pas collées, ça veut juste dire que c'est le nom de
@@ -236,6 +240,7 @@ class Cooc:
         graph = networkx.Graph()
 
         for pair in pairs:
+            print(pair)
             # retrouve les entités présentes dans le couple
             weight: int = pairs[pair]
             first_entity = self.get_named_entity_from_id(pair[0], 0).entity
