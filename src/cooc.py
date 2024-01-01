@@ -82,7 +82,7 @@ class Cooc:
         * `FileNotFoundError` - retourne un `FileNotFoundError` si le fichier 
         """
         with open(path, 'r') as file:
-            content = file.read().lower().split()
+            content = file.read().split()
             return content
 
     def find(self):
@@ -157,7 +157,6 @@ class Cooc:
             f_entity: NamedEntity = self.get_named_entity_from_id(pair[0], 0).entity
             s_entity: NamedEntity = self.get_named_entity_from_id(pair[1], 0).entity
 
-            print("{} & {}: {}".format(f_entity["name"], s_entity["name"], pairs[(pair[0], pair[1])]))
 
         return pairs
 
@@ -227,6 +226,8 @@ class Cooc:
 
         chapter: int = self.chapter_id
 
+        return book + str(chapter)
+
     def generate_graph(self, pairs: Dict[Tuple[int, int], int]):
         """
         Génère un graphe en fonction des pairs trouvées
@@ -236,14 +237,12 @@ class Cooc:
 
         for pair in pairs:
             # retrouve les entités présentes dans le couple
+            weight: int = pairs[pair]
             first_entity = self.get_named_entity_from_id(pair[0], 0).entity
             secnd_entity = self.get_named_entity_from_id(pair[1], 0).entity
 
-            print(f"{first_entity}")
-            print(self.get_entity_names(first_entity))
-            
             # ajoute les arêtes
-            graph.add_edge(first_entity["name"], secnd_entity["name"])
+            graph.add_edge(first_entity["name"], secnd_entity["name"], weight=weight)
             graph.nodes[first_entity["name"]]["names"] = self.get_entity_names(first_entity)
             graph.nodes[secnd_entity["name"]]["names"] = self.get_entity_names(secnd_entity)
 
