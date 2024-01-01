@@ -46,15 +46,9 @@
         "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            "Daneel"
-        ]
-    },
-    {
-        "id": 15,
-        "name": "M. Olivaw",
-        "category": "PER",
-        "alias": [
-            "Olivaw"
+            "Daneel",
+            "Olivaw",
+            "M. Olivaw"
         ]
     }
 ]

@@ -5,23 +5,28 @@
         "category": "PER",
         "alias": [
             "Seldon",
-            "Hari"
+            "Hari",
+            "Sel"
         ]
     },
     {
-        "id": 2,
-        "name": "Grisnuage",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 3,
-        "name": "Dors",
+        "name": "Demerzel",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 5,
+        "id": 4,
+        "name": "Dors Machinchose",
+        "category": "PER",
+        "alias": [
+            "Dors",
+            "Venabili",
+            "Dors Venabili"
+        ]
+    },
+    {
+        "id": 8,
         "name": "Chetter Hummin",
         "category": "PER",
         "alias": [
@@ -29,23 +34,21 @@
         ]
     },
     {
-        "id": 7,
-        "name": "Maître-du-Soleil Quatorze",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Goutte-de-Pluie Quarante-cinq",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 10,
-        "name": "Goutte- de-Pluie Quarante-trois",
+        "name": "Empereur",
         "category": "PER",
-        "alias": [
-            "Goutte-de-Pluie Quarante-trois"
-        ]
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 13,
+        "name": "Kan",
+        "category": "PER",
+        "alias": []
     }
 ]

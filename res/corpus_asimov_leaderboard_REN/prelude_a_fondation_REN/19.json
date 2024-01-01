@@ -1,75 +1,81 @@
 [
     {
         "id": 0,
-        "name": "R. Daneel",
+        "name": "Dors SELDON",
         "category": "PER",
         "alias": [
-            "Daneel"
+            "Dors"
         ]
     },
     {
         "id": 1,
-        "name": "Francis",
+        "name": "Hari Seldon",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
     },
     {
         "id": 2,
-        "name": "Clousarr",
+        "name": "Raych Seldon",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Seldon",
+            "Raych"
+        ]
     },
     {
-        "id": 3,
-        "name": "Baley",
+        "id": 4,
+        "name": "Hummin",
         "category": "PER",
         "alias": []
     },
     {
         "id": 5,
-        "name": "Fastolfe",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Elijah",
+        "name": "Mère Rittah",
         "category": "PER",
         "alias": []
     },
     {
         "id": 7,
-        "name": "Enderby",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 8,
-        "name": "Gerrigel",
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": []
     },
     {
         "id": 9,
-        "name": "Julius",
+        "name": "Tisalver",
         "category": "PER",
         "alias": []
     },
     {
         "id": 10,
-        "name": "R. Sammy",
+        "name": "Mannix",
         "category": "PER",
         "alias": []
     },
     {
         "id": 11,
-        "name": "Vince Barrett",
+        "name": "Rachelle",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
-        "name": "Jessie",
+        "id": 13,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Yugo Amaryl",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 16,
+        "name": "Demerzel",
         "category": "PER",
         "alias": []
     }

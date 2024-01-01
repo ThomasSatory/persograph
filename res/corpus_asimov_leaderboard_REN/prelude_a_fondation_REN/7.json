@@ -3,17 +3,13 @@
         "id": 0,
         "name": "Seldon",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Hari"
+        ]
     },
     {
         "id": 1,
         "name": "Hummin",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 2,
-        "name": "Dors",
         "category": "PER",
         "alias": []
     },
@@ -28,18 +24,6 @@
     {
         "id": 4,
         "name": "Leggen",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Hari",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Randa",
         "category": "PER",
         "alias": []
     },

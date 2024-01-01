@@ -1,87 +1,81 @@
 [
     {
         "id": 0,
-        "name": "Dors SELDON",
-        "category": "PER",
-        "alias": [
-            "Dors"
-        ]
-    },
-    {
-        "id": 1,
         "name": "Hari Seldon",
         "category": "PER",
         "alias": [
             "Seldon",
-            "Hari"
+            "Hari",
+            "Maître Seldon"
         ]
     },
     {
         "id": 2,
-        "name": "Raych Seldon",
+        "name": "Empereur",
         "category": "PER",
-        "alias": [
-            "Seldon",
-            "Raych"
-        ]
+        "alias": []
     },
     {
-        "id": 4,
-        "name": "Hummin",
+        "id": 3,
+        "name": "Demerzel",
         "category": "PER",
         "alias": []
     },
     {
         "id": 5,
-        "name": "Mère Rittah",
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Grand Ancien",
         "category": "PER",
         "alias": []
     },
     {
         "id": 7,
-        "name": "Maître-du-Soleil Quatorze",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 9,
-        "name": "Tisalver",
+        "name": "Hummin",
         "category": "PER",
         "alias": []
     },
     {
         "id": 10,
-        "name": "Mannix",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
-        "name": "Rachelle",
+        "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": []
     },
     {
         "id": 12,
-        "name": "Maître Robot",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 13,
-        "name": "Daneel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 15,
-        "name": "Yugo Amaryl",
+        "name": "Jirad",
         "category": "PER",
         "alias": []
     },
     {
         "id": 16,
-        "name": "Demerzel",
+        "name": "Hano Lindor",
+        "category": "PER",
+        "alias": [
+            "Lindor"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Maîtresse Tisalver",
+        "category": "PER",
+        "alias": [
+            "sse Tisalver"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Goutte-de-Pluie Quarante-trois",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 22,
+        "name": "Amaryl",
         "category": "PER",
         "alias": []
     }

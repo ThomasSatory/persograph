@@ -10,20 +10,12 @@
     },
     {
         "id": 2,
-        "name": "Dors",
+        "name": "Grisnuage",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 3,
-        "name": "Endor Levanian",
-        "category": "PER",
-        "alias": [
-            "Levanian"
-        ]
-    },
-    {
-        "id": 7,
+        "id": 5,
         "name": "Chetter Hummin",
         "category": "PER",
         "alias": [
@@ -31,21 +23,23 @@
         ]
     },
     {
-        "id": 8,
+        "id": 7,
         "name": "Maître-du-Soleil Quatorze",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
-        "name": "Grisnuage",
+        "id": 8,
+        "name": "Goutte-de-Pluie Quarante-cinq",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 13,
-        "name": "Goutte-de-Pluie Quarante-trois",
+        "id": 10,
+        "name": "Goutte- de-Pluie Quarante-trois",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Goutte-de-Pluie Quarante-trois"
+        ]
     }
 ]

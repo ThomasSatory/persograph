@@ -19,14 +19,9 @@
         "category": "PER",
         "alias": [
             "Seldon",
-            "Hari"
+            "Hari",
+            "Maître"
         ]
-    },
-    {
-        "id": 5,
-        "name": "Dors",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 6,
@@ -55,20 +50,8 @@
         "alias": []
     },
     {
-        "id": 11,
-        "name": "Venabili",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 13,
         "name": "Demerzel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 14,
-        "name": "Maître",
         "category": "PER",
         "alias": []
     },
