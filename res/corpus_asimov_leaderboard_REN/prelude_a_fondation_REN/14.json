@@ -4,8 +4,9 @@
         "name": "Hari Seldon",
         "category": "PER",
         "alias": [
+            "Seldon",
             "Hari",
-            "Seldon"
+            "Maître Seldon"
         ]
     },
     {
@@ -44,26 +45,8 @@
         "id": 10,
         "name": "Casilia",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
-        "name": "Tisalver",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 12,
-        "name": "Maître Seldon",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 14,
-        "name": "Maîtresse Venabili",
-        "category": "PER",
         "alias": [
-            "Dors Venabili"
+            "Tisalver"
         ]
     },
     {

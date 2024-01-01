@@ -4,16 +4,9 @@
         "name": "Goutte-de-Pluie Quarante-trois",
         "category": "PER",
         "alias": [
-            "Goutte-de-Pluie"
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Goutte-de-Pluie Quarante- cinq",
-        "category": "PER",
-        "alias": [
             "Goutte-de-Pluie",
-            "Goutte-de-Pluie Quarante-cinq"
+            "Goutte-de-Pluie Quarante-cinq",
+            "Goutte-de-Pluie Quarante- cinq"
         ]
     },
     {

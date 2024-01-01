@@ -17,31 +17,14 @@
         "id": 3,
         "name": "Tisalver",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Maître Tisalver",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Maîtresse Tisalver",
+            "Maître Tisalver"
+        ]
     },
     {
         "id": 6,
         "name": "Maîtresse",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 7,
-        "name": "Maîtresse Venabili",
-        "category": "PER",
-        "alias": [
-            "Dors Venabili"
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Maîtresse Tisalver",
         "category": "PER",
         "alias": []
     },

@@ -34,7 +34,8 @@
         "name": "Dr Han Fastolfe",
         "category": "PER",
         "alias": [
-            "Fastolfe"
+            "Fastolfe",
+            "Dr Fastolfe"
         ]
     },
     {
@@ -42,14 +43,6 @@
         "name": "Dr Sarton",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 10,
-        "name": "Dr Fastolfe",
-        "category": "PER",
-        "alias": [
-            "Fastolfe"
-        ]
     },
     {
         "id": 11,

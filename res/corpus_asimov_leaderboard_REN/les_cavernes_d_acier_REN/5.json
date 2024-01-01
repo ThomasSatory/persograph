@@ -9,7 +9,10 @@
         "id": 1,
         "name": "Olivaw",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Daneel",
+            "R. Daneel"
+        ]
     },
     {
         "id": 2,
@@ -22,14 +25,6 @@
         "name": "Baley",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 4,
-        "name": "R. Daneel",
-        "category": "PER",
-        "alias": [
-            "Daneel"
-        ]
     },
     {
         "id": 6,

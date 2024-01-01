@@ -5,7 +5,8 @@
         "category": "PER",
         "alias": [
             "Seldon",
-            "Hari"
+            "Hari",
+            "Maître Seldon"
         ]
     },
     {
@@ -39,12 +40,6 @@
         "alias": [
             "Dors"
         ]
-    },
-    {
-        "id": 11,
-        "name": "Maître Seldon",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 12,

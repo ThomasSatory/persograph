@@ -43,7 +43,8 @@ def format_ner_results(data):
     'exos',
     'trantor',
     'galactos',
-    'hélicon'
+    'hélicon',
+    'héliconien'
     ]
     #print (data)
     for i in data:
@@ -71,7 +72,7 @@ def alias_creation(data):
                 result['alias'].append(result2['id'])
     data = delete_duplicates(data)
     show_result(data)
-    return(data)
+    return(clean_chapter(data))
 
 
 def is_similar(name1, name2):
@@ -96,6 +97,8 @@ def is_similar(name1, name2):
     if (len(name2.split(' ')) > 1):
         if (name2.split(' ')[0] in list_maitre):
             name2 = name2.split(' ', 1)[-1]
+    if (name1.startswith('raych') and name2 == 'rachelle') or (name1 == 'rachelle' and name2.startswith('raych')):
+        return False
     if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.ratio(name1, name2) >= 80)
          or (name1 in name2 or name2 in name1)
          or (name1.startswith('cléon') and name2.endswith('empereur'))
@@ -126,22 +129,34 @@ def pretraitement(name1,name2):
         or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
         or (name1 == 'marron' and name2 == 'marlo tanto') or (name1 == 'marlo tanto' and name2 == 'marron') 
         or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
+        or (name1 == 'dors venabili' and name2 == 'dors') or (name1 == 'dors' and name2 == 'dors venabili')
         or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
-        or (name1 == 'barrett' and name2 == 'vince barrett') or (name1 == 'vince barrett' and name2 == 'barrett')
         or (name1 == 'chetter hummin' and name2 == 'chester') or (name1 == 'chester' and name2 == 'chetter hummin')
         or (name1 == 'amaryl' and name2 == 'yugo amaryl')
         or (name1 == 'hummin' and name2 == 'chetter hummin')
         or (name1 == 'demerzel' and name2 == 'eto demerzel')
         or (name1 == 'marbie' and name2 == 'maître seldon')
         or (name1 == 'raych' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych')
+        or (name1 == 'raych seldon' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych seldon')
         or (name1 == 'bentley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley')
-        or (name1 == 'bentley baley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley baley')):
+        or (name1 == 'bentley baley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley baley')
+        or (name1 == 'maître-du-soleil' and name2 == 'maître seldon') or (name1 == 'maître seldon' and name2 == 'maître-du-soleil')
+        or (name1 == 'maîtresse' and name2 == 'maître seldon') or (name1 == 'maître seldon' and name2 == 'maîtresse')
+        or (name1 == 'goutte-de-pluie quarante- cinq' and name2 == 'goutte-de-pluie') or (name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie quarante- cinq')
+        or (name1 == 'maître tisalver' and name2 == 'casilia tisalver') or (name1 == 'casilia tisalver' and name2 == 'maître tisalver')
+        or (name1 == 'maîtresse tisalver' and name2 == 'sse tisalver') or (name1 == 'sse tisalver' and name2 == 'maîtresse tisalver')
+        or (name1 == 'maître seldon' and name2 == 'seldon') or (name1 == 'seldon' and name2 == 'maître seldon')
+        or (name1 == 'goutte- de-pluie quarante-trois' and name2.startswith('goutte-de-pluie')) or (name1.startswith('goutte-de-pluie') and name2 == 'goutte- de-pluie quarante-trois')):
         return False
     
     if ((name1.endswith('venabili') and name2.endswith('machinchose'))
         or (name1.endswith('hari seldon') and name2.endswith('maître'))
         or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))
-        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))):
+        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))
+        or (name1.endswith('barrett') and name2.endswith('barrett'))
+        or (name1.endswith('tisalver') and name2.endswith('casilia'))
+        or (name1.endswith('robot daneel olivaw') and name2.endswith('maître robot'))
+        or (name1.endswith('daneel') and name2.endswith('olivaw'))):
         return True
 
     if (len(name1.split(' ')) > 1):
@@ -325,13 +340,61 @@ def clean_dictionary(dictionary):
     with open(path_dictionnary, "w", encoding="utf-8") as f:
         json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
+
+def clean_chapter(chapter):
+    #on parcourt le dictionnaire pour merge les entitées qui sont les meme dans les chapitres
+    if not os.path.exists(path_dictionnary) or os.path.getsize(path_dictionnary) == 0:
+        # Si le fichier n'existe pas ou est vide, initialisez une liste vide
+        dictionary = []
+    else:
+        try:
+            with open(path_dictionnary, "r", encoding="utf-8") as f:
+                dictionary = json.load(f)
+        except json.JSONDecodeError:
+            # Gérer l'erreur si le fichier contient des données JSON invalides
+            print("Le fichier JSON est invalide ou vide.")
+            dictionary = []
+
+    to_remove = []
+        
+    for chapt in chapter:
+        for entry in dictionary:
+            for entry_alias in entry['alias']:
+                if (pretraitement(chapt['name'], entry_alias) or pretraitement(entry['name'], chapt['name'])) and chapt not in to_remove:
+                    for chapt2 in chapter:
+                        if pretraitement(chapt2['name'], entry_alias) and chapt2 not in to_remove and chapt2 != chapt:
+                            #delete chapt2 et mettre chapt2['name'] dans chapt['alias'] et on merge les alias
+                            print('1:'+chapt2['name']+ '2:'+entry_alias)
+                            chapt['alias'] = list(set(chapt['alias']) | set(chapt2['alias']))
+                            if (chapt2['name'] not in chapt['alias']):
+                                chapt['alias'].append(chapt2['name'])
+                            print('On supprime ' + chapt2['name'] + ' et on ajoute ses alias à ' + chapt['name'])
+                            to_remove.append(chapt2)
+                            break
+                        if  pretraitement(entry['name'], chapt2['name']) and chapt2 not in to_remove and not pretraitement(chapt['name'], chapt2['name']):
+                            #delete chapt2 et mettre chapt2['name'] dans chapt['alias'] et on merge les alias
+                            print('1:'+entry['name']+ '2:'+chapt2['name'])
+                            chapt['alias'] = list(set(chapt['alias']) | set(chapt2['alias']))
+                            if (chapt2['name'] not in chapt['alias']):
+                                chapt['alias'].append(chapt2['name'])
+                            print('On supprime ' + chapt2['name'] + ' et on ajoute ses alias à ' + chapt['name'])
+                            to_remove.append(chapt2)
+                            break
+    
+    # Supprimer les entrées qui ont été fusionnées
+    for entry in to_remove:
+        chapter.remove(entry)
+
+    return chapter
+
+
 def main():
     ren = True
     if (ren):
         # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
         for file in os.listdir(path_caverne_normalized):
             file_path = os.path.join(path_caverne_normalized, file)  # Chemin complet du fichier
-            output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
+            output_file = file.replace(".txt", ".json")  # Nom du fichier de sortie
 
             try:
                 # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
@@ -354,7 +417,7 @@ def main():
             with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
                 json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
 
-            add_to_dictionnary(formatted_ner_results)
+            #add_to_dictionnary(formatted_ner_results)
 
             print(f"Traitement terminé pour {file_path}.")
 
@@ -362,7 +425,7 @@ def main():
         # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
         for file in os.listdir(path_prelude_normalized):
             file_path = os.path.join(path_prelude_normalized, file)  # Chemin complet du fichier
-            output_file = file.replace(".txt.preprocessed", "_REN.json")  # Nom du fichier de sortie
+            output_file = file.replace(".txt", ".json")  # Nom du fichier de sortie
 
             try:
                 # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
@@ -383,16 +446,14 @@ def main():
             with open(os.path.join(path_prelude_REN, output_file), "w", encoding="utf-8") as f:
                 json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
 
-            add_to_dictionnary(formatted_ner_results)
+            #add_to_dictionnary(formatted_ner_results)
 
             print(f"Traitement terminé pour {file_path}.")
         
-        # Nettoyage du dictionnaire
+        #Nettoyage du dictionnaire
         #with open(path_dictionnary, "r", encoding="utf-8") as f:
-        #   dictionary = json.load(f)
-        #cleaned_dict = clean_dictionary(dictionary)
-        #with open(path_dictionnary, "w", encoding="utf-8") as f:
-            #json.dump(cleaned_dict, f, ensure_ascii=False, indent=4)
+          # dictionary = json.load(f)
+        #clean_dictionary(dictionary)
     else:
 
         #supprimer le contenu du document dictionnaire

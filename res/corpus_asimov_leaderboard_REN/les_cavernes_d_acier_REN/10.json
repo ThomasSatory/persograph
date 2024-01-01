@@ -21,17 +21,13 @@
         "id": 3,
         "name": "Julius",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Enderby"
+        ]
     },
     {
         "id": 4,
         "name": "Lije",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
-        "name": "Enderby",
         "category": "PER",
         "alias": []
     },

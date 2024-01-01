@@ -11,13 +11,9 @@
         "id": 1,
         "name": "Francis",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 2,
-        "name": "Clousarr",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Clousarr"
+        ]
     },
     {
         "id": 3,
@@ -41,17 +37,13 @@
         "id": 7,
         "name": "Enderby",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Julius"
+        ]
     },
     {
         "id": 8,
         "name": "Gerrigel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 9,
-        "name": "Julius",
         "category": "PER",
         "alias": []
     },

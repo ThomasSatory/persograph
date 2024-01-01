@@ -3,7 +3,9 @@
         "id": 0,
         "name": "Seldon",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Hari"
+        ]
     },
     {
         "id": 1,
@@ -13,6 +15,12 @@
             "Dors",
             "Venabili"
         ]
+    },
+    {
+        "id": 2,
+        "name": "Raych",
+        "category": "PER",
+        "alias": []
     },
     {
         "id": 4,
@@ -29,12 +37,6 @@
         ]
     },
     {
-        "id": 6,
-        "name": "Hari",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 7,
         "name": "Demerzel",
         "category": "PER",
@@ -44,19 +46,11 @@
         "id": 8,
         "name": "Rachelle",
         "category": "PER",
-        "alias": [
-            "Raych"
-        ]
+        "alias": []
     },
     {
         "id": 10,
         "name": "Empereur",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
-        "name": "Maître Seldon",
         "category": "PER",
         "alias": []
     }

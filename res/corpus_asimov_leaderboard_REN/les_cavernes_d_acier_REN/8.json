@@ -3,13 +3,9 @@
         "id": 0,
         "name": "Enderby",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 1,
-        "name": "Julius",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Julius"
+        ]
     },
     {
         "id": 2,
