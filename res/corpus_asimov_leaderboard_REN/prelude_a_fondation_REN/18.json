@@ -1,0 +1,63 @@
+[
+    {
+        "id": 0,
+        "name": "Seldon",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Dors Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors",
+            "Venabili"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Mannix IV",
+        "category": "PER",
+        "alias": [
+            "Mannix"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Hari",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Rachelle",
+        "category": "PER",
+        "alias": [
+            "Raych"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Empereur",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Maître Seldon",
+        "category": "PER",
+        "alias": []
+    }
+]

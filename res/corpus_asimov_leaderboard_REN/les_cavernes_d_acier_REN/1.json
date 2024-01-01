@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0,
+        "name": "Simpson",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "R. Sammy",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Vince Barrett",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "JULIUS ENDERBY",
+        "category": "PER",
+        "alias": [
+            "Enderby",
+            "Julius"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Lije",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Robot Daneel Olivaw",
+        "category": "PER",
+        "alias": []
+    }
+]

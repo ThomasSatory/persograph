@@ -1,0 +1,60 @@
+[
+    {
+        "id": 0,
+        "name": "Jessie",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Jézabel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Ahab",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Jéhoram",
+        "category": "PER",
+        "alias": [
+            "Jéhu"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Naboth",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Bentley Baley",
+        "category": "PER",
+        "alias": [
+            "Baley",
+            "Bentley",
+            "Ben"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "M. Olivaw",
+        "category": "PER",
+        "alias": [
+            "Olivaw"
+        ]
+    }
+]

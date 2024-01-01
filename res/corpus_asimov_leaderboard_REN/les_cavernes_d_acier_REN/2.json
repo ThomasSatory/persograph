@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "name": "Julius Enderby",
+        "category": "PER",
+        "alias": [
+            "Enderby"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "R. Daneel Olivaw",
+        "category": "PER",
+        "alias": [
+            "Olivaw",
+            "R. Daneel",
+            "Daneel"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Elijah Baley",
+        "category": "PER",
+        "alias": [
+            "Baley"
+        ]
+    }
+]

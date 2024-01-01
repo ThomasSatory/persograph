@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Elijah Baley",
+        "category": "PER",
+        "alias": [
+            "Baley"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Ben",
+        "category": "PER",
+        "alias": []
+    }
+]

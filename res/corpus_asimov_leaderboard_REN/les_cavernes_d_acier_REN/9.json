@@ -1,0 +1,28 @@
+[
+    {
+        "id": 0,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": [
+            "Fastolfe"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Lije",
+        "category": "PER",
+        "alias": []
+    }
+]

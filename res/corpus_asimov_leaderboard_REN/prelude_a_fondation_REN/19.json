@@ -1,0 +1,83 @@
+[
+    {
+        "id": 0,
+        "name": "Dors SELDON",
+        "category": "PER",
+        "alias": [
+            "Dors"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Raych Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Rachelle",
+            "Raych"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Mère Rittah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Maître-du-Soleil Quatorze",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Tisalver",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Mannix",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Maître Robot",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 13,
+        "name": "Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Yugo Amaryl",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 16,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": []
+    }
+]

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Eto Demerzel",
+        "category": "PER",
+        "alias": [
+            "Demerzel"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Wellis",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "L’Empereur",
+        "category": "PER",
+        "alias": [
+            "Empereur"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": []
+    }
+]

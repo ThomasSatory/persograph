@@ -1,0 +1,95 @@
+[
+    {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Empereur",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Grand Ancien",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Hummin",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Maître-du-Soleil Quatorze",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Jirad",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 13,
+        "name": "Maître Seldon",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Hano Lindor",
+        "category": "PER",
+        "alias": [
+            "Lindor"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Maîtresse Tisalver",
+        "category": "PER",
+        "alias": [
+            "sse Tisalver"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Goutte-de-Pluie Quarante-trois",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 22,
+        "name": "Amaryl",
+        "category": "PER",
+        "alias": []
+    }
+]

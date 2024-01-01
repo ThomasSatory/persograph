@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "R. Sammy",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Lije",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Julius",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Francis Clousarr",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Paul Gerhard",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    }
+]

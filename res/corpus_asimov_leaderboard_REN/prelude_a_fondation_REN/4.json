@@ -1,0 +1,61 @@
+[
+    {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari",
+            "Sel"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Dors Machinchose",
+        "category": "PER",
+        "alias": [
+            "Dors"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dors Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors",
+            "Venabili"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Chetter Hummin",
+        "category": "PER",
+        "alias": [
+            "Hummin"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Empereur",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Sire",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 13,
+        "name": "Kan",
+        "category": "PER",
+        "alias": []
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 3,
+        "name": "Jenarr Leggen",
+        "category": "PER",
+        "alias": [
+            "Leggen",
+            "Jenarr"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Seldon",
+            "Hari"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Héliconien",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Clowzia",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Benastra",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Docteur Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili",
+            "Venabili"
+        ]
+    }
+]

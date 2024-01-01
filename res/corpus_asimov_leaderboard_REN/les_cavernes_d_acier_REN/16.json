@@ -1,0 +1,76 @@
+[
+    {
+        "id": 0,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Francis",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Clousarr",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 5,
+        "name": "Fastolfe",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Gerrigel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Julius",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "R. Sammy",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Vince Barrett",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Jessie",
+        "category": "PER",
+        "alias": []
+    }
+]

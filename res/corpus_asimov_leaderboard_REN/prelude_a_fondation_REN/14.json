@@ -1,0 +1,89 @@
+[
+    {
+        "id": 0,
+        "name": "Hari Seldon",
+        "category": "PER",
+        "alias": [
+            "Hari",
+            "Seldon"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Maître-du-Soleil Quatorze",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Chetter Hummin",
+        "category": "PER",
+        "alias": [
+            "Hummin"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Demerzel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Empereur",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Yugo Amaryl",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
+        "name": "Casilia",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 11,
+        "name": "Tisalver",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 12,
+        "name": "Maître Seldon",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 14,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Mère Rittah",
+        "category": "PER",
+        "alias": [
+            "Mère"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Raych",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 18,
+        "name": "Marron",
+        "category": "PER",
+        "alias": []
+    }
+]

@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Julius",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Lije",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Dr Sarton",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": [
+            "Fastolfe"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Bentley",
+        "category": "PER",
+        "alias": []
+    }
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "id": 0,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Francis Clousarr",
+        "category": "PER",
+        "alias": [
+            "Clousarr"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "R. Daneel",
+        "category": "PER",
+        "alias": [
+            "Daneel"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "R. Sammy",
+        "category": "PER",
+        "alias": []
+    }
+]

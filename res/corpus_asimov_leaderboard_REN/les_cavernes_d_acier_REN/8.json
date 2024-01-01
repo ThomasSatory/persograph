@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 1,
+        "name": "Julius",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 2,
+        "name": "Lije",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 3,
+        "name": "Dr Sarton",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 4,
+        "name": "Baley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 8,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": [
+            "Fastolfe"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Daneel Olivaw",
+        "category": "PER",
+        "alias": [
+            "R. Daneel",
+            "Daneel"
+        ]
+    }
+]
