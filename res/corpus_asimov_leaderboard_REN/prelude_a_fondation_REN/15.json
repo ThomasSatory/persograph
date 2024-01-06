@@ -18,8 +18,8 @@
         "name": "Tisalver",
         "category": "PER",
         "alias": [
-            "Maîtresse Tisalver",
-            "Maître Tisalver"
+            "Maître Tisalver",
+            "Maîtresse Tisalver"
         ]
     },
     {
@@ -27,6 +27,14 @@
         "name": "Maîtresse",
         "category": "PER",
         "alias": []
+    },
+    {
+        "id": 7,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
     },
     {
         "id": 10,

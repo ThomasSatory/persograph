@@ -6,31 +6,15 @@
         "alias": []
     },
     {
-        "id": 2,
-        "name": "Norris",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 3,
-        "name": "Barrett",
+        "name": "Dr Gerrigel",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Gerrigel"
+        ]
     },
     {
         "id": 4,
-        "name": "Phil",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Lije",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 6,
         "name": "R. Daneel",
         "category": "PER",
         "alias": [
@@ -38,25 +22,53 @@
         ]
     },
     {
+        "id": 5,
+        "name": "Norris",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 6,
+        "name": "Lije",
+        "category": "PER",
+        "alias": [
+            "Elijah"
+        ]
+    },
+    {
         "id": 7,
+        "name": "Vince Barrett",
+        "category": "PER",
+        "alias": [
+            "Barrett"
+        ]
+    },
+    {
+        "id": 8,
         "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 8,
-        "name": "Elijah",
+        "id": 10,
+        "name": "Phil",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 11,
+        "id": 13,
         "name": "Dr Sarton",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 12,
+        "id": 14,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 15,
         "name": "Julius Enderby",
         "category": "PER",
         "alias": [
@@ -64,11 +76,15 @@
         ]
     },
     {
-        "id": 13,
-        "name": "Dr Gerrigel",
+        "id": 16,
+        "name": "Jessie",
         "category": "PER",
-        "alias": [
-            "Gerrigel"
-        ]
+        "alias": []
+    },
+    {
+        "id": 17,
+        "name": "Bentley",
+        "category": "PER",
+        "alias": []
     }
 ]

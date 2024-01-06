@@ -13,17 +13,13 @@
         "id": 2,
         "name": "Empereur",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Sire"
+        ]
     },
     {
         "id": 3,
         "name": "Demerzel",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 5,
-        "name": "Sire",
         "category": "PER",
         "alias": []
     },
@@ -50,6 +46,14 @@
         "name": "Jirad",
         "category": "PER",
         "alias": []
+    },
+    {
+        "id": 15,
+        "name": "Maîtresse Venabili",
+        "category": "PER",
+        "alias": [
+            "Dors Venabili"
+        ]
     },
     {
         "id": 16,

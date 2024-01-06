@@ -28,13 +28,15 @@
     },
     {
         "id": 6,
-        "name": "Dr Sarton",
+        "name": "Elijah",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Lije"
+        ]
     },
     {
         "id": 7,
-        "name": "Elijah",
+        "name": "Dr Sarton",
         "category": "PER",
         "alias": []
     },
@@ -46,11 +48,5 @@
             "Julius",
             "Enderby"
         ]
-    },
-    {
-        "id": 11,
-        "name": "Lije",
-        "category": "PER",
-        "alias": []
     }
 ]

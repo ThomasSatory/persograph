@@ -6,47 +6,48 @@ import json
 from fuzzywuzzy import fuzz
 from jaro import jaro_winkler_metric
 
-path_caverne_normalized = "../res/corpus_asimov_leaderboard/les_cavernes_d_acier"
-path_prelude_normalized = "../res/corpus_asimov_leaderboard/prelude_a_fondation"
+path_caverne_normalized = "res/corpus_asimov_leaderboard/les_cavernes_d_acier"
+path_prelude_normalized = "res/corpus_asimov_leaderboard/prelude_a_fondation"
 
-path_caverne_REN = "../res/corpus_asimov_leaderboard_REN/les_cavernes_d_acier_REN"
-path_prelude_REN = "../res/corpus_asimov_leaderboard_REN/prelude_a_fondation_REN"
-path_dictionnary = "../res/dictionnary.json"
+path_caverne_REN = "res/corpus_asimov_leaderboard_REN/les_cavernes_d_acier_REN"
+path_prelude_REN = "res/corpus_asimov_leaderboard_REN/prelude_a_fondation_REN"
+path_dictionnary = "res/dictionnary.json"
 
-def extract_REN(text):
-    tokenizer = AutoTokenizer.from_pretrained("Jean-Baptiste/camembert-ner")
-    model = AutoModelForTokenClassification.from_pretrained("Jean-Baptiste/camembert-ner")
-    nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
+def extract_REN(nlp,text: str) -> list:
+    """
+
+        Méthode qui prend en paramètre un NER et un texte et qui renvoie les données extraites
+
+        # Arguments
+        * nlp: Le NER utilisé pour renconnaitre les entités nommées
+        * text: texte à analyser
+    """
     ner_results = nlp(text)
     return (ner_results)
 
-#prendre les resultats et les formater au format json pour les sauvegarder sous forme de liste d'objet json
-#{
-#   "id" : 1, 
-#   "name" : "John Doe",
-#   "category" : "PER",
-#   "alias" : ["John","Doe","Johnny"]   
-# }
-def format_ner_results(data):
+def format_ner_results(data: list) -> list:
+    """
+
+        Méthode qui prend en paramètre les données extraites et qui les formate au format json
+        en fitrant sur une liste de fausses entités nommées
+
+        Par exemple :
+            {
+                "id" : 1,
+                "name" : "John Doe",
+                "category" : "PER",
+                "alias" : ["John","Doe","Johnny"]
+            }
+
+        # Arguments
+        * data: données extraites
+    """
+
     concatenated_data = []
 
-    fausses_entites = [
-    'chester',
-    'heisenberg',
-    'frère',
-    'streeling',
-    'mycogène',
-    'mycogénien',
-    'dahl',
-    'anat bigell',
-    'ba-lee',
-    'exos',
-    'trantor',
-    'galactos',
-    'hélicon',
-    'héliconien'
-    ]
-    #print (data)
+    fausses_entites = ['chester','heisenberg','frère','streeling','mycogène','mycogénien',
+                       'dahl','anat bigell','ba-lee','exos','trantor','galactos','hélicon',
+                       'héliconien','shakespeare','churchill','spacien','marron']
     for i in data:
         if i['entity_group'] == 'PER' and i['score'] > 0.9 and i['word'] not in concatenated_data and len(i['word'])>2 and i['word'].lower() not in fausses_entites:
             concatenated_data.append(i['word'])
@@ -62,23 +63,41 @@ def format_ner_results(data):
         id += 1
     return(alias_creation(formatted_ner_results))
 
-#méthode prenant en paramètre les données extraites et créant les alias pour chaque entité
-def alias_creation(data):
-    for result in data:
-        for result2 in data:
+
+def alias_creation(chapitre: list) -> list:
+
+    """
+        Méthode qui prend en paramètre les données extraites et créant les alias pour chaque entité
+
+        # Arguments
+        * chapitre: liste des entités nommées d'un chapitre
+    """
+
+    for result in chapitre:
+        for result2 in chapitre:
             name1 = result['name']
             name2 = result2['name']
             if (is_similar(name1, name2)):
                 result['alias'].append(result2['id'])
-    data = delete_duplicates(data)
-    show_result(data)
-    return(clean_chapter(data))
+    chapitre = delete_duplicates(chapitre)
+    show_result(chapitre)
+    return(chapitre)
 
 
-def is_similar(name1, name2):
+def is_similar(name1: str, name2: str)  -> bool:
+    """
+
+        Méthode qui prend en paramètre deux chaines de caractères et qui renvoie True si elles sont similaires
+        et False sinon en utilisant la méthode jaro winkler, le fuzzy matching et des règles
+
+        # Arguments
+        * name1: chaine de caractères
+        * name2: chaine de caractères
+
+    """
+
     name1 = name1.lower()
     name2 = name2.lower()
-
 
     list_maitre = ['maître-du-soleil','maîtresse','maître-du-','maître-','maître']
 
@@ -114,10 +133,90 @@ def is_similar(name1, name2):
         return True
     return False
 
+def pretraitement_dictionnary(name1: str,name2:str) -> bool:
+    """
+        Méthode réservé à la création et au nettoyage du dictionnaire, qui prend en paramètre deux chaines de caractères et qui renvoie True si elles sont similaires
+        et False sinon en prenant en compte certains cas particuliers qui sont gérés par des règles
 
-def pretraitement(name1,name2):
+        # Arguments
+        * name1: chaine de caractères
+        * name2: chaine de caractères
+    """
+
     list_maitre = ['maître-du-soleil','maîtresse','maître','maître-du-','maître-']
+    list_cleon = ['cléon ier','cléon','sire','empereur','l\'empereur']
+    name1 = name1.lower()
+    name2 = name2.lower()
+    if ((name1 == 'goutte-de-pluie' and name2 == 'goutte-de-pluie')
+        or (name1 == 'baley' and name2 == 'baley')
+        or (name1 == 'seldon' and name2 == 'seldon')
+        or (name1 == 'dors' and name2 == 'dors')
+        or (name1 == 'randa' and name2 == 'randa')
+        or (name1 == 'marbie' and name2 == 'maître') or (name1 == 'maître' and name2 == 'marbie')
+        or (name1 == 'marron' and name2 == 'marlo tanto') or (name1 == 'marlo tanto' and name2 == 'marron') 
+        or (name1 == 'dors venabili' and name2 == 'dors seldon') or (name1 == 'dors seldon' and name2 == 'dors venabili')
+        or (name1 == 'dors venabili' and name2 == 'dors') or (name1 == 'dors' and name2 == 'dors venabili')
+        or (name1 == 'kan' and name2 == 'kiangtow randa') or (name1 == 'kiangtow randa' and name2 == 'kan')
+        or (name1 == 'chetter hummin' and name2 == 'chester') or (name1 == 'chester' and name2 == 'chetter hummin')
+        or (name1 == 'amaryl' and name2 == 'yugo amaryl')
+        or (name1 == 'hummin' and name2 == 'chetter hummin')
+        or (name1 == 'demerzel' and name2 == 'eto demerzel')
+        or (name1 == 'marbie' and name2 == 'maître seldon')
+        or (name1 == 'raych' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych')
+        or (name1 == 'raych seldon' and name2 == 'rachelle') or (name1 == 'rachelle' and name2 == 'raych seldon')
+        or (name1 == 'bentley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley')
+        or (name1 == 'bentley baley' and name2 == 'ben') or (name1 == 'ben' and name2 == 'bentley baley')):
+        return False
+    
+    if ((name1.endswith('venabili') and name2.endswith('machinchose'))
+        or (name1.endswith('hari seldon') and name2.endswith('maître'))
+        or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))
+        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))
+        or (name1.endswith('barrett') and name2.endswith('barrett'))
+        or (name1.endswith('tisalver') and name2.endswith('casilia'))
+        or (name1.endswith('robot daneel olivaw') and name2.endswith('maître robot'))
+        or (name1.endswith('sarton') and name2.endswith('sarton'))
+        or (name1 in list_cleon and name2 in list_cleon)):
+        return True
+    
+    if (len(name1.split(' ')) > 1):
+        if (name1.split(' ')[0] in list_maitre):
+            name1 = name1.split(' ')[1]
+        if (name1.endswith('cinq') or name1.endswith('trois')):
+            name2 = name2.rpartition('-')[-1] if '-' in name2 else name2
+        
+        if (name1.endswith('baley') or name1.endswith('randa') or name1.endswith('seldon')  or name1.endswith('iv')):
+            name1 = name1.split(' ')[0]
+    if (len(name2.split(' ')) > 1):
+        if (name2.endswith('cinq') or name1.endswith('trois')):
+            name2 = name2.rpartition('-')[-1] if '-' in name2 else name2
+        if (name2.endswith('baley') or name2.endswith('randa') or name2.endswith('seldon')):
+            name2 = name2.split(' ')[0]
+        if (name2.split(' ')[0] == 'robot'):
+            name2 = name2.split(' ', 1)[-1]
+    if (name1 == name2):
+        return True
+    
+    if (name1.startswith('dr') and name2.startswith('hano') or name1.startswith('hano') and name2.startswith('dr')):
+        return False
+    if (name1.startswith('elisabeth') or name2.startswith('elisabeth')):
+        return False
+    return is_similar(name1,name2)
 
+
+
+def pretraitement_chapter(name1: str,name2: str) -> bool:
+    """
+        Méthode réservé au nettoyage de chapitre, qui prend en paramètre deux chaines de caractères et qui renvoie True si elles sont similaires
+        et False sinon en prenant en compte certains cas particuliers qui sont gérés par des règles
+
+        # Arguments
+        * name1: chaine de caractères
+        * name2: chaine de caractères
+    """
+
+    list_maitre = ['maître-du-soleil','maîtresse','maître','maître-du-','maître-']
+    list_cleon = ['cléon ier','cléon','sire','empereur','l\'empereur']
     name1 = name1.lower()
     name2 = name2.lower()
 
@@ -146,17 +245,19 @@ def pretraitement(name1,name2):
         or (name1 == 'maître tisalver' and name2 == 'casilia tisalver') or (name1 == 'casilia tisalver' and name2 == 'maître tisalver')
         or (name1 == 'maîtresse tisalver' and name2 == 'sse tisalver') or (name1 == 'sse tisalver' and name2 == 'maîtresse tisalver')
         or (name1 == 'maître seldon' and name2 == 'seldon') or (name1 == 'seldon' and name2 == 'maître seldon')
-        or (name1 == 'goutte- de-pluie quarante-trois' and name2.startswith('goutte-de-pluie')) or (name1.startswith('goutte-de-pluie') and name2 == 'goutte- de-pluie quarante-trois')):
+        or (name1 == 'goutte- de-pluie quarante-trois' and name2.startswith('goutte-de-pluie')) or (name1.startswith('goutte-de-pluie') and name2 == 'goutte- de-pluie quarante-trois')
+        or (name1 == 'goutte-de-pluie quarante- cinq' and name2 == 'goutte-de-pluie quarante- cinq') or (name1 == 'goutte-de-pluie quarante- cinq' and name2 == 'goutte-de-pluie quarante- cinq')):
         return False
     
     if ((name1.endswith('venabili') and name2.endswith('machinchose'))
         or (name1.endswith('hari seldon') and name2.endswith('maître'))
         or (name1.endswith('hari seldon') and name2.endswith('maître seldon'))
-        or (name1.endswith('cléon') and name2.endswith('l\'empereur'))
         or (name1.endswith('barrett') and name2.endswith('barrett'))
         or (name1.endswith('tisalver') and name2.endswith('casilia'))
         or (name1.endswith('robot daneel olivaw') and name2.endswith('maître robot'))
-        or (name1.endswith('daneel') and name2.endswith('olivaw'))):
+        or (name1.endswith('daneel') and name2.endswith('olivaw'))
+        or (name1.endswith('sarton') and name2.endswith('sarton'))
+        or (name1 in list_cleon and name2 in list_cleon)):
         return True
 
     if (len(name1.split(' ')) > 1):
@@ -176,7 +277,6 @@ def pretraitement(name1,name2):
         if (name2.endswith('baley') or name2.endswith('randa') or name2.endswith('seldon')):
             name2 = name2.split(' ')[0]
 
-        #si le premier mot est robot alors on supprime robot dans la chaine 
         if (name2.split(' ')[0] == 'robot'):
             name2 = name2.split(' ', 1)[-1]
 
@@ -191,7 +291,13 @@ def pretraitement(name1,name2):
 
     return is_similar(name1,name2)
 
-def is_shorter_named_entity(entity):
+def is_shorter_named_entity(entity: dict) -> bool:
+    """
+        Vérifier si l'entité nommée est plus courte que ses alias
+
+        # Arguments
+        * entity: entité nommée
+    """
     entity_name_length = len(entity['name'])
     alias_lengths = [len(name) for name in entity['alias']]
     if not alias_lengths:
@@ -200,13 +306,19 @@ def is_shorter_named_entity(entity):
         return True
     return entity_name_length < max(alias_lengths)
 
-#on parcourt la liste des entités et on prend l'entitée nommée la plus grande 
-#et on supprime les alias associés et à la place de sauvegarder des id non 
-#sauvegarde les noms
-def delete_duplicates(entities):
+def delete_duplicates(entities: list) -> list:
+    """
+        Supprimer les entités nommées qui sont des alias d'autres entités nommées
+        On garde la plus grande entitée nommée, on merge les alias et on supprime les autres entités nommées
+        Mettre le nom des alias à la place de leur id
+
+        # Arguments
+        * entities: liste des entités nommées d'un chapitre
+    """
+
     data_cleaned = []
 
-    #Parcourir la liste des entités pour mettre le nom des entitées à la place de leur id
+    #Parcourir la liste des entités pour mettre le nom des entités à la place de leur id
     for entity in entities:
         if len(entity['alias']) > 0:
             string_aliases = []
@@ -218,52 +330,62 @@ def delete_duplicates(entities):
     entities = [entity for entity in entities if not is_shorter_named_entity(entity)]
     return (entities)
 
-#méthode affichant les résultats avec pour chaque mot la liste de mot alias associés
-def show_result(data):
-    for result in data:
+def show_result(chapitre: list) -> list:
+    """
+        Afficher les résultats de chaque chapitre
+
+        # Arguments
+        * chapitre: liste des entités nommées d'un chapitre
+    """
+    for result in chapitre:
         print(result['name'])
         if (len(result['alias']) > 0):
             print(result['alias'])
 
 
-def split_text_by_tokens(text, token_limit=500):
-    # Séparation du texte en tokens (mots)
+def split_text_by_tokens(text: str, token_limit=500) -> list: 
+    """
+        Séparer le texte en sous-textes de 500 tokens
+
+        # Arguments
+        * text: texte à séparer
+        * token_limit: nombre de tokens maximum par sous-texte (500 par défaut)
+    """
     tokens = text.split(' ')
     
-    # Initialisation des sous-textes
     token_chunks = []
     current_chunk = []
 
-    # Parcours des tokens pour former les sous-textes
     for token in tokens:
         current_chunk.append(token)
-        # Vérification de la limite de tokens par sous-texte
         if len(current_chunk) >= token_limit:
             token_chunks.append(' '.join(current_chunk))
             current_chunk = []
 
-    # Si des tokens restent à la fin, les ajouter à un dernier sous-texte
     if current_chunk:
         token_chunks.append(' '.join(current_chunk))
 
     return token_chunks
 
-#fonction pour ajouter les nouvelles entités nommées au dictionnaire
-#si une entitée de data est déjà dans le dictionnaire on ne l'ajoute pas
-#sinon on l'ajoute
-#si une entité de data est déjà en temps qu'alias dans le dictionnaire on ne l'ajoute pa
-#mais on ajoute ses alias à l'entité déjà présente dans le dictionnaire
-#le chemin du fichier est path_dictionnary
-def add_to_dictionnary(data):
+def add_to_dictionnary(chapter: list) -> list:
+    """
+        Ajouter les nouvelles entités nommées au dictionnaire
+            -si une entitée du chapitre est déjà dans le dictionnaire on ne l'ajoute pas
+            -sinon on l'ajoute
+            -si une entité du chapitre est déjà en temps qu'alias dans le dictionnaire on ne l'ajoute pas
+                mais on ajoute ses alias à l'entité déjà présente dans le dictionnaire
+
+        # Arguments
+        * chapter: liste des entités nommées d'un chapitre
+    """
+
     if not os.path.exists(path_dictionnary) or os.path.getsize(path_dictionnary) == 0:
-        # Si le fichier n'existe pas ou est vide, initialisez une liste vide
         dictionary = []
     else:
         try:
             with open(path_dictionnary, "r", encoding="utf-8") as f:
                 dictionary = json.load(f)
         except json.JSONDecodeError:
-            # Gérer l'erreur si le fichier contient des données JSON invalides
             print("Le fichier JSON est invalide ou vide.")
             dictionary = []
 
@@ -271,7 +393,7 @@ def add_to_dictionnary(data):
     for entry in dictionary:
         alias_set.update(entry['alias'])
 
-    for new_entity in data:
+    for new_entity in chapter:
         new_name = new_entity['name']
         new_aliases = set(alias for alias in new_entity['alias'])
 
@@ -281,7 +403,6 @@ def add_to_dictionnary(data):
             if new_name == entry['name']:
                 entry['alias'] = list(set(entry['alias']) | new_aliases)
                 found = True
-                #print new_name en jaune
                 print ('\033[93m' + new_name + '\033[0m' + ' existe déjà et on a merge les alias')
                 break
 
@@ -291,7 +412,6 @@ def add_to_dictionnary(data):
                 if new_name in entry['alias']:
                     entry['alias'] = list(set(entry['alias']) | new_aliases)
                     found = True
-                    #print new_name en rouge
                     print ('\033[91m' + new_name + '\033[0m' + ' est un alias de ' + entry['name'] + ' et on a merge les alias')
                     break
 
@@ -300,11 +420,10 @@ def add_to_dictionnary(data):
             for entry in dictionary:
                 for alias in entry['alias']:
                     for new_alias in new_aliases:
-                        if pretraitement(alias, new_alias):
+                        if pretraitement_dictionnary(alias, new_alias):
                             print (alias + ' est un alias de ' + new_alias + ' et on a merge les alias')
                             entry['alias'] = list(set(entry['alias']) | new_aliases | {new_entity['name']})
                             found = True
-                            #print new_name en orange
                             print ('\033[33m' + new_name + '\033[0m' + ' est un alias de ' + entry['name'] + ' et on a merge les alias')
                             break
                 if found:
@@ -313,19 +432,23 @@ def add_to_dictionnary(data):
         # Cas 4: Si la nouvelle entité n'a pas été fusionnée, l'ajouter simplement au dictionnaire
         if not found:
             dictionary.append({'id': len(dictionary), 'name': new_name, 'alias': list(new_aliases)})
-            #print new_name en vert
             print ('\033[32m' + new_name + '\033[0m' + ' a été ajouté au dictionnaire')
 
     with open(path_dictionnary, "w", encoding="utf-8") as f:
         json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
-def clean_dictionary(dictionary):
+def clean_dictionary(dictionary: list) -> list:
+    """
+        Nettoyer le dictionnaire
+
+        # Arguments
+        * dictionnary: liste des entités nommées d'un chapitre
+    """
     to_delete = []
 
     for entry in dictionary:
         for entry2 in dictionary:
-            if pretraitement(entry['name'], entry2['name']) and entry['id'] != entry2['id']  and entry2 not in to_delete and entry not in to_delete:
-                #merge les alias et ajouter entry{name} si il n'est pas déjà dans la liste des alias
+            if pretraitement_dictionnary(entry['name'], entry2['name']) and entry['id'] != entry2['id'] and entry2 not in to_delete and entry not in to_delete:
                 entry['alias'] = list(set(entry['alias']) | set(entry2['alias']))
                 if entry2['name'] not in entry['alias']:
                     entry['alias'].append(entry2['name'])
@@ -341,39 +464,43 @@ def clean_dictionary(dictionary):
         json.dump(dictionary, f, ensure_ascii=False, indent=4)
 
 
-def clean_chapter(chapter):
-    #on parcourt le dictionnaire pour merge les entitées qui sont les meme dans les chapitres
+def clean_chapter(chapter: list) -> list:
+    """
+        Nettoyer les chapitres en fusionnant les entités nommées qui sont similaires
+        tout en s'aidant du dictionnaire commun précedement créé
+
+        # Arguments
+        * chapter: liste des entités nommées d'un chapitre
+    """
+
     if not os.path.exists(path_dictionnary) or os.path.getsize(path_dictionnary) == 0:
-        # Si le fichier n'existe pas ou est vide, initialisez une liste vide
         dictionary = []
     else:
         try:
             with open(path_dictionnary, "r", encoding="utf-8") as f:
                 dictionary = json.load(f)
         except json.JSONDecodeError:
-            # Gérer l'erreur si le fichier contient des données JSON invalides
             print("Le fichier JSON est invalide ou vide.")
             dictionary = []
 
     to_remove = []
+    ban_list = ['Dors Venabili','Maîtresse Venabili']
         
     for chapt in chapter:
         for entry in dictionary:
             for entry_alias in entry['alias']:
-                if (pretraitement(chapt['name'], entry_alias) or pretraitement(entry['name'], chapt['name'])) and chapt not in to_remove:
+                if (pretraitement_chapter(chapt['name'], entry_alias) or pretraitement_chapter(entry['name'], chapt['name'])) and chapt not in to_remove:
                     for chapt2 in chapter:
-                        if pretraitement(chapt2['name'], entry_alias) and chapt2 not in to_remove and chapt2 != chapt:
-                            #delete chapt2 et mettre chapt2['name'] dans chapt['alias'] et on merge les alias
-                            print('1:'+chapt2['name']+ '2:'+entry_alias)
+
+                        if pretraitement_chapter(chapt2['name'], entry_alias) and chapt2 not in to_remove and chapt2 != chapt:
                             chapt['alias'] = list(set(chapt['alias']) | set(chapt2['alias']))
                             if (chapt2['name'] not in chapt['alias']):
                                 chapt['alias'].append(chapt2['name'])
                             print('On supprime ' + chapt2['name'] + ' et on ajoute ses alias à ' + chapt['name'])
                             to_remove.append(chapt2)
                             break
-                        if  pretraitement(entry['name'], chapt2['name']) and chapt2 not in to_remove and not pretraitement(chapt['name'], chapt2['name']):
-                            #delete chapt2 et mettre chapt2['name'] dans chapt['alias'] et on merge les alias
-                            print('1:'+entry['name']+ '2:'+chapt2['name'])
+
+                        if  pretraitement_chapter(entry['name'], chapt2['name']) and chapt2 not in to_remove and (not pretraitement_chapter(chapt['name'], chapt2['name']) and (chapt['name'] not in ban_list and chapt2['name'] not in ban_list)):
                             chapt['alias'] = list(set(chapt['alias']) | set(chapt2['alias']))
                             if (chapt2['name'] not in chapt['alias']):
                                 chapt['alias'].append(chapt2['name'])
@@ -389,109 +516,109 @@ def clean_chapter(chapter):
 
 
 def main():
-    ren = True
-    if (ren):
-        # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
-        for file in os.listdir(path_caverne_normalized):
-            file_path = os.path.join(path_caverne_normalized, file)  # Chemin complet du fichier
-            output_file = file.replace(".txt", ".json")  # Nom du fichier de sortie
+    """
+        Partir d'un texte brut et extraire les entités nommées grace à un NER
+        Créer un dictionnaire commun d'entités nommées / le nettoyer
+        Nettoyer les chapitres en fusionnant les entités nommées qui sont similaires
+    """
+    # ETAPE 0: Initialisation du modèle NER
+    tokenizer = AutoTokenizer.from_pretrained("Jean-Baptiste/camembert-ner")
+    model = AutoModelForTokenClassification.from_pretrained("Jean-Baptiste/camembert-ner")
+    nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
 
-            try:
-                # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
-                with open(file_path, "r", encoding="utf-8") as f:
-                    text = f.read()
-            except UnicodeDecodeError:
-                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-                return
+    #Suppresion du dictionnaire actuel
+    with open(path_dictionnary, "w", encoding="utf-8") as f:
+        json.dump([], f, ensure_ascii=False, indent=4)
 
-            ner_results = []
-            #découper text en blocs de 500 mots
-            chunks = split_text_by_tokens(text, 500)
-            for i, chunk in enumerate(chunks, start=1):
-                ner_results += (extract_REN(chunk))
-            #print (ner_results)
-            formatted_ner_results = format_ner_results(ner_results)
-            #print(formatted_ner_results)
+    # ETAPE 1: Création du dictionnaire grace aux chapitres
 
-            #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
-            with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
-                json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
+    #Premier Livre : Les Cavernes d'Acier
+    for file in os.listdir(path_caverne_normalized):
+        file_path = os.path.join(path_caverne_normalized, file)
+        output_file = file.replace(".txt", ".json")
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                text = f.read()
+        except UnicodeDecodeError:
+            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+            return
+        ner_results = []
 
-            #add_to_dictionnary(formatted_ner_results)
+        #découper text en blocs de 500 mots car le modele NER ne prend que 500 mots à la fois
+        chunks = split_text_by_tokens(text, 300)
+        for i, chunk in enumerate(chunks, start=1):
+            ner_results += (extract_REN(nlp,chunk))
+        formatted_ner_results = format_ner_results(ner_results)
 
-            print(f"Traitement terminé pour {file_path}.")
+        with open(os.path.join(path_caverne_REN, output_file), "w", encoding="utf-8") as f:
+            json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
+        add_to_dictionnary(formatted_ner_results)
+        print(f"Traitement terminé pour {file_path}.")
 
 
-        # Boucle sur tous les fichiers du corpus_pdf_directory en lisant chaque fichier 300 caracteres par 300 caracteres
-        for file in os.listdir(path_prelude_normalized):
-            file_path = os.path.join(path_prelude_normalized, file)  # Chemin complet du fichier
-            output_file = file.replace(".txt", ".json")  # Nom du fichier de sortie
+    #Deuxieme Livre : Prelude à Fondation
+    for file in os.listdir(path_prelude_normalized):
 
-            try:
-                # Ouvrir le fichier en lecture avec l'encodage utf-8 et lire seulement 300 caracteres par 300 caracteres
-                with open(file_path, "r", encoding="utf-8") as f:
-                    text = f.read()
-            except UnicodeDecodeError:
-                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-                return
+        file_path = os.path.join(path_prelude_normalized, file)
+        output_file = file.replace(".txt", ".json")
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                text = f.read()
+        except UnicodeDecodeError:
+            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+            return
+        ner_results = []
 
-            ner_results = []
-            #découper text en blocs de 500 mots
-            chunks = split_text_by_tokens(text, 500)
-            for i, chunk in enumerate(chunks, start=1):
-                ner_results += (extract_REN(chunk))
-            formatted_ner_results = format_ner_results(ner_results)
+        #découper text en blocs de 500 mots car le modele NER ne prend que 500 mots à la fois
+        chunks = split_text_by_tokens(text, 500)
+        for i, chunk in enumerate(chunks, start=1):
+            ner_results += (extract_REN(nlp,chunk))
+        formatted_ner_results = format_ner_results(ner_results)
 
-            #save les resultats dans un fichier txt dans le dossier res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized
-            with open(os.path.join(path_prelude_REN, output_file), "w", encoding="utf-8") as f:
-                json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
-
-            #add_to_dictionnary(formatted_ner_results)
-
-            print(f"Traitement terminé pour {file_path}.")
+        with open(os.path.join(path_prelude_REN, output_file), "w", encoding="utf-8") as f:
+            json.dump(formatted_ner_results, f, ensure_ascii=False, indent=4)
+        add_to_dictionnary(formatted_ner_results)
+        print(f"Traitement terminé pour {file_path}.")
         
-        #Nettoyage du dictionnaire
-        #with open(path_dictionnary, "r", encoding="utf-8") as f:
-          # dictionary = json.load(f)
-        #clean_dictionary(dictionary)
-    else:
+    #ETAPE 2: Nettoyage du dictionnaire
+    with open(path_dictionnary, "r", encoding="utf-8") as f:
+        dictionary = json.load(f)
+    clean_dictionary(dictionary)
 
-        #supprimer le contenu du document dictionnaire
-        with open(path_dictionnary, "w", encoding="utf-8") as f:
-            json.dump([], f, ensure_ascii=False, indent=4)
-        
-        for file in os.listdir(path_caverne_REN):
-            file_path = os.path.join(path_caverne_REN, file)
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    text = f.read()
-            except UnicodeDecodeError:
-                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-                return
-        
-            ner_results = json.loads(text)
-            add_to_dictionnary(ner_results)
-            print(f"Traitement terminé pour {file_path}.")
-        
-        for file in os.listdir(path_prelude_REN):
-            file_path = os.path.join(path_prelude_REN, file)
-            try:
-                with open(file_path, "r", encoding="utf-8") as f:
-                    text = f.read()
-            except UnicodeDecodeError:
-                print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
-                return
-        
-            ner_results = json.loads(text)
-            add_to_dictionnary(ner_results)
-            print(f"Traitement terminé pour {file_path}.")
-        
-        # Nettoyage du dictionnaire
-        for i in range(10):
-            with open(path_dictionnary, "r", encoding="utf-8") as f:
-                dictionary = json.load(f)
-            clean_dictionary(dictionary)
+    #ETAPE 3: Nettoyage des chapitres grace au dictionnaire
 
+    #Premier livre : Les Cavernes d'Acier
+    for file in os.listdir(path_caverne_REN):
+        file_path = os.path.join(path_caverne_REN, file)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                text = json.load(f)
+        except UnicodeDecodeError:
+            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+            return
+        
+        cleaned_text = clean_chapter(text)
+
+        with open(os.path.join(file_path), "w", encoding="utf-8") as f:
+            json.dump(cleaned_text, f, ensure_ascii=False, indent=4)
+        print(f"{file_path} a été nettoyé.")
+    
+
+    #Deuxieme livre : Prelude à Fondation
+    for file in os.listdir(path_prelude_REN):
+        file_path = os.path.join(path_prelude_REN, file)
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                text = json.load(f)
+        except UnicodeDecodeError:
+            print(f"Impossible de lire le fichier {file_path}. Assurez-vous de l'encodage approprié.")
+            return
+        
+        cleaned_text = clean_chapter(text)
+
+        with open(os.path.join(file_path), "w", encoding="utf-8") as f:
+            json.dump(cleaned_text, f, ensure_ascii=False, indent=4)
+        print(f"{file_path} a été nettoyé.")
 
 if __name__ == "__main__":
     main()

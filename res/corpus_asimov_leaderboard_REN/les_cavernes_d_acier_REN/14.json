@@ -16,12 +16,11 @@
         "name": "R. Daneel",
         "category": "PER",
         "alias": [
-            "Daneel",
-            "R. Dan"
+            "Daneel"
         ]
     },
     {
-        "id": 4,
+        "id": 3,
         "name": "Lije",
         "category": "PER",
         "alias": []
@@ -46,12 +45,18 @@
     },
     {
         "id": 8,
-        "name": "Bentley",
+        "name": "Jézabel",
         "category": "PER",
         "alias": []
     },
     {
         "id": 9,
+        "name": "Bentley",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
         "name": "Joseph Klemin",
         "category": "PER",
         "alias": [
