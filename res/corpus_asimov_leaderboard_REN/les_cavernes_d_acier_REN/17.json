@@ -1,23 +1,11 @@
 [
     {
-        "id": 0,
-        "name": "Baley",
-        "category": "PER",
-        "alias": []
-    },
-    {
         "id": 1,
         "name": "R. Daneel",
         "category": "PER",
         "alias": [
             "Daneel"
         ]
-    },
-    {
-        "id": 2,
-        "name": "Elijah",
-        "category": "PER",
-        "alias": []
     },
     {
         "id": 3,
@@ -27,9 +15,13 @@
     },
     {
         "id": 6,
-        "name": "Lije",
+        "name": "Elijah Baley",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Elijah",
+            "Baley",
+            "Lije"
+        ]
     },
     {
         "id": 7,
@@ -38,19 +30,19 @@
         "alias": []
     },
     {
-        "id": 8,
+        "id": 9,
         "name": "R. Sammy",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 9,
+        "id": 10,
         "name": "Jessie",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 10,
+        "id": 11,
         "name": "Francis Clousarr",
         "category": "PER",
         "alias": [
@@ -58,9 +50,11 @@
         ]
     },
     {
-        "id": 11,
+        "id": 12,
         "name": "Dr Sarton",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Sarton"
+        ]
     }
 ]

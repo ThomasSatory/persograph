@@ -13,12 +13,29 @@
     },
     {
         "id": 4,
+        "name": "Elijah",
+        "category": "PER",
+        "alias": [
+            "Elie",
+            "Baley",
+            "Lije",
+            "Lije Baley"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Julius Enderby",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
         "name": "Ahab",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 5,
+        "id": 8,
         "name": "Jéhoram",
         "category": "PER",
         "alias": [
@@ -26,28 +43,27 @@
         ]
     },
     {
-        "id": 7,
+        "id": 10,
         "name": "Naboth",
         "category": "PER",
         "alias": []
     },
     {
-        "id": 9,
-        "name": "Bentley Baley",
+        "id": 12,
+        "name": "Bentley",
         "category": "PER",
         "alias": [
-            "Baley",
-            "Bentley",
             "Ben"
         ]
     },
     {
-        "id": 13,
-        "name": "R. Daneel",
+        "id": 16,
+        "name": "Daneel Olivaw",
         "category": "PER",
         "alias": [
             "Daneel",
             "Olivaw",
+            "R. Daneel",
             "M. Olivaw"
         ]
     }

@@ -40,6 +40,18 @@
     },
     {
         "id": 8,
+        "name": "Roj Nemennuh Sarton",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 9,
+        "name": "Jessie",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 10,
         "name": "Robot Daneel Olivaw",
         "category": "PER",
         "alias": []

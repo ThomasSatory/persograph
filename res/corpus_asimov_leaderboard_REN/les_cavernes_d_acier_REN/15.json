@@ -6,7 +6,7 @@
         "alias": []
     },
     {
-        "id": 1,
+        "id": 2,
         "name": "Francis Clousarr",
         "category": "PER",
         "alias": [
@@ -29,6 +29,12 @@
     },
     {
         "id": 6,
+        "name": "Dr Fastolfe",
+        "category": "PER",
+        "alias": []
+    },
+    {
+        "id": 7,
         "name": "R. Sammy",
         "category": "PER",
         "alias": []

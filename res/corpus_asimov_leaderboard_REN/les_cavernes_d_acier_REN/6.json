@@ -4,7 +4,8 @@
         "name": "Elijah Baley",
         "category": "PER",
         "alias": [
-            "Baley"
+            "Baley",
+            "Lije"
         ]
     },
     {
@@ -20,11 +21,17 @@
         "alias": []
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Julius Enderby",
         "category": "PER",
         "alias": [
             "Enderby"
         ]
+    },
+    {
+        "id": 7,
+        "name": "Bentley",
+        "category": "PER",
+        "alias": []
     }
 ]

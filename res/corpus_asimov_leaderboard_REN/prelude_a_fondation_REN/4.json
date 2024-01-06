@@ -20,8 +20,8 @@
         "name": "Dors Machinchose",
         "category": "PER",
         "alias": [
-            "Dors",
             "Venabili",
+            "Dors",
             "Dors Venabili"
         ]
     },
@@ -37,13 +37,9 @@
         "id": 10,
         "name": "Empereur",
         "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 11,
-        "name": "Sire",
-        "category": "PER",
-        "alias": []
+        "alias": [
+            "Sire"
+        ]
     },
     {
         "id": 13,

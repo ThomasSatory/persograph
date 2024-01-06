@@ -19,21 +19,16 @@
         "id": 5,
         "name": "Sire",
         "category": "PER",
-        "alias": []
+        "alias": [
+            "Empereur",
+            "L’Empereur"
+        ]
     },
     {
         "id": 7,
         "name": "Wellis",
         "category": "PER",
         "alias": []
-    },
-    {
-        "id": 8,
-        "name": "L’Empereur",
-        "category": "PER",
-        "alias": [
-            "Empereur"
-        ]
     },
     {
         "id": 9,
