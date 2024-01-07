@@ -25,8 +25,8 @@
         "id": 4,
         "name": "JULIUS ENDERBY",
         "alias": [
-            "Enderby",
             "Julius Enderby",
+            "Enderby",
             "Julius"
         ]
     },
@@ -52,13 +52,13 @@
         "id": 8,
         "name": "Robot Daneel Olivaw",
         "alias": [
-            "Daneel Olivaw",
-            "Olivaw",
-            "R. Daneel Olivaw",
-            "M. Olivaw",
-            "Daneel",
             "R. Daneel",
-            "Da... Daneel"
+            "Daneel Olivaw",
+            "Da... Daneel",
+            "Daneel",
+            "Olivaw",
+            "M. Olivaw",
+            "R. Daneel Olivaw"
         ]
     },
     {
@@ -66,10 +66,10 @@
         "name": "Elijah",
         "alias": [
             "Lije",
-            "Baley",
+            "Elijah",
             "Elie",
             "Lije Baley",
-            "Elijah",
+            "Baley",
             "Elijah Baley"
         ]
     },
@@ -170,17 +170,17 @@
         "id": 32,
         "name": "Dr Han Fastolfe",
         "alias": [
-            "Dr Fastolfe",
-            "Fastolfe"
+            "Fastolfe",
+            "Dr Fastolfe"
         ]
     },
     {
         "id": 33,
         "name": "Hari Seldon",
         "alias": [
-            "Sel",
-            "Seldon",
             "Hari",
+            "Seldon",
+            "Sel",
             "Maître Seldon"
         ]
     },
@@ -207,28 +207,28 @@
         "id": 37,
         "name": "L’Empereur",
         "alias": [
-            "Empereur",
-            "Cléon Ier"
+            "Cléon Ier",
+            "Empereur"
         ]
     },
     {
         "id": 39,
         "name": "Goutte-de-Pluie Quarante-trois",
         "alias": [
-            "Goutte-de-Pluie",
+            "Goutte- de-Pluie Quarante-trois",
             "Goutte-de-Pluie Quarante-trois",
-            "Goutte- de-Pluie Quarante-trois"
+            "Goutte-de-Pluie"
         ]
     },
     {
         "id": 40,
         "name": "Dors Venabili",
         "alias": [
-            "Dors Venabili",
-            "Maîtresse Venabili",
             "Docteur Venabili",
-            "Venabili",
             "Dors",
+            "Maîtresse Venabili",
+            "Venabili",
+            "Dors Venabili",
             "Dors Machinchose"
         ]
     },
@@ -405,8 +405,8 @@
         "id": 76,
         "name": "Lisung Randa",
         "alias": [
-            "Lisung",
-            "Randa"
+            "Randa",
+            "Lisung"
         ]
     },
     {
