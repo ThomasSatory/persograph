@@ -2,13 +2,11 @@
     {
         "id": 1,
         "name": "Baley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 3,
         "name": "Dr Gerrigel",
-        "category": "PER",
         "alias": [
             "Gerrigel"
         ]
@@ -16,7 +14,6 @@
     {
         "id": 4,
         "name": "R. Daneel",
-        "category": "PER",
         "alias": [
             "Daneel"
         ]
@@ -24,13 +21,11 @@
     {
         "id": 5,
         "name": "Norris",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 6,
         "name": "Lije",
-        "category": "PER",
         "alias": [
             "Elijah"
         ]
@@ -38,7 +33,6 @@
     {
         "id": 7,
         "name": "Vince Barrett",
-        "category": "PER",
         "alias": [
             "Barrett"
         ]
@@ -46,31 +40,26 @@
     {
         "id": 8,
         "name": "R. Sammy",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Phil",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 13,
         "name": "Dr Sarton",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 14,
         "name": "Dr Fastolfe",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 15,
         "name": "Julius Enderby",
-        "category": "PER",
         "alias": [
             "Enderby"
         ]
@@ -78,13 +67,11 @@
     {
         "id": 16,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 17,
         "name": "Bentley",
-        "category": "PER",
         "alias": []
     }
 ]

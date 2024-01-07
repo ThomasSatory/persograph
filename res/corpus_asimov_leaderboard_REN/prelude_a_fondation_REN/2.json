@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Cléon Ier",
-        "category": "PER",
         "alias": [
             "Empereur"
         ]
@@ -10,31 +9,26 @@
     {
         "id": 1,
         "name": "Seldon",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 2,
         "name": "Marbie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 3,
         "name": "Alem",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 4,
         "name": "Hummin",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     }
 ]

@@ -52,24 +52,24 @@
         "id": 8,
         "name": "Robot Daneel Olivaw",
         "alias": [
-            "Da... Daneel",
-            "R. Daneel Olivaw",
-            "R. Daneel",
-            "Olivaw",
             "Daneel Olivaw",
+            "Olivaw",
+            "R. Daneel Olivaw",
+            "M. Olivaw",
             "Daneel",
-            "M. Olivaw"
+            "R. Daneel",
+            "Da... Daneel"
         ]
     },
     {
         "id": 11,
         "name": "Elijah",
         "alias": [
+            "Lije",
+            "Baley",
             "Elie",
             "Lije Baley",
-            "Baley",
             "Elijah",
-            "Lije",
             "Elijah Baley"
         ]
     },
@@ -178,9 +178,9 @@
         "id": 33,
         "name": "Hari Seldon",
         "alias": [
+            "Sel",
             "Seldon",
             "Hari",
-            "Sel",
             "Maître Seldon"
         ]
     },
@@ -207,17 +207,17 @@
         "id": 37,
         "name": "L’Empereur",
         "alias": [
-            "Cléon Ier",
-            "Empereur"
+            "Empereur",
+            "Cléon Ier"
         ]
     },
     {
         "id": 39,
         "name": "Goutte-de-Pluie Quarante-trois",
         "alias": [
-            "Goutte- de-Pluie Quarante-trois",
             "Goutte-de-Pluie",
-            "Goutte-de-Pluie Quarante-trois"
+            "Goutte-de-Pluie Quarante-trois",
+            "Goutte- de-Pluie Quarante-trois"
         ]
     },
     {
@@ -225,10 +225,10 @@
         "name": "Dors Venabili",
         "alias": [
             "Dors Venabili",
-            "Venabili",
             "Maîtresse Venabili",
-            "Dors",
             "Docteur Venabili",
+            "Venabili",
+            "Dors",
             "Dors Machinchose"
         ]
     },
@@ -285,8 +285,8 @@
         "id": 51,
         "name": "Maîtresse Tisalver",
         "alias": [
-            "sse Tisalver",
             "Casilia Tisalver",
+            "sse Tisalver",
             "Casilia"
         ]
     },
@@ -315,64 +315,59 @@
         "id": 58,
         "name": "Raych",
         "alias": [
-            "Raych",
             "Seldon",
+            "Raych",
             "Raych Seldon"
         ]
     },
     {
         "id": 59,
-        "name": "Marron",
-        "alias": []
-    },
-    {
-        "id": 60,
         "name": "Davan",
         "alias": []
     },
     {
-        "id": 61,
+        "id": 60,
         "name": "Maître Tisalver",
         "alias": [
             "Tisalver"
         ]
     },
     {
-        "id": 63,
+        "id": 62,
         "name": "Marlo Tanto",
         "alias": []
     },
     {
-        "id": 64,
+        "id": 63,
         "name": "Russ",
         "alias": []
     },
     {
-        "id": 65,
+        "id": 64,
         "name": "Astinwald",
         "alias": []
     },
     {
-        "id": 66,
+        "id": 65,
         "name": "Mannix IV",
         "alias": [
             "Mannix"
         ]
     },
     {
-        "id": 67,
+        "id": 66,
         "name": "Emmer Thalus",
         "alias": [
             "Thalus"
         ]
     },
     {
-        "id": 68,
+        "id": 67,
         "name": "Rachelle",
         "alias": []
     },
     {
-        "id": 69,
+        "id": 68,
         "name": "Maître",
         "alias": [
             "Maîtresse",
@@ -380,34 +375,34 @@
         ]
     },
     {
-        "id": 70,
+        "id": 69,
         "name": "Dors SELDON",
         "alias": [
             "Dors"
         ]
     },
     {
-        "id": 72,
+        "id": 71,
         "name": "Maître Robot",
         "alias": []
     },
     {
-        "id": 73,
+        "id": 72,
         "name": "Marbie",
         "alias": []
     },
     {
-        "id": 74,
+        "id": 73,
         "name": "Alem",
         "alias": []
     },
     {
-        "id": 76,
+        "id": 75,
         "name": "Kan",
         "alias": []
     },
     {
-        "id": 77,
+        "id": 76,
         "name": "Lisung Randa",
         "alias": [
             "Lisung",
@@ -415,34 +410,34 @@
         ]
     },
     {
-        "id": 78,
+        "id": 77,
         "name": "Kiangtow Randa",
         "alias": [
             "Randa"
         ]
     },
     {
-        "id": 79,
+        "id": 78,
         "name": "Jenarr Leggen",
         "alias": [
-            "Jenarr",
-            "Leggen"
+            "Leggen",
+            "Jenarr"
         ]
     },
     {
-        "id": 80,
+        "id": 79,
         "name": "Clowzia",
         "alias": []
     },
     {
-        "id": 83,
+        "id": 82,
         "name": "Endor Levanian",
         "alias": [
             "Levanian"
         ]
     },
     {
-        "id": 84,
+        "id": 83,
         "name": "Grisnuage",
         "alias": []
     }

@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon",
             "Hari",
@@ -12,13 +11,11 @@
     {
         "id": 3,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 4,
         "name": "Dors Machinchose",
-        "category": "PER",
         "alias": [
             "Venabili",
             "Dors",
@@ -28,7 +25,6 @@
     {
         "id": 8,
         "name": "Chetter Hummin",
-        "category": "PER",
         "alias": [
             "Hummin"
         ]
@@ -36,7 +32,6 @@
     {
         "id": 10,
         "name": "Empereur",
-        "category": "PER",
         "alias": [
             "Sire"
         ]
@@ -44,7 +39,6 @@
     {
         "id": 13,
         "name": "Kan",
-        "category": "PER",
         "alias": []
     }
 ]

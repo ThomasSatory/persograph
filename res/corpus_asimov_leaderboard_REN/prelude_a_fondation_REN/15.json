@@ -2,13 +2,11 @@
     {
         "id": 0,
         "name": "Davan",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 1,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon"
         ]
@@ -16,22 +14,19 @@
     {
         "id": 3,
         "name": "Tisalver",
-        "category": "PER",
         "alias": [
-            "Maître Tisalver",
-            "Maîtresse Tisalver"
+            "Maîtresse Tisalver",
+            "Maître Tisalver"
         ]
     },
     {
         "id": 6,
         "name": "Maîtresse",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 7,
         "name": "Maîtresse Venabili",
-        "category": "PER",
         "alias": [
             "Dors Venabili"
         ]
@@ -39,19 +34,16 @@
     {
         "id": 10,
         "name": "Marlo Tanto",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 11,
         "name": "Raych",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 12,
         "name": "Yugo Amaryl",
-        "category": "PER",
         "alias": [
             "Amaryl"
         ]
@@ -59,13 +51,11 @@
     {
         "id": 14,
         "name": "Empereur",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 15,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     }
 ]

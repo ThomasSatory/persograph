@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "R. Daneel",
-        "category": "PER",
         "alias": [
             "Daneel"
         ]
@@ -10,13 +9,11 @@
     {
         "id": 1,
         "name": "Baley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 2,
         "name": "Enderby",
-        "category": "PER",
         "alias": [
             "Julius"
         ]
@@ -24,13 +21,11 @@
     {
         "id": 3,
         "name": "Dr Sarton",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 4,
         "name": "Elijah",
-        "category": "PER",
         "alias": [
             "Lije"
         ]
@@ -38,19 +33,16 @@
     {
         "id": 7,
         "name": "Fastolfe",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 9,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Bentley",
-        "category": "PER",
         "alias": []
     }
 ]

@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon",
             "Hari"
@@ -11,13 +10,11 @@
     {
         "id": 2,
         "name": "Grisnuage",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Chetter Hummin",
-        "category": "PER",
         "alias": [
             "Hummin"
         ]
@@ -25,19 +22,16 @@
     {
         "id": 7,
         "name": "Maître-du-Soleil Quatorze",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Goutte-de-Pluie Quarante-cinq",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Goutte- de-Pluie Quarante-trois",
-        "category": "PER",
         "alias": [
             "Goutte-de-Pluie Quarante-trois"
         ]
