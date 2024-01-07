@@ -2,8 +2,12 @@ import os
 import pandas
 
 from cooc import Cooc, BookType
+import extraction_REN_Aliases
 
 def main() -> None:
+    # lance le NER et la création d'alias
+    extraction_REN_Aliases.main()
+
     # charge les fichiers texte
     path_paf = "res/corpus_asimov_leaderboard_normalized/prelude_a_fondation_normalized"
     texts_paf: list[str] = os.listdir(path_paf)

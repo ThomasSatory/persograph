@@ -116,7 +116,7 @@ def is_similar(name1: str, name2: str)  -> bool:
             name2 = name2.split(' ', 1)[-1]
     if (name1.startswith('raych') and name2 == 'rachelle') or (name1 == 'rachelle' and name2.startswith('raych')):
         return False
-    if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.ratio(name1, name2) >= 80)
+    if (((jaro_winkler_metric(name1, name2) >= 0.8 or fuzz.token_sort_ratio(name1, name2) >= 80)
          or (name1 in name2 or name2 in name1)
          or (name1.startswith('cléon') and name2.endswith('empereur'))
          or ((len(name1.split(' ')) > 1 and len(name2.split(' ')) > 1 and (name1.split(' ')[1] in name2 or name2.split(' ')[1] in name1))))
