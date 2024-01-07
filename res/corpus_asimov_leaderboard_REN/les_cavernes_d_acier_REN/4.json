@@ -2,22 +2,19 @@
     {
         "id": 0,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 1,
         "name": "Jézabel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 4,
         "name": "Elijah",
-        "category": "PER",
         "alias": [
-            "Elie",
             "Baley",
+            "Elie",
             "Lije",
             "Lije Baley"
         ]
@@ -25,19 +22,16 @@
     {
         "id": 6,
         "name": "Julius Enderby",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 7,
         "name": "Ahab",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Jéhoram",
-        "category": "PER",
         "alias": [
             "Jéhu"
         ]
@@ -45,13 +39,11 @@
     {
         "id": 10,
         "name": "Naboth",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 12,
         "name": "Bentley",
-        "category": "PER",
         "alias": [
             "Ben"
         ]
@@ -59,7 +51,6 @@
     {
         "id": 16,
         "name": "Daneel Olivaw",
-        "category": "PER",
         "alias": [
             "Daneel",
             "Olivaw",

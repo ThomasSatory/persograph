@@ -2,13 +2,11 @@
     {
         "id": 0,
         "name": "Mannix IV",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 2,
         "name": "Emmer Thalus",
-        "category": "PER",
         "alias": [
             "Thalus"
         ]
@@ -16,7 +14,6 @@
     {
         "id": 3,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon",
             "Hari",
@@ -26,19 +23,16 @@
     {
         "id": 6,
         "name": "Raych",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 7,
         "name": "Davan",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 9,
         "name": "Chetter Hummin",
-        "category": "PER",
         "alias": [
             "Hummin"
         ]
@@ -46,19 +40,16 @@
     {
         "id": 10,
         "name": "Rachelle",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 13,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 15,
         "name": "Empereur",
-        "category": "PER",
         "alias": []
     }
 ]

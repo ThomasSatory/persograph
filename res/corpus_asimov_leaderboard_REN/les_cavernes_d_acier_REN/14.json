@@ -2,19 +2,16 @@
     {
         "id": 0,
         "name": "Baley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 1,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 2,
         "name": "R. Daneel",
-        "category": "PER",
         "alias": [
             "Daneel"
         ]
@@ -22,43 +19,36 @@
     {
         "id": 3,
         "name": "Lije",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Lizzy",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 6,
         "name": "Jane Myers",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 7,
         "name": "Elisabeth",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Jézabel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 9,
         "name": "Bentley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Joseph Klemin",
-        "category": "PER",
         "alias": [
             "Klemin"
         ]
@@ -66,13 +56,11 @@
     {
         "id": 12,
         "name": "Jésus",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 14,
         "name": "Francis Clousarr",
-        "category": "PER",
         "alias": []
     }
 ]

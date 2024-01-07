@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Elijah Baley",
-        "category": "PER",
         "alias": [
             "Baley",
             "Lije"
@@ -11,19 +10,16 @@
     {
         "id": 1,
         "name": "R. Daneel Olivaw",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 3,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Julius Enderby",
-        "category": "PER",
         "alias": [
             "Enderby"
         ]
@@ -31,7 +27,6 @@
     {
         "id": 7,
         "name": "Bentley",
-        "category": "PER",
         "alias": []
     }
 ]

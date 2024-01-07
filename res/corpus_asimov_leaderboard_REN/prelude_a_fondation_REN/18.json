@@ -1,16 +1,7 @@
 [
     {
-        "id": 0,
-        "name": "Seldon",
-        "category": "PER",
-        "alias": [
-            "Hari"
-        ]
-    },
-    {
         "id": 1,
         "name": "Dors Venabili",
-        "category": "PER",
         "alias": [
             "Dors",
             "Venabili"
@@ -19,19 +10,16 @@
     {
         "id": 2,
         "name": "Raych",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 4,
         "name": "Hummin",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Mannix IV",
-        "category": "PER",
         "alias": [
             "Mannix"
         ]
@@ -39,19 +27,16 @@
     {
         "id": 7,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Rachelle",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Empereur",
-        "category": "PER",
         "alias": []
     }
 ]

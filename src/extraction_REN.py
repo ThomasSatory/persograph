@@ -35,7 +35,6 @@ def format_ner_results(data: list) -> list:
             {
                 "id" : 1,
                 "name" : "John Doe",
-                "category" : "PER",
                 "alias" : ["John","Doe","Johnny"]
             }
 
@@ -57,7 +56,6 @@ def format_ner_results(data: list) -> list:
         formatted_ner_results.append({
             "id": id,
             "name": word,
-            "category": 'PER',
             "alias": []
         })
         id += 1

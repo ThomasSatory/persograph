@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon",
             "Hari",
@@ -12,31 +11,26 @@
     {
         "id": 1,
         "name": "Raych",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Demerzel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Russ",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 9,
         "name": "Maîtresse",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 10,
         "name": "Dors Venabili",
-        "category": "PER",
         "alias": [
             "Dors"
         ]
@@ -44,39 +38,28 @@
     {
         "id": 12,
         "name": "Astinwald",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 13,
         "name": "Maîtresse Tisalver",
-        "category": "PER",
         "alias": [
             "Casilia Tisalver"
         ]
     },
     {
         "id": 14,
-        "name": "Marron",
-        "category": "PER",
+        "name": "Empereur",
         "alias": []
     },
     {
         "id": 15,
-        "name": "Empereur",
-        "category": "PER",
+        "name": "Hummin",
         "alias": []
     },
     {
         "id": 16,
-        "name": "Hummin",
-        "category": "PER",
-        "alias": []
-    },
-    {
-        "id": 17,
         "name": "Davan",
-        "category": "PER",
         "alias": []
     }
 ]

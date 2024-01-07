@@ -2,19 +2,16 @@
     {
         "id": 1,
         "name": "Clousarr",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 2,
         "name": "Baley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 3,
         "name": "Lije",
-        "category": "PER",
         "alias": [
             "Elijah"
         ]
@@ -22,13 +19,11 @@
     {
         "id": 4,
         "name": "R. Sammy",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 5,
         "name": "Dr Sarton",
-        "category": "PER",
         "alias": [
             "Sarton"
         ]
@@ -36,13 +31,11 @@
     {
         "id": 6,
         "name": "Jessie",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 7,
         "name": "Julius Enderby",
-        "category": "PER",
         "alias": [
             "Enderby"
         ]
@@ -50,13 +43,11 @@
     {
         "id": 10,
         "name": "Dr Gerrigel",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 11,
         "name": "R. Daneel",
-        "category": "PER",
         "alias": [
             "Daneel"
         ]
@@ -64,13 +55,11 @@
     {
         "id": 13,
         "name": "Bentley",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 14,
         "name": "Dr Fastolfe",
-        "category": "PER",
         "alias": []
     }
 ]

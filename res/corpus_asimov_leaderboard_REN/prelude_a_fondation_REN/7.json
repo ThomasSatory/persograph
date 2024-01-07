@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Seldon",
-        "category": "PER",
         "alias": [
             "Hari"
         ]
@@ -10,13 +9,11 @@
     {
         "id": 1,
         "name": "Hummin",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 3,
         "name": "Eto Demerzel",
-        "category": "PER",
         "alias": [
             "Demerzel"
         ]
@@ -24,13 +21,11 @@
     {
         "id": 4,
         "name": "Leggen",
-        "category": "PER",
         "alias": []
     },
     {
         "id": 8,
         "name": "Cléon",
-        "category": "PER",
         "alias": []
     }
 ]

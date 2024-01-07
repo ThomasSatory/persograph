@@ -2,7 +2,6 @@
     {
         "id": 0,
         "name": "Hari Seldon",
-        "category": "PER",
         "alias": [
             "Seldon",
             "Hari"
@@ -11,7 +10,6 @@
     {
         "id": 2,
         "name": "Goutte-de-Pluie Quarante-trois",
-        "category": "PER",
         "alias": [
             "Goutte-de-Pluie"
         ]
@@ -19,7 +17,6 @@
     {
         "id": 4,
         "name": "Dors Venabili",
-        "category": "PER",
         "alias": [
             "Dors"
         ]
@@ -27,7 +24,6 @@
     {
         "id": 5,
         "name": "Jennat",
-        "category": "PER",
         "alias": []
     }
 ]
